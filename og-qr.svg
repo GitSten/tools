@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0A0A0F"/>
+  <defs>
+    <radialGradient id="grad" cx="25%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0A0A0F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad)"/>
+  <!-- Logo -->
+  <rect x="80" y="80" width="52" height="52" rx="12" fill="#7C3AED"/>
+  <text x="106" y="117" font-family="system-ui" font-size="28" text-anchor="middle" fill="white">⚡</text>
+  <text x="148" y="116" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="white">ToolsNowPro</text>
+  <!-- QR mock -->
+  <rect x="750" y="100" width="370" height="430" rx="20" fill="#13131A" stroke="#7C3AED" stroke-width="2"/>
+  <text x="935" y="330" font-family="system-ui" font-size="160" text-anchor="middle" fill="#7C3AED" opacity="0.6">▦</text>
+  <!-- Main content -->
+  <text x="80" y="240" font-family="system-ui,sans-serif" font-size="66" font-weight="900" fill="white" letter-spacing="-2">Free QR Code</text>
+  <text x="80" y="316" font-family="system-ui,sans-serif" font-size="66" font-weight="900" fill="#A78BFA" letter-spacing="-2">Generator</text>
+  <text x="80" y="390" font-family="system-ui,sans-serif" font-size="28" fill="#888">URL · WiFi · vCard · Email · SMS · Text</text>
+  <!-- Features -->
+  <text x="80" y="460" font-family="system-ui,sans-serif" font-size="24" fill="#34D399">✓ No signup required</text>
+  <text x="80" y="496" font-family="system-ui,sans-serif" font-size="24" fill="#34D399">✓ Static codes — never expire</text>
+  <text x="80" y="532" font-family="system-ui,sans-serif" font-size="24" fill="#34D399">✓ PNG + SVG download, no watermark</text>
+  <text x="80" y="590" font-family="system-ui,sans-serif" font-size="22" fill="#444">toolsnowpro.com/qr-generator</text>
+</svg>

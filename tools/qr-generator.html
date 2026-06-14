@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free QR Code Generator – Create QR Codes Instantly (2026)</title>
+<meta name="description" content="Generate QR codes for URLs, text, WiFi, contact info and more. Free, instant, no signup. Download as PNG or SVG.">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.hero{padding:52px 0 28px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px}
+.hero h1 span{color:var(--violet-l)}
+.hero p{color:var(--muted);font-size:1rem;max-width:480px;margin:0 auto}
+.tool-wrap{max-width:720px;margin:0 auto;padding-bottom:60px}
+.qr-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px}
+.qr-layout{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start}
+.field-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.inp{width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:var(--rs);padding:11px 14px;font-size:.92rem;outline:none;transition:border-color .18s;box-sizing:border-box;margin-bottom:14px;font-family:inherit}
+.inp:focus{border-color:var(--violet)}.inp::placeholder{color:var(--muted)}
+.type-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.type-pill{padding:6px 13px;border-radius:100px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-size:.8rem;font-weight:600;cursor:pointer;transition:all .18s}
+.type-pill:hover,.type-pill.active{border-color:var(--violet);color:var(--violet-l);background:var(--glow)}
+.qr-preview{width:220px;height:220px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.qr-preview img,.qr-preview canvas{width:200px;height:200px}
+.qr-placeholder{text-align:center;color:var(--muted);font-size:.82rem}
+.qr-placeholder .icon{font-size:2.5rem;margin-bottom:8px}
+.btn-gen{width:100%;background:var(--violet);color:#fff;border:none;border-radius:var(--rs);padding:14px;font-size:1rem;font-weight:800;cursor:pointer;transition:all .18s;margin-bottom:12px}
+.btn-gen:hover{background:#6D28D9;transform:translateY(-1px);box-shadow:0 10px 30px var(--glow)}
+.dl-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn-dl{flex:1;background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:var(--rs);padding:10px;font-size:.875rem;font-weight:600;cursor:pointer;transition:all .15s;text-align:center}
+.btn-dl:hover{border-color:var(--violet);color:var(--violet-l)}
+.size-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.size-label{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.size-sel{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:var(--rs);padding:8px 12px;font-size:.85rem;outline:none;cursor:pointer}
+@media(max-width:600px){.qr-layout{grid-template-columns:1fr}.qr-preview{width:100%;height:240px}}
+</style>
+<!-- Google Analytics: replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.svg">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<header class="site-header"><div class="wrapper"><div class="header-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
+  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
+  <nav class="site-nav" id="snav">
+    <a href="../qr-generator/index.html">▦ QR Generator</a>
+    <a href="../text-tools/index.html">🔤 Case Converter</a>
+    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
+    <a href="../tools/password-generator.html">🔑 Password</a>
+    <a href="../image-converter/index.html">🖼 Image</a>
+    <a href="../gaming/index.html">⚡ Username</a>
+    <a href="../blog/index.html">Blog</a>
+  </nav>
+</div></div></header>
+
+<div class="wrapper"><div class="ad-slot ad-banner">Advertisement</div></div>
+
+<div class="hero wrapper">
+  <div style="display:inline-flex;align-items:center;gap:6px;background:var(--glow);border:1px solid rgba(124,58,237,.4);color:var(--violet-l);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:100px;margin-bottom:18px;">⬛ Free & Instant</div>
+  <h1>QR Code <span>Generator</span></h1>
+  <p>Create a QR code for any URL, text, WiFi or contact in seconds. Download as PNG. No signup, no watermark.</p>
+</div>
+
+<div class="wrapper">
+  <div class="tool-wrap">
+    <div class="qr-card">
+      <div class="qr-layout">
+        <div>
+          <div class="field-label">Type</div>
+          <div class="type-pills" id="type-pills">
+            <button class="type-pill active" data-type="url">🔗 URL</button>
+            <button class="type-pill" data-type="text">📝 Text</button>
+            <button class="type-pill" data-type="email">✉️ Email</button>
+            <button class="type-pill" data-type="phone">📞 Phone</button>
+            <button class="type-pill" data-type="wifi">📶 WiFi</button>
+          </div>
+
+          <div id="input-url">
+            <div class="field-label">URL</div>
+            <input id="inp-url" class="inp" type="url" placeholder="https://yourwebsite.com" oninput="liveGen()">
+          </div>
+          <div id="input-text" style="display:none">
+            <div class="field-label">Text</div>
+            <textarea id="inp-text" class="inp" rows="3" placeholder="Any text…" oninput="liveGen()"></textarea>
+          </div>
+          <div id="input-email" style="display:none">
+            <div class="field-label">Email address</div>
+            <input id="inp-email" class="inp" type="email" placeholder="you@example.com" oninput="liveGen()">
+          </div>
+          <div id="input-phone" style="display:none">
+            <div class="field-label">Phone number</div>
+            <input id="inp-phone" class="inp" type="tel" placeholder="+1 555 0100" oninput="liveGen()">
+          </div>
+          <div id="input-wifi" style="display:none">
+            <div class="field-label">Network name (SSID)</div>
+            <input id="inp-ssid" class="inp" type="text" placeholder="MyWifi" oninput="liveGen()">
+            <div class="field-label">Password</div>
+            <input id="inp-wifipw" class="inp" type="text" placeholder="password" oninput="liveGen()">
+          </div>
+
+          <div class="size-row">
+            <span class="size-label">Size:</span>
+            <select id="qr-size" class="size-sel" onchange="liveGen()">
+              <option value="200">200×200</option>
+              <option value="300" selected>300×300</option>
+              <option value="400">400×400</option>
+              <option value="600">600×600</option>
+            </select>
+          </div>
+
+          <button class="btn-gen" onclick="liveGen()">⬛ Generate QR Code</button>
+          <div class="dl-row">
+            <button class="btn-dl" onclick="downloadQR('png')">⬇ Download PNG</button>
+          </div>
+        </div>
+        <div>
+          <div class="qr-preview" id="qr-preview">
+            <div class="qr-placeholder"><div class="icon">⬛</div><p>QR code will appear here</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-slot ad-rect">Advertisement</div>
+
+    <div class="card" style="margin-bottom:24px">
+      <h2 style="font-size:1.1rem;font-weight:800;margin-bottom:12px">QR Code Use Cases</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px">
+        <div style="background:var(--surface2);border-radius:var(--rs);padding:14px"><strong style="font-size:.88rem">📇 Business cards</strong><p style="font-size:.8rem;color:var(--muted);margin-top:4px">Link to your portfolio or LinkedIn</p></div>
+        <div style="background:var(--surface2);border-radius:var(--rs);padding:14px"><strong style="font-size:.88rem">🏪 Menus & products</strong><p style="font-size:.8rem;color:var(--muted);margin-top:4px">Link to menus, specs or reviews</p></div>
+        <div style="background:var(--surface2);border-radius:var(--rs);padding:14px"><strong style="font-size:.88rem">📱 Social media</strong><p style="font-size:.8rem;color:var(--muted);margin-top:4px">Share your TikTok or Instagram profile</p></div>
+        <div style="background:var(--surface2);border-radius:var(--rs);padding:14px"><strong style="font-size:.88rem">📶 WiFi sharing</strong><p style="font-size:.8rem;color:var(--muted);margin-top:4px">Let guests connect without typing a password</p></div>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:32px">
+      Also try → <a href="../index.html" style="color:var(--violet-l)">Username Generator</a> · <a href="bio-generator.html" style="color:var(--violet-l)">Bio Generator</a>
+    </p>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="wrapper">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators.</p></div>
+    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../index.html">Username Generator</a></li><li><a href="password-generator.html">Password Generator</a></li><li><a href="bio-generator.html">Bio Generator</a></li><li><a href="hashtag-generator.html">Hashtag Generator</a></li><li><a href="qr-generator.html">QR Code Generator</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
+</div></footer>
+<div class="toast" id="toast">✓ Done!</div>
+
+<script>
+/* Pure JS QR generator using qrcode.js CDN */
+let QRLib = null;
+let currentType = 'url';
+let qrCanvas = null;
+
+document.querySelectorAll('.type-pill').forEach(p=>{
+  p.addEventListener('click',()=>{
+    document.querySelectorAll('.type-pill').forEach(x=>x.classList.remove('active'));
+    p.classList.add('active'); currentType=p.dataset.type;
+    ['url','text','email','phone','wifi'].forEach(t=>{
+      document.getElementById('input-'+t).style.display=t===currentType?'block':'none';
+    });
+  });
+});
+
+function getContent(){
+  switch(currentType){
+    case 'url': return document.getElementById('inp-url').value.trim()||'https://toolsnowpro.com';
+    case 'text': return document.getElementById('inp-text').value.trim();
+    case 'email': return 'mailto:'+document.getElementById('inp-email').value.trim();
+    case 'phone': return 'tel:'+document.getElementById('inp-phone').value.trim();
+    case 'wifi': {
+      const ssid=document.getElementById('inp-ssid').value.trim();
+      const pw=document.getElementById('inp-wifipw').value.trim();
+      return `WIFI:T:WPA;S:${ssid};P:${pw};;`;
+    }
+    default: return 'https://toolsnowpro.com';
+  }
+}
+
+async function loadQR(){
+  if(QRLib) return;
+  return new Promise((res,rej)=>{
+    const s=document.createElement('script');
+    s.src='../js/qrcode.js';
+    s.onload=()=>{QRLib=true;res();};s.onerror=rej;
+    document.head.appendChild(s);
+  });
+}
+
+async function liveGen(){
+  const content=getContent(); if(!content) return;
+  const size=parseInt(document.getElementById('qr-size').value);
+  await loadQR();
+  const preview=document.getElementById('qr-preview');
+  preview.innerHTML='';
+  const div=document.createElement('div');preview.appendChild(div);
+  try {
+    new QRCode(div,{text:content,width:Math.min(size,400),height:Math.min(size,400),colorDark:'#7C3AED',colorLight:'#13131A',correctLevel:QRCode.CorrectLevel.M});
+    qrCanvas=div.querySelector('canvas')||div.querySelector('img');
+  } catch(e){ preview.innerHTML='<div class="qr-placeholder"><div class="icon">⚠️</div><p>Error generating QR</p></div>'; }
+}
+
+function downloadQR(){
+  if(!qrCanvas){alert('Generate a QR code first.');return;}
+  const a=document.createElement('a');
+  if(qrCanvas.tagName==='CANVAS'){a.href=qrCanvas.toDataURL('image/png');}
+  else{a.href=qrCanvas.src;}
+  a.download='qrcode-usernamepro.png';a.click();
+  const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);
+}
+
+// Auto-generate on load
+window.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('inp-url').value='https://toolsnowpro.com';
+  liveGen();
+});
+</script>
+</body></html>

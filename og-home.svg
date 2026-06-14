@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0A0A0F"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)"/>
+  <defs>
+    <radialGradient id="grad" cx="30%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0A0A0F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Logo area -->
+  <rect x="80" y="80" width="60" height="60" rx="14" fill="#7C3AED"/>
+  <text x="110" y="122" font-family="system-ui" font-size="34" text-anchor="middle" fill="white">⚡</text>
+  <text x="158" y="122" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="white">ToolsNowPro</text>
+  <!-- Main headline -->
+  <text x="80" y="260" font-family="system-ui,sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="-2">Free Online Tools</text>
+  <text x="80" y="340" font-family="system-ui,sans-serif" font-size="48" font-weight="700" fill="#A78BFA">No signup. No expiry. No catch.</text>
+  <!-- Tool pills -->
+  <rect x="80" y="410" width="200" height="52" rx="10" fill="#13131A" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="180" y="442" font-family="system-ui" font-size="22" text-anchor="middle" fill="white">▦ QR Generator</text>
+  <rect x="296" y="410" width="200" height="52" rx="10" fill="#13131A" stroke="#333"/>
+  <text x="396" y="442" font-family="system-ui" font-size="22" text-anchor="middle" fill="#999">🔤 Text Converter</text>
+  <rect x="512" y="410" width="200" height="52" rx="10" fill="#13131A" stroke="#333"/>
+  <text x="612" y="442" font-family="system-ui" font-size="22" text-anchor="middle" fill="#999">🔑 Password Gen</text>
+  <rect x="728" y="410" width="200" height="52" rx="10" fill="#13131A" stroke="#333"/>
+  <text x="828" y="442" font-family="system-ui" font-size="22" text-anchor="middle" fill="#999">🖼 Image Convert</text>
+  <!-- URL -->
+  <text x="80" y="570" font-family="system-ui,sans-serif" font-size="24" fill="#555">toolsnowpro.com</text>
+</svg>

@@ -1,0 +1,56 @@
+# ToolsNowPro – llms.txt
+# https://llmstxt.org/
+# This file helps AI language models navigate and understand our site.
+
+> ToolsNowPro is a collection of free browser-based utilities for creators, developers, and small businesses. All tools run client-side — no data is uploaded to servers. No account required. No expiry.
+
+## Tools
+
+- [QR Code Generator](https://toolsnowpro.com/qr-generator/): Generate static QR codes for URLs, WiFi credentials, vCards, email, SMS, and plain text. Outputs PNG and SVG. No signup, no watermark, codes never expire.
+- [Text Case Converter](https://toolsnowpro.com/text-tools/): Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and AlTeRnAtInG case. Live statistics included.
+- [Word Counter](https://toolsnowpro.com/text-tools/word-counter.html): Count words, characters (with and without spaces), sentences, paragraphs and reading time. Supports word limit targets for SEO and social media.
+- [Password Generator](https://toolsnowpro.com/tools/password-generator.html): Generate cryptographically random passwords. Configurable length, symbols, uppercase, numbers. All generation happens client-side.
+- [Image Converter](https://toolsnowpro.com/image-converter/): Convert images between JPG, PNG, and WebP formats. Resize and compress. Runs entirely in the browser — images never leave the user's device.
+- [Username Generator](https://toolsnowpro.com/gaming/): Generate usernames for gaming, TikTok, Instagram, aesthetic, and business purposes. Client-side JavaScript generation.
+
+
+## QR Code guides
+
+- [How to Create a QR Code for Your Restaurant Menu](https://toolsnowpro.com/blog/qr-code-restaurant-menu.html)
+- [WiFi QR Code Generator – Let Guests Connect Without Sharing the Password](https://toolsnowpro.com/blog/wifi-qr-code-generator.html)
+- [QR Code for Business Cards – The Complete Guide](https://toolsnowpro.com/blog/qr-code-business-card.html)
+- [QR Code Size Guide – How Big Should Your QR Code Be?](https://toolsnowpro.com/blog/qr-code-size-guide.html)
+- [Free QR Code Generator with No Signup – Static Codes That Never Expire](https://toolsnowpro.com/blog/free-qr-code-generator-no-signup.html)
+
+## Username & social media guides
+
+- [How to Pick a Gaming Username Nobody Forgets](https://toolsnowpro.com/blog/gaming-username-guide.html)
+- [300+ Cool Roblox Username Ideas (2026)](https://toolsnowpro.com/blog/roblox-usernames.html)
+- [200+ Cool Discord Username Ideas](https://toolsnowpro.com/blog/discord-usernames.html)
+- [200+ TikTok Username Ideas](https://toolsnowpro.com/blog/tiktok-usernames-2026.html)
+- [Aesthetic Username Guide](https://toolsnowpro.com/blog/aesthetic-usernames.html)
+- [Cute Username Ideas](https://toolsnowpro.com/blog/cute-usernames.html)
+- [Funny Usernames Guide](https://toolsnowpro.com/blog/funny-usernames.html)
+- [Business Username Branding Guide](https://toolsnowpro.com/blog/business-usernames.html)
+- [Minecraft Username Ideas](https://toolsnowpro.com/blog/minecraft-usernames.html)
+- [How to Check Username Availability](https://toolsnowpro.com/blog/username-availability.html)
+- [How to Rebrand Your Social Media Username](https://toolsnowpro.com/blog/rebrand-username.html)
+- [Short Username Ideas Under 8 Characters](https://toolsnowpro.com/blog/short-usernames.html)
+- [Dark Academia Username Ideas](https://toolsnowpro.com/blog/dark-academia-usernames.html)
+- [Cottagecore Username Ideas](https://toolsnowpro.com/blog/cottagecore-usernames.html)
+- [How to Build a Username Around Your Real Name](https://toolsnowpro.com/blog/username-with-name.html)
+- [YouTube Channel Name Guide](https://toolsnowpro.com/blog/youtube-channel-names.html)
+- [Twitch Username Guide](https://toolsnowpro.com/blog/twitch-usernames.html)
+- [Matching Usernames for Best Friends & Twins](https://toolsnowpro.com/blog/twin-usernames.html)
+- [Unique Username Ideas](https://toolsnowpro.com/blog/unique-usernames.html)
+
+## About
+
+- [About & Privacy Policy](https://toolsnowpro.com/about/)
+- [FAQ](https://toolsnowpro.com/faq/)
+
+## Optional: full content versions
+
+- [QR Generator (full page)](https://toolsnowpro.com/qr-generator/)
+- [Text Tools (full page)](https://toolsnowpro.com/text-tools/)
+- [Blog index](https://toolsnowpro.com/blog/)

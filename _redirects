@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects
+# Note: 404.html in root is served automatically by Cloudflare Pages for missing pages
+# No redirect rules needed for 404 — it's handled natively

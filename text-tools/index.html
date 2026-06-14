@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Text Case Converter – UPPERCASE, lowercase, Title Case | ToolsNowPro</title>
+<meta name="description" content="Convert text between UPPERCASE, lowercase, Title Case, Sentence case and more. Free, instant, works in your browser — no upload, no waiting.">
+<link rel="canonical" href="https://toolsnowpro.com/text-tools/">
+<meta property="og:title" content="Free Text Case Converter – UPPERCASE, lowercase, Title Case">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Text Case Converter","url":"https://toolsnowpro.com/text-tools/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="stylesheet" href="../shared.css">
+<style>
+.tool-hero{padding:48px 0 28px;text-align:center}
+.tool-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-.03em;margin-bottom:12px}
+.tool-hero h1 span{color:var(--violet-l)}
+.tool-hero p{color:var(--muted);font-size:.95rem;max-width:480px;margin:0 auto}
+.tool-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:28px}
+.case-btns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.case-btn{background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:9px 16px;font-size:.82rem;font-weight:700;color:var(--muted);cursor:pointer;transition:all .15s}
+.case-btn:hover{border-color:var(--violet);color:var(--violet-l)}
+.case-btn.active{background:var(--glow);border-color:var(--violet);color:var(--violet-l)}
+.text-area{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:14px;color:var(--text);font-size:.95rem;font-family:inherit;resize:vertical;min-height:160px;outline:none;transition:border-color .15s;line-height:1.7}
+.text-area:focus{border-color:var(--violet)}
+.stats-bar{display:flex;gap:20px;flex-wrap:wrap;padding:10px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);margin:10px 0;font-size:.78rem;color:var(--muted)}
+.stats-bar span b{color:var(--text);font-weight:700}
+.action-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.tool-grid{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+.tools-sidebar{display:flex;flex-direction:column;gap:14px}
+.sb-tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .15s}
+.sb-tool-card:hover{border-color:var(--violet)}
+.sb-tool-card h3{font-size:.9rem;font-weight:700;margin-bottom:4px}
+.sb-tool-card p{font-size:.78rem;color:var(--muted)}
+@media(max-width:768px){.tool-grid{grid-template-columns:1fr}}
+</style>
+<!-- Google Analytics: replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.svg">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<header class="site-header"><div class="wrapper"><div class="header-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
+  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
+  <nav class="site-nav" id="snav">
+    <a href="../qr-generator/index.html">▦ QR Generator</a>
+    <a href="../text-tools/index.html" class="active">🔤 Case Converter</a>
+    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
+    <a href="../tools/password-generator.html">🔑 Password</a>
+    <a href="../image-converter/index.html">🖼 Image</a>
+    <a href="../gaming/index.html">⚡ Username</a>
+    <a href="../blog/index.html">Blog</a>
+  </nav>
+</div></div></header>
+
+<div class="wrapper"><div class="ad-slot ad-banner">Advertisement</div></div>
+
+<div class="wrapper">
+  <div class="tool-hero">
+    <div class="badge badge-violet" style="margin-bottom:14px">⚡ Instant — No Signup</div>
+    <h1>Text <span>Case Converter</span></h1>
+    <p>Paste your text and convert it to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, and more — instantly, in your browser.</p>
+  </div>
+
+  <div class="tool-grid">
+    <div>
+      <div class="tool-wrap">
+        <!-- Case buttons -->
+        <div class="case-btns">
+          <button class="case-btn active" onclick="convert('upper',this)">UPPERCASE</button>
+          <button class="case-btn" onclick="convert('lower',this)">lowercase</button>
+          <button class="case-btn" onclick="convert('title',this)">Title Case</button>
+          <button class="case-btn" onclick="convert('sentence',this)">Sentence case</button>
+          <button class="case-btn" onclick="convert('camel',this)">camelCase</button>
+          <button class="case-btn" onclick="convert('pascal',this)">PascalCase</button>
+          <button class="case-btn" onclick="convert('snake',this)">snake_case</button>
+          <button class="case-btn" onclick="convert('kebab',this)">kebab-case</button>
+          <button class="case-btn" onclick="convert('alt',this)">AlTeRnAtInG</button>
+          <button class="case-btn" onclick="convert('inverse',this)">iNVERSE</button>
+        </div>
+
+        <!-- Input -->
+        <div style="margin-bottom:10px">
+          <label style="font-size:.75rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">Paste or type your text below ↓</label>
+          <textarea class="text-area" id="input-text" placeholder="Type or paste your text here…" oninput="liveConvert()"></textarea>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-bar">
+          <span>Characters: <b id="stat-chars">0</b></span>
+          <span>Words: <b id="stat-words">0</b></span>
+          <span>Sentences: <b id="stat-sents">0</b></span>
+          <span>Paragraphs: <b id="stat-paras">0</b></span>
+          <span>Lines: <b id="stat-lines">0</b></span>
+          <span>Reading time: <b id="stat-time">0 sec</b></span>
+        </div>
+
+        <!-- Output -->
+        <div style="margin-top:14px">
+          <label style="font-size:.75rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">Result ↓</label>
+          <textarea class="text-area" id="output-text" placeholder="Converted text appears here…" readonly style="background:var(--bg)"></textarea>
+        </div>
+
+        <div class="action-row">
+          <button class="btn-primary" onclick="copyOutput()">📋 Copy Result</button>
+          <button class="btn-ghost" onclick="clearAll()">🗑 Clear</button>
+          <button class="btn-ghost" onclick="swapTexts()">⇅ Swap</button>
+        </div>
+      </div>
+
+      <div class="ad-slot ad-rect">Advertisement</div>
+
+      <div class="prose" style="margin-top:32px">
+        <h2>When to Use Each Case Type</h2>
+
+        <h3>UPPERCASE</h3>
+        <p>All letters capitalised. Use for: headings that need strong visual emphasis, warning text, acronyms, social media posts that need to stand out, and stylistic all-caps in design work. Avoid using for body text — all-caps reduces reading speed by up to 13%.</p>
+
+        <h3>lowercase</h3>
+        <p>All letters in lowercase. Widely used in: social media usernames, code identifiers, CSS class names, URLs and slugs, minimalist design aesthetics, and any context where you want a casual, understated tone.</p>
+
+        <h3>Title Case</h3>
+        <p>Major words capitalised. The standard for: article and book titles, blog post headings, product names, movie and song titles, and professional document headings. Different style guides (APA, Chicago, AP) have slightly different rules for which words to capitalise — our converter follows Chicago style (capitalise all words except articles, conjunctions, and short prepositions).</p>
+
+        <h3>Sentence case</h3>
+        <p>Only the first word and proper nouns capitalised. Used for: normal prose, email subject lines, UI labels in modern design, marketing copy that wants a conversational tone, and any context where Title Case feels too formal.</p>
+
+        <h3>camelCase and PascalCase</h3>
+        <p>Used almost exclusively in programming. camelCase (first word lowercase) is standard for variables and function names in JavaScript, Java, and Swift. PascalCase (every word capitalised) is used for class names, component names in React, and type definitions.</p>
+
+        <h3>snake_case and kebab-case</h3>
+        <p>Words separated by underscores (snake_case) or hyphens (kebab-case). snake_case is used in Python variable names, database column names, and file names. kebab-case is used in CSS class names, HTML attributes, and URL slugs.</p>
+      </div>
+    </div>
+
+    <div class="tools-sidebar">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px">
+        <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px">Text Tools</div>
+        <ul class="footer-links">
+          <li><a href="index.html">🔤 Case Converter</a></li>
+          <li><a href="word-counter.html">📊 Word Counter</a></li>
+        </ul>
+      </div>
+      <a href="../qr-generator/index.html" class="sb-tool-card">
+        <h3>▦ QR Code Generator</h3>
+        <p>Create QR codes for URLs, WiFi, vCards, email and text. Free, no signup.</p>
+      </a>
+      <a href="../tools/password-generator.html" class="sb-tool-card">
+        <h3>🔑 Password Generator</h3>
+        <p>Generate strong, cryptographically random passwords of any length.</p>
+      </a>
+      <a href="../image-converter/index.html" class="sb-tool-card">
+        <h3>🖼 Image Converter</h3>
+        <p>Convert images between JPG, PNG, WebP and more. Runs locally.</p>
+      </a>
+      <div class="ad-slot" style="height:300px">Advertisement</div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="wrapper">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free tools for creators and small businesses.</p></div>
+    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../qr-generator/index.html">QR Generator</a></li><li><a href="index.html">Text Tools</a></li><li><a href="../tools/password-generator.html">Password Gen</a></li><li><a href="../index.html">Username Gen</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
+</div></footer>
+
+<div class="toast" id="toast">✓ Copied!</div>
+<script>
+let activeCase = 'upper';
+
+const SMALL_WORDS = new Set(['a','an','the','and','but','or','nor','for','so','yet','at','by','in','of','on','to','up','as','is','it']);
+
+function titleCase(str){
+  return str.replace(/\S+/g,(w,i,full)=>{
+    const lower=w.toLowerCase();
+    if(i===0||i+w.length===full.length) return cap(w);
+    return SMALL_WORDS.has(lower)?lower:cap(w);
+  });
+}
+function cap(w){return w.charAt(0).toUpperCase()+w.slice(1).toLowerCase();}
+function sentenceCase(str){return str.replace(/(^\s*\w|[.!?]\s+\w)/g,c=>c.toUpperCase());}
+function toCamel(str){return str.replace(/[-_\s]+(.)/g,(_,c)=>c.toUpperCase()).replace(/^./,c=>c.toLowerCase());}
+function toPascal(str){return str.replace(/[-_\s]+(.)/g,(_,c)=>c.toUpperCase()).replace(/^./,c=>c.toUpperCase());}
+function toSnake(str){return str.replace(/([A-Z])/g,'_$1').replace(/[-\s]+/g,'_').replace(/^_/,'').toLowerCase();}
+function toKebab(str){return str.replace(/([A-Z])/g,'-$1').replace(/[_\s]+/g,'-').replace(/^-/,'').toLowerCase();}
+function toAlt(str){return [...str].map((c,i)=>i%2===0?c.toUpperCase():c.toLowerCase()).join('');}
+function toInverse(str){return [...str].map(c=>c===c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join('');}
+
+function applyCase(text, type){
+  switch(type){
+    case 'upper':    return text.toUpperCase();
+    case 'lower':    return text.toLowerCase();
+    case 'title':    return titleCase(text);
+    case 'sentence': return sentenceCase(text.toLowerCase());
+    case 'camel':    return toCamel(text);
+    case 'pascal':   return toPascal(text);
+    case 'snake':    return toSnake(text);
+    case 'kebab':    return toKebab(text);
+    case 'alt':      return toAlt(text);
+    case 'inverse':  return toInverse(text);
+    default:         return text;
+  }
+}
+
+function convert(type, btn){
+  activeCase = type;
+  document.querySelectorAll('.case-btn').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  liveConvert();
+}
+
+function liveConvert(){
+  const input = document.getElementById('input-text').value;
+  document.getElementById('output-text').value = applyCase(input, activeCase);
+  updateStats(input);
+}
+
+function updateStats(text){
+  const chars = text.length;
+  const words = text.trim()===''?0:text.trim().split(/\s+/).length;
+  const sents = text.trim()===''?0:(text.match(/[.!?]+/g)||[]).length||1;
+  const paras = text.trim()===''?0:text.trim().split(/\n\s*\n/).length;
+  const lines = text.trim()===''?0:text.split(/\n/).length;
+  const readSec = Math.ceil(words/3.5);
+  const readStr = readSec < 60 ? readSec+' sec' : Math.ceil(readSec/60)+' min';
+  document.getElementById('stat-chars').textContent = chars.toLocaleString();
+  document.getElementById('stat-words').textContent = words.toLocaleString();
+  document.getElementById('stat-sents').textContent = sents.toLocaleString();
+  document.getElementById('stat-paras').textContent = paras.toLocaleString();
+  document.getElementById('stat-lines').textContent = lines.toLocaleString();
+  document.getElementById('stat-time').textContent  = readStr;
+}
+
+function copyOutput(){
+  const out = document.getElementById('output-text').value;
+  if(!out) return;
+  navigator.clipboard.writeText(out).then(()=>{
+    const t=document.getElementById('toast');t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),1800);
+  });
+}
+function clearAll(){document.getElementById('input-text').value='';document.getElementById('output-text').value='';updateStats('');}
+function swapTexts(){
+  const a=document.getElementById('input-text'),b=document.getElementById('output-text');
+  const tmp=a.value;a.value=b.value;b.value=tmp;updateStats(a.value);
+}
+</script>
+</body>
+</html>

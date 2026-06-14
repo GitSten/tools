@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Hashtag Generator – TikTok & Instagram Hashtags (2026)</title>
+<meta name="description" content="Generate the best hashtags for TikTok and Instagram. Free hashtag generator with trending, niche and viral hashtag suggestions.">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.hero{padding:52px 0 28px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px}
+.hero h1 span{color:var(--violet-l)}
+.hero p{color:var(--muted);font-size:1rem;max-width:480px;margin:0 auto}
+.tool-wrap{max-width:720px;margin:0 auto;padding-bottom:60px}
+.ht-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px}
+.field-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.inp{width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:var(--rs);padding:11px 14px;font-size:.95rem;outline:none;transition:border-color .18s;box-sizing:border-box;margin-bottom:14px}
+.inp:focus{border-color:var(--violet)}.inp::placeholder{color:var(--muted)}
+.plat-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.plat-pill{padding:7px 15px;border-radius:100px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .18s}
+.plat-pill:hover,.plat-pill.active{border-color:var(--violet);color:var(--violet-l);background:var(--glow)}
+.btn-gen{width:100%;background:var(--violet);color:#fff;border:none;border-radius:var(--rs);padding:14px;font-size:1rem;font-weight:800;cursor:pointer;transition:all .18s}
+.btn-gen:hover{background:#6D28D9;transform:translateY(-1px);box-shadow:0 10px 30px var(--glow)}
+.ht-output{background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:18px;margin-top:18px;line-height:2}
+.ht-tag{display:inline-block;background:var(--glow);border:1px solid rgba(124,58,237,.25);color:var(--violet-l);padding:4px 10px;border-radius:100px;font-size:.82rem;font-weight:700;margin:3px;cursor:pointer;transition:all .15s}
+.ht-tag:hover{background:var(--violet);color:#fff;border-color:var(--violet)}
+.ht-tag.sel{background:var(--violet);color:#fff;border-color:var(--violet)}
+.copy-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.btn-copy-all{background:var(--violet);color:#fff;border:none;border-radius:var(--rs);padding:10px 20px;font-size:.875rem;font-weight:700;cursor:pointer;transition:all .18s}
+.btn-copy-all:hover{background:#6D28D9}
+.btn-copy-sel{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:var(--rs);padding:10px 18px;font-size:.875rem;cursor:pointer;transition:all .15s}
+.btn-copy-sel:hover{border-color:var(--violet);color:var(--violet-l)}
+.ht-count{font-size:.78rem;color:var(--muted);margin-top:8px}
+.tier-label{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:14px 0 6px}
+</style>
+<!-- Google Analytics: replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.svg">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<header class="site-header"><div class="wrapper"><div class="header-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
+  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
+  <nav class="site-nav" id="snav">
+    <a href="../qr-generator/index.html">▦ QR Generator</a>
+    <a href="../text-tools/index.html">🔤 Case Converter</a>
+    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
+    <a href="../tools/password-generator.html">🔑 Password</a>
+    <a href="../image-converter/index.html">🖼 Image</a>
+    <a href="../gaming/index.html">⚡ Username</a>
+    <a href="../blog/index.html">Blog</a>
+  </nav>
+</div></div></header>
+
+<div class="wrapper"><div class="ad-slot ad-banner">Advertisement</div></div>
+
+<div class="hero wrapper">
+  <div style="display:inline-flex;align-items:center;gap:6px;background:var(--glow);border:1px solid rgba(124,58,237,.4);color:var(--violet-l);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:100px;margin-bottom:18px;"># Free Generator</div>
+  <h1>Hashtag <span>Generator</span></h1>
+  <p>Get 30 relevant hashtags for TikTok and Instagram. Mix of viral, trending and niche tags for maximum reach.</p>
+</div>
+
+<div class="wrapper">
+  <div class="tool-wrap">
+    <div class="ht-card">
+      <div class="field-label">Your content topic</div>
+      <input id="topic" class="inp" type="text" placeholder="e.g. fitness, travel photography, home cooking, gaming…" maxlength="60">
+
+      <div class="field-label">Platform</div>
+      <div class="plat-pills" id="plat-pills">
+        <button class="plat-pill active" data-plat="tiktok">🎵 TikTok</button>
+        <button class="plat-pill" data-plat="instagram">📸 Instagram</button>
+        <button class="plat-pill" data-plat="both">🔀 Both</button>
+      </div>
+      <button class="btn-gen" onclick="genHashtags()"># Generate Hashtags</button>
+
+      <div id="ht-results" style="display:none">
+        <div class="ht-output" id="ht-out"></div>
+        <div class="ht-count" id="ht-count"></div>
+        <div class="copy-row">
+          <button class="btn-copy-all" onclick="copyAll()">📋 Copy All Hashtags</button>
+          <button class="btn-copy-sel" onclick="copySel()">Copy Selected</button>
+        </div>
+        <p style="font-size:.76rem;color:var(--muted);margin-top:10px">💡 Click tags to select/deselect. Copy All copies all 30.</p>
+      </div>
+    </div>
+
+    <div class="ad-slot ad-rect">Advertisement</div>
+
+    <div class="card" style="margin-bottom:24px">
+      <h2 style="font-size:1.1rem;font-weight:800;margin-bottom:12px">Hashtag Strategy for 2026</h2>
+      <ul style="color:var(--muted);font-size:.9rem;padding-left:18px;display:flex;flex-direction:column;gap:8px">
+        <li><strong style="color:var(--text)">Mix tag sizes</strong> — combine mega tags (#fitness, 500M+), mid-tier (#homegym, 10M+) and niche tags (#garagegimsession, 50K) for best reach</li>
+        <li><strong style="color:var(--text)">TikTok: 3–5 tags</strong> — TikTok's algorithm is primarily content-driven. Over-tagging can hurt performance. Use 3–5 highly relevant tags</li>
+        <li><strong style="color:var(--text)">Instagram: 5–15 tags</strong> — Instagram indexes hashtags. Use a mix of sizes and always include at least 2 ultra-niche tags</li>
+        <li><strong style="color:var(--text)">Avoid banned tags</strong> — some tags are shadowbanned on Instagram. Check before use with a quick search in-app</li>
+      </ul>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:32px">
+      Also try → <a href="../index.html" style="color:var(--violet-l)">Username Generator</a> · <a href="bio-generator.html" style="color:var(--violet-l)">Bio Generator</a>
+    </p>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="wrapper">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators.</p></div>
+    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../index.html">Username Generator</a></li><li><a href="password-generator.html">Password Generator</a></li><li><a href="bio-generator.html">Bio Generator</a></li><li><a href="hashtag-generator.html">Hashtag Generator</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
+</div></footer>
+<div class="toast" id="toast">✓ Copied!</div>
+
+<script>
+const UNIVERSAL=['#fyp','#foryou','#foryoupage','#viral','#trending','#explore','#content','#creator','#viral2026','#trending2026'];
+const NICHES={
+  fitness:['#fitness','#workout','#gym','#fitnessmotivation','#healthylifestyle','#exercise','#fit','#bodybuilding','#weightloss','#homegym','#cardio','#strength','#fitnessjourney','#personaltrainer','#fitlife'],
+  travel:['#travel','#travelgram','#wanderlust','#adventure','#explore','#travelphotography','#travellife','#vacation','#travelblogger','#worldtravel','#traveling','#tourism','#holiday','#roadtrip','#instatravel'],
+  food:['#food','#foodie','#foodphotography','#instafood','#cooking','#recipe','#homecooking','#foodlover','#delicious','#healthyfood','#dinner','#lunch','#baking','#foodblogger','#tasty'],
+  gaming:['#gaming','#gamer','#videogames','#twitch','#streamer','#pcgaming','#gamingcommunity','#gamerlife','#xbox','#playstation','#nintendo','#minecraft','#fortnite','#roblox','#esports'],
+  fashion:['#fashion','#style','#ootd','#outfit','#fashionblogger','#streetstyle','#aesthetic','#vintage','#fashionstyle','#clothing','#trend','#fashionista','#styleblogger','#outfitoftheday','#wiwt'],
+  photography:['#photography','#photo','#photographer','#photooftheday','#portrait','#landscape','#naturephotography','#streetphotography','#filmphotography','#editorialphotography','#visualart','#camera','#photostyle','#picoftheday','#shots'],
+  beauty:['#beauty','#makeup','#skincare','#beautytips','#makeuptutorial','#cosmetics','#glam','#selfcare','#haircare','#beautyblogger','#makeuplook','#nails','#skincareroutine','#beautyproducts','#grwm'],
+  lifestyle:['#lifestyle','#lifestyleblogger','#dailylife','#motivation','#mindset','#wellness','#selflove','#positivity','#growth','#inspiration','#habits','#morning','#productivity','#mentalhealth','#life'],
+};
+
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+let plat='tiktok';
+document.querySelectorAll('.plat-pill').forEach(p=>{p.addEventListener('click',()=>{document.querySelectorAll('.plat-pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');plat=p.dataset.plat;});});
+
+function genHashtags(){
+  const topic=document.getElementById('topic').value.trim().toLowerCase();
+  let pool=[...UNIVERSAL];
+  const kw=topic.replace(/\s+/g,'').toLowerCase();
+  if(kw){pool.push('#'+kw,'#'+kw+'s','#'+kw+'lover','#'+kw+'life','#'+kw+'community','#'+kw+'tips','#'+kw+'daily','#'+kw+'2026','#best'+kw,'#'+kw+'inspo');}
+  // find best matching niche
+  const matched=Object.keys(NICHES).find(n=>topic.includes(n)||n.includes(topic.split(/\s+/)[0]))||'lifestyle';
+  pool=[...new Set([...pool,...NICHES[matched]])].slice(0,30);
+  // fill to 30 if needed
+  while(pool.length<30){pool.push('#'+kw+(pool.length));}
+  pool=pool.slice(0,30);
+
+  const out=document.getElementById('ht-out');out.innerHTML='';
+  pool.forEach(tag=>{
+    const s=document.createElement('span');s.className='ht-tag';s.textContent=tag;
+    s.onclick=()=>s.classList.toggle('sel');
+    out.appendChild(s);
+  });
+  document.getElementById('ht-count').textContent=pool.length+' hashtags generated';
+  document.getElementById('ht-results').style.display='block';
+}
+
+function copyAll(){
+  const tags=[...document.querySelectorAll('.ht-tag')].map(t=>t.textContent).join(' ');
+  navigator.clipboard.writeText(tags).catch(()=>{});
+  showToast();
+}
+function copySel(){
+  const tags=[...document.querySelectorAll('.ht-tag.sel')].map(t=>t.textContent).join(' ');
+  if(!tags){alert('Click tags to select them first.');return;}
+  navigator.clipboard.writeText(tags).catch(()=>{});
+  showToast();
+}
+function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);}
+</script>
+</body></html>

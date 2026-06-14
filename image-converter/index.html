@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Image Converter – JPG, PNG, WebP, Convert & Compress Online</title>
+<meta name="description" content="Convert images between JPG, PNG, and WebP formats instantly in your browser. No upload to server, no account, files never leave your device. Also resize and compress.">
+<link rel="canonical" href="https://toolsnowpro.com/image-converter/">
+<meta property="og:title" content="Free Image Converter – JPG, PNG, WebP — No Upload">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Free Image Converter","url":"https://toolsnowpro.com/image-converter/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert images between JPG, PNG and WebP. Resize and compress. No upload, runs in browser."}</script>
+<link rel="stylesheet" href="../shared.css">
+<style>
+.tool-hero{padding:48px 0 28px;text-align:center}
+.tool-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-.03em;margin-bottom:12px}
+.tool-hero h1 span{color:var(--violet-l)}
+.tool-hero p{color:var(--muted);font-size:.95rem;max-width:520px;margin:0 auto}
+.trust-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:16px}
+.trust-pill{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:.78rem;font-weight:500}
+.trust-pill span{color:var(--success)}
+
+.drop-zone{border:2px dashed var(--border);border-radius:var(--r);padding:60px 20px;text-align:center;cursor:pointer;transition:all .2s;background:var(--surface)}
+.drop-zone:hover,.drop-zone.dragover{border-color:var(--violet);background:var(--glow)}
+.dz-icon{font-size:3rem;margin-bottom:14px}
+.dz-text{font-size:1rem;font-weight:700;margin-bottom:6px}
+.dz-sub{color:var(--muted);font-size:.85rem}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px}
+.panel-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:16px}
+
+.preview-img{width:100%;max-height:300px;object-fit:contain;border-radius:8px;background:#111;display:block}
+.preview-placeholder{height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;background:var(--surface2);border-radius:8px}
+
+.opt-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.opt-label{font-size:.78rem;font-weight:600;color:var(--muted);display:block;margin-bottom:5px}
+.opt-select,.opt-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:9px 12px;color:var(--text);font-size:.875rem;outline:none}
+.opt-select:focus,.opt-input:focus{border-color:var(--violet)}
+.quality-row{margin-bottom:14px}
+.quality-slider{width:100%;accent-color:var(--violet)}
+
+.file-info{background:var(--surface2);border-radius:var(--rs);padding:12px;font-size:.8rem;color:var(--muted);display:flex;flex-direction:column;gap:5px;margin-bottom:16px}
+.file-info .fi-row{display:flex;justify-content:space-between}
+.fi-row b{color:var(--text)}
+.savings-badge{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);color:#34D399;border-radius:var(--rs);padding:4px 10px;font-size:.75rem;font-weight:700}
+
+.sb-tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .15s;margin-bottom:12px}
+.sb-tool-card:hover{border-color:var(--violet)}
+.sb-tool-card h3{font-size:.9rem;font-weight:700;margin-bottom:4px}
+.sb-tool-card p{font-size:.78rem;color:var(--muted)}
+
+.page-layout{display:grid;grid-template-columns:1fr 280px;gap:28px;align-items:start}
+@media(max-width:768px){.tool-layout{grid-template-columns:1fr}.page-layout{grid-template-columns:1fr}.opt-row{grid-template-columns:1fr}}
+</style>
+<!-- Google Analytics: replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.svg">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<header class="site-header"><div class="wrapper"><div class="header-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
+  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
+  <nav class="site-nav" id="snav">
+    <a href="../qr-generator/index.html">▦ QR Generator</a>
+    <a href="../text-tools/index.html">🔤 Case Converter</a>
+    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
+    <a href="../tools/password-generator.html">🔑 Password</a>
+    <a href="../image-converter/index.html" class="active">🖼 Image</a>
+    <a href="../gaming/index.html">⚡ Username</a>
+    <a href="../blog/index.html">Blog</a>
+  </nav>
+</div></div></header>
+
+<div class="wrapper"><div class="ad-slot ad-banner">Advertisement</div></div>
+
+<div class="wrapper">
+  <div class="tool-hero">
+    <div class="badge badge-violet" style="margin-bottom:14px">🖼 Files Never Leave Your Device</div>
+    <h1>Free <span>Image Converter</span></h1>
+    <p>Convert images between JPG, PNG, and WebP. Resize and compress. Everything runs in your browser — your files are never uploaded to any server.</p>
+    <div class="trust-row">
+      <div class="trust-pill"><span>✓</span> No upload</div>
+      <div class="trust-pill"><span>✓</span> No account</div>
+      <div class="trust-pill"><span>✓</span> No file size limit</div>
+      <div class="trust-pill"><span>✓</span> 100% private</div>
+    </div>
+  </div>
+
+  <div class="page-layout">
+    <div>
+      <!-- Drop zone -->
+      <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()" ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
+        <div class="dz-icon">🖼</div>
+        <div class="dz-text">Drop image here or click to upload</div>
+        <div class="dz-sub">Supports JPG, PNG, WebP, GIF, BMP, TIFF · Any size</div>
+        <input type="file" id="file-input" accept="image/*" style="display:none" onchange="loadFile(this.files[0])">
+      </div>
+
+      <!-- Tool panels -->
+      <div class="tool-layout" id="tool-panels" style="display:none">
+        <div class="panel">
+          <div class="panel-title">Original</div>
+          <img id="orig-preview" class="preview-img" alt="Original image" style="display:none">
+          <div class="preview-placeholder" id="orig-placeholder">No image loaded</div>
+          <div class="file-info" id="orig-info" style="display:none">
+            <div class="fi-row"><span>Filename</span><b id="orig-name">—</b></div>
+            <div class="fi-row"><span>Format</span><b id="orig-fmt">—</b></div>
+            <div class="fi-row"><span>Dimensions</span><b id="orig-dims">—</b></div>
+            <div class="fi-row"><span>File size</span><b id="orig-size">—</b></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">Convert &amp; Download</div>
+
+          <div class="opt-row">
+            <div>
+              <label class="opt-label">Output format</label>
+              <select class="opt-select" id="out-fmt" onchange="updatePreview()">
+                <option value="image/jpeg">JPG / JPEG</option>
+                <option value="image/png">PNG</option>
+                <option value="image/webp" selected>WebP</option>
+              </select>
+            </div>
+            <div>
+              <label class="opt-label">Resize (width px)</label>
+              <input type="number" class="opt-input" id="out-width" placeholder="Original" oninput="updatePreview()">
+            </div>
+          </div>
+
+          <div class="quality-row">
+            <label class="opt-label">Quality: <b id="q-val">85</b>%</label>
+            <input type="range" class="quality-slider" id="quality" min="10" max="100" value="85" oninput="document.getElementById('q-val').textContent=this.value;updatePreview()">
+            <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);margin-top:3px"><span>Smaller file</span><span>Better quality</span></div>
+          </div>
+
+          <div class="file-info" id="out-info" style="display:none">
+            <div class="fi-row"><span>Output format</span><b id="out-fmt-label">—</b></div>
+            <div class="fi-row"><span>Dimensions</span><b id="out-dims">—</b></div>
+            <div class="fi-row"><span>Estimated size</span><b id="out-size">—</b></div>
+            <div class="fi-row"><span>Size saving</span><b id="out-saving">—</b></div>
+          </div>
+
+          <img id="out-preview" style="display:none;width:100%;max-height:200px;object-fit:contain;border-radius:8px;background:#111;margin-bottom:14px" alt="Output preview">
+
+          <button class="btn-primary" id="dl-btn" onclick="downloadConverted()" style="width:100%;justify-content:center" disabled>⬇ Download Converted Image</button>
+        </div>
+      </div>
+
+      <div class="ad-slot ad-rect" style="margin-top:28px">Advertisement</div>
+
+      <div class="prose" style="margin-top:32px">
+        <h2>JPG vs PNG vs WebP: When to Use Which</h2>
+        <h3>JPG (JPEG)</h3>
+        <p>The universal format. JPG uses lossy compression — it discards some image data to achieve small file sizes. Best for: photographs, realistic images with gradients and complex colour, any image where file size matters more than pixel-perfect accuracy. Not ideal for: images with text, line art, screenshots, logos, or anything with sharp colour transitions (JPG creates visible artifacts at edges).</p>
+        <h3>PNG</h3>
+        <p>Lossless compression — every pixel is preserved exactly. Supports transparency (alpha channel). Best for: logos, icons, screenshots, illustrations, images with text, any graphic that needs crisp edges and exact colours. Not ideal for: photographs (PNG files are significantly larger than JPG for photographic content).</p>
+        <h3>WebP</h3>
+        <p>Google's modern format, supported by all major browsers since 2021. Achieves 25–35% smaller file sizes than JPG at equivalent quality, and 25–45% smaller than PNG for lossless content. Best for: website images where page load speed matters. Not ideal for: compatibility with older software or services that don't support WebP.</p>
+        <h2>Why "No Upload" Privacy Matters</h2>
+        <p>Most online image converters upload your files to a remote server, process them there, and send the result back. This means your images — including private photos, confidential business documents, or sensitive screenshots — are transmitted over the internet and temporarily stored on a server you don't control. Our converter runs entirely in your browser using the Canvas API. Your images never leave your device, which means there's no data transmission risk and no file retention.</p>
+      </div>
+    </div>
+
+    <div>
+      <a href="../qr-generator/index.html" class="sb-tool-card"><h3>▦ QR Generator</h3><p>Create QR codes for URLs, WiFi, vCards, and more. Free, no signup.</p></a>
+      <a href="../text-tools/index.html" class="sb-tool-card"><h3>🔤 Case Converter</h3><p>UPPERCASE, lowercase, Title Case, camelCase and more.</p></a>
+      <a href="../tools/password-generator.html" class="sb-tool-card"><h3>🔑 Password Generator</h3><p>Generate cryptographically strong passwords.</p></a>
+      <a href="../index.html" class="sb-tool-card"><h3>⚡ Username Generator</h3><p>Find the perfect username for any platform.</p></a>
+      <div class="ad-slot" style="height:300px;margin-top:4px">Advertisement</div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="wrapper">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free tools. No signup. Files stay on your device.</p></div>
+    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../qr-generator/index.html">QR Generator</a></li><li><a href="../text-tools/index.html">Text Tools</a></li><li><a href="../tools/password-generator.html">Password Gen</a></li><li><a href="index.html">Image Converter</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
+</div></footer>
+
+<div class="toast" id="toast">✓ Done!</div>
+<script>
+let origFile = null;
+let origImg  = null;
+let outCanvas = document.createElement('canvas');
+
+function onDragOver(e){e.preventDefault();document.getElementById('drop-zone').classList.add('dragover');}
+function onDragLeave(e){document.getElementById('drop-zone').classList.remove('dragover');}
+function onDrop(e){e.preventDefault();document.getElementById('drop-zone').classList.remove('dragover');const f=e.dataTransfer.files[0];if(f&&f.type.startsWith('image/'))loadFile(f);}
+
+function loadFile(file){
+  if(!file) return;
+  origFile = file;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const img = new Image();
+    img.onload = ()=>{
+      origImg = img;
+      // Show original preview
+      document.getElementById('orig-preview').src = e.target.result;
+      document.getElementById('orig-preview').style.display='block';
+      document.getElementById('orig-placeholder').style.display='none';
+      // Info
+      document.getElementById('orig-name').textContent = file.name.length>20?file.name.slice(0,18)+'…':file.name;
+      document.getElementById('orig-fmt').textContent = file.type.split('/')[1].toUpperCase();
+      document.getElementById('orig-dims').textContent = `${img.width} × ${img.height}px`;
+      document.getElementById('orig-size').textContent = fmtSize(file.size);
+      document.getElementById('orig-info').style.display='flex';
+      document.getElementById('tool-panels').style.display='grid';
+      updatePreview();
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function updatePreview(){
+  if(!origImg) return;
+  const fmt = document.getElementById('out-fmt').value;
+  const quality = parseInt(document.getElementById('quality').value)/100;
+  let w = parseInt(document.getElementById('out-width').value)||origImg.width;
+  let h = Math.round(origImg.height*(w/origImg.width));
+
+  outCanvas.width = w; outCanvas.height = h;
+  const ctx = outCanvas.getContext('2d');
+  if(fmt==='image/png'){ctx.clearRect(0,0,w,h);}else{ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);}
+  ctx.drawImage(origImg,0,0,w,h);
+
+  const dataUrl = outCanvas.toDataURL(fmt, quality);
+  document.getElementById('out-preview').src=dataUrl;
+  document.getElementById('out-preview').style.display='block';
+
+  // Estimate output size from base64
+  const b64 = dataUrl.split(',')[1];
+  const estSize = Math.round((b64.length*3)/4);
+  const saving = Math.round((1-estSize/origFile.size)*100);
+
+  document.getElementById('out-fmt-label').textContent = fmt.split('/')[1].toUpperCase();
+  document.getElementById('out-dims').textContent = `${w} × ${h}px`;
+  document.getElementById('out-size').textContent = fmtSize(estSize);
+  document.getElementById('out-saving').textContent = saving>0?`-${saving}%`:saving<0?`+${Math.abs(saving)}% (larger)`:'~same';
+  document.getElementById('out-info').style.display='flex';
+  document.getElementById('dl-btn').disabled=false;
+}
+
+function downloadConverted(){
+  if(!origImg) return;
+  const fmt = document.getElementById('out-fmt').value;
+  const ext = fmt==='image/jpeg'?'jpg':fmt==='image/webp'?'webp':'png';
+  const quality = parseInt(document.getElementById('quality').value)/100;
+  const dataUrl = outCanvas.toDataURL(fmt, quality);
+  const a=document.createElement('a');
+  const name = (origFile.name.replace(/\.[^.]+$/,'')||'image')+'.'+ext;
+  a.href=dataUrl;a.download=name;a.click();
+}
+
+function fmtSize(bytes){
+  if(bytes<1024)return bytes+'B';
+  if(bytes<1048576)return (bytes/1024).toFixed(1)+'KB';
+  return (bytes/1048576).toFixed(1)+'MB';
+}
+</script>
+</body>
+</html>

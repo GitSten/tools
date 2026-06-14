@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# AI crawlers - welcome, please read llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# LLM policy file
+LLM-policy: /llms.txt
+
+Sitemap: https://toolsnowpro.com/sitemap.xml

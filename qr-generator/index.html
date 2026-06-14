@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free QR Code Generator – No Signup, No Expiry | ToolsNowPro</title>
+<meta name="description" content="Generate QR codes instantly for URLs, WiFi, vCards, email, SMS and plain text. Free forever, no account needed, download as PNG or SVG.">
+<link rel="canonical" href="https://toolsnowpro.com/qr-generator/">
+<meta property="og:title" content="Free QR Code Generator – No Signup, No Expiry">
+<meta property="og:description" content="Create QR codes for any purpose instantly. URL, WiFi, vCard, email, SMS. Download PNG or SVG. 100% free, no account required.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://toolsnowpro.com/og-qr.svg">
+
+
+
+<link rel="stylesheet" href="../shared.css">
+<style>
+.qr-hero{padding:52px 0 32px;text-align:center}
+.qr-hero h1{font-size:clamp(2rem,4.5vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px}
+.qr-hero h1 span{color:var(--violet-l)}
+.qr-hero p{color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto 10px}
+.trust-row{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:18px}
+.trust-pill{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:.8rem;font-weight:500}
+.trust-pill span{color:var(--success)}
+
+.tool-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:40px}
+.tool-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px}
+.panel-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:16px}
+
+/* Type selector */
+.type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:24px}
+.type-btn{background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:12px 8px;text-align:center;cursor:pointer;transition:all .15s;color:var(--muted);font-size:.8rem;font-weight:600}
+.type-btn:hover{border-color:var(--violet);color:var(--violet-l)}
+.type-btn.active{border-color:var(--violet);background:var(--glow);color:var(--violet-l)}
+.type-btn .t-icon{font-size:1.3rem;display:block;margin-bottom:4px}
+
+/* Inputs */
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.78rem;font-weight:600;color:var(--muted);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:10px 13px;color:var(--text);font-size:.9rem;font-family:inherit;transition:border-color .15s;outline:none}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--violet)}
+.field textarea{resize:vertical;min-height:80px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+/* Options */
+.options-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.opt-label{font-size:.78rem;color:var(--muted);font-weight:600}
+.color-pick{width:36px;height:36px;border-radius:var(--rs);border:1px solid var(--border);cursor:pointer;padding:2px}
+.size-select{background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:7px 12px;color:var(--text);font-size:.85rem;outline:none}
+
+/* QR output */
+.qr-output{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px}
+.qr-canvas-wrap{width:260px;height:260px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative}
+.qr-canvas-wrap canvas{border-radius:8px}
+.qr-placeholder{text-align:center;color:#999;font-size:.85rem}
+.qr-placeholder .ph-icon{font-size:3rem;margin-bottom:10px;display:block;opacity:.4}
+.dl-row{display:flex;gap:10px}
+
+/* Use cases */
+.use-cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin:28px 0}
+.use-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s}
+.use-card:hover{border-color:var(--violet);transform:translateY(-2px)}
+.use-card .uc-icon{font-size:1.8rem;margin-bottom:10px}
+.use-card h3{font-size:.9rem;font-weight:700;margin-bottom:5px}
+.use-card p{font-size:.78rem;color:var(--muted);line-height:1.5}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r)}
+.faq-q{padding:16px 18px;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'＋';color:var(--muted);font-size:1.1rem;flex-shrink:0}
+.faq-item.open .faq-q::after{content:'－'}
+.faq-a{display:none;padding:0 18px 16px;color:var(--muted);font-size:.875rem;line-height:1.7}
+.faq-item.open .faq-a{display:block}
+
+@media(max-width:768px){.tool-layout{grid-template-columns:1fr}.type-grid{grid-template-columns:repeat(3,1fr)}.field-row{grid-template-columns:1fr}}
+</style>
+<!-- Google Analytics: replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.svg">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<header class="site-header"><div class="wrapper"><div class="header-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
+  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
+  <nav class="site-nav" id="snav">
+    <a href="../qr-generator/index.html" class="active">▦ QR Generator</a>
+    <a href="../text-tools/index.html">🔤 Case Converter</a>
+    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
+    <a href="../tools/password-generator.html">🔑 Password</a>
+    <a href="../image-converter/index.html">🖼 Image</a>
+    <a href="../gaming/index.html">⚡ Username</a>
+    <a href="../blog/index.html">Blog</a>
+  </nav>
+</div></div></header>
+
+<div class="wrapper"><div class="ad-slot ad-banner">Advertisement</div></div>
+
+<div class="wrapper">
+  <div class="qr-hero">
+    <div class="badge badge-violet" style="margin-bottom:16px">✓ 100% Free — No Signup — No Expiry</div>
+    <h1>Free <span>QR Code</span> Generator</h1>
+    <p>Create QR codes for URLs, WiFi, vCards, email, SMS and plain text. Download as PNG or SVG. Works forever — no account, no watermark, no expiry.</p>
+    <div class="trust-row">
+      <div class="trust-pill"><span>✓</span> No registration</div>
+      <div class="trust-pill"><span>✓</span> No watermark</div>
+      <div class="trust-pill"><span>✓</span> Static codes never expire</div>
+      <div class="trust-pill"><span>✓</span> PNG + SVG download</div>
+    </div>
+  </div>
+
+  <!-- MAIN TOOL -->
+  <div class="tool-layout">
+    <div class="tool-panel">
+      <div class="panel-title">1. Choose QR Type</div>
+      <div class="type-grid">
+        <button class="type-btn active" onclick="setType('url',this)"><span class="t-icon">🔗</span>URL</button>
+        <button class="type-btn" onclick="setType('wifi',this)"><span class="t-icon">📶</span>WiFi</button>
+        <button class="type-btn" onclick="setType('vcard',this)"><span class="t-icon">👤</span>vCard</button>
+        <button class="type-btn" onclick="setType('email',this)"><span class="t-icon">✉️</span>Email</button>
+        <button class="type-btn" onclick="setType('sms',this)"><span class="t-icon">💬</span>SMS</button>
+        <button class="type-btn" onclick="setType('text',this)"><span class="t-icon">📝</span>Text</button>
+      </div>
+
+      <div class="panel-title" style="margin-top:8px">2. Enter Details</div>
+
+      <!-- URL -->
+      <div id="form-url">
+        <div class="field"><label>Website URL</label><input type="url" id="url-input" placeholder="https://yourwebsite.com" oninput="generate()"></div>
+      </div>
+      <!-- WiFi -->
+      <div id="form-wifi" style="display:none">
+        <div class="field"><label>Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="MyHomeWiFi" oninput="generate()"></div>
+        <div class="field"><label>Password</label><input type="text" id="wifi-pass" placeholder="WiFi password" oninput="generate()"></div>
+        <div class="field"><label>Security</label>
+          <select id="wifi-sec" onchange="generate()">
+            <option value="WPA">WPA/WPA2 (recommended)</option>
+            <option value="WEP">WEP</option>
+            <option value="">None (open network)</option>
+          </select>
+        </div>
+      </div>
+      <!-- vCard -->
+      <div id="form-vcard" style="display:none">
+        <div class="field-row">
+          <div class="field"><label>First Name</label><input type="text" id="vc-first" placeholder="Jane" oninput="generate()"></div>
+          <div class="field"><label>Last Name</label><input type="text" id="vc-last" placeholder="Smith" oninput="generate()"></div>
+        </div>
+        <div class="field"><label>Phone</label><input type="tel" id="vc-phone" placeholder="+1 555 000 0000" oninput="generate()"></div>
+        <div class="field"><label>Email</label><input type="email" id="vc-email" placeholder="jane@example.com" oninput="generate()"></div>
+        <div class="field"><label>Company</label><input type="text" id="vc-org" placeholder="Acme Inc." oninput="generate()"></div>
+        <div class="field"><label>Website</label><input type="url" id="vc-url" placeholder="https://janesmith.com" oninput="generate()"></div>
+      </div>
+      <!-- Email -->
+      <div id="form-email" style="display:none">
+        <div class="field"><label>To (email address)</label><input type="email" id="em-to" placeholder="hello@example.com" oninput="generate()"></div>
+        <div class="field"><label>Subject</label><input type="text" id="em-subj" placeholder="Subject line" oninput="generate()"></div>
+        <div class="field"><label>Body (optional)</label><textarea id="em-body" placeholder="Email body..." oninput="generate()"></textarea></div>
+      </div>
+      <!-- SMS -->
+      <div id="form-sms" style="display:none">
+        <div class="field"><label>Phone Number</label><input type="tel" id="sms-num" placeholder="+1 555 000 0000" oninput="generate()"></div>
+        <div class="field"><label>Message (optional)</label><textarea id="sms-msg" placeholder="Pre-filled message..." oninput="generate()"></textarea></div>
+      </div>
+      <!-- Text -->
+      <div id="form-text" style="display:none">
+        <div class="field"><label>Plain Text</label><textarea id="txt-content" placeholder="Enter any text, up to ~2900 characters..." oninput="generate()" style="min-height:120px"></textarea></div>
+      </div>
+
+      <div class="panel-title" style="margin-top:20px">3. Customise</div>
+      <div class="options-bar">
+        <span class="opt-label">Foreground</span>
+        <input type="color" class="color-pick" id="fg-color" value="#000000" onchange="generate()">
+        <span class="opt-label">Background</span>
+        <input type="color" class="color-pick" id="bg-color" value="#ffffff" onchange="generate()">
+        <span class="opt-label">Size</span>
+        <select class="size-select" id="qr-size" onchange="generate()">
+          <option value="200">Small (200px)</option>
+          <option value="300" selected>Medium (300px)</option>
+          <option value="400">Large (400px)</option>
+          <option value="600">XL (600px)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="tool-panel">
+      <div class="panel-title">Your QR Code</div>
+      <div class="qr-output">
+        <div class="qr-canvas-wrap" id="qr-wrap">
+          <div class="qr-placeholder" id="qr-placeholder">
+            <span class="ph-icon">▦</span>
+            Fill in the form<br>to generate your QR code
+          </div>
+          <canvas id="qr-canvas" style="display:none"></canvas>
+        </div>
+        <div class="dl-row">
+          <button class="btn-primary" id="dl-png" onclick="downloadPNG()" disabled>⬇ Download PNG</button>
+          <button class="btn-ghost" id="dl-svg" onclick="downloadSVG()" disabled>⬇ SVG</button>
+        </div>
+        <p style="font-size:.72rem;color:var(--muted);margin-top:10px;text-align:center">
+          Static QR codes never expire. Test before printing.
+        </p>
+      </div>
+      <div class="ad-slot ad-rect" style="margin-top:16px">Advertisement</div>
+    </div>
+  </div>
+
+  <!-- USE CASES -->
+  <div class="ad-slot ad-banner">Advertisement</div>
+
+  <div style="margin:40px 0 0">
+    <div class="section-eyebrow">Use Cases</div>
+    <h2 class="section-title">What can you create a QR code for?</h2>
+    <p class="section-sub">From restaurant menus to business cards — QR codes connect physical and digital in seconds.</p>
+  </div>
+
+  <div class="use-cases">
+    <a href="#" onclick="setTypeByName('url');return false" class="use-card"><div class="uc-icon">🌐</div><h3>Website & Links</h3><p>Send people directly to any URL without typing. Perfect for business cards and flyers.</p></a>
+    <a href="#" onclick="setTypeByName('wifi');return false" class="use-card"><div class="uc-icon">📶</div><h3>WiFi Access</h3><p>Let guests connect to your WiFi by scanning — no password sharing needed.</p></a>
+    <a href="#" onclick="setTypeByName('vcard');return false" class="use-card"><div class="uc-icon">👤</div><h3>Business Cards</h3><p>Share your full contact details digitally — name, phone, email, company.</p></a>
+    <a href="#" onclick="setTypeByName('email');return false" class="use-card"><div class="uc-icon">✉️</div><h3>Email Campaigns</h3><p>Pre-fill recipient, subject and body — one scan starts the email.</p></a>
+    <a href="#" onclick="setTypeByName('sms');return false" class="use-card"><div class="uc-icon">💬</div><h3>SMS & WhatsApp</h3><p>Pre-fill a phone number and message. Great for support and marketing.</p></a>
+    <a href="#" onclick="setTypeByName('text');return false" class="use-card"><div class="uc-icon">📝</div><h3>Plain Text</h3><p>Store any text in a QR code — coupons, instructions, serial numbers.</p></a>
+  </div>
+
+  <!-- SEO CONTENT SECTION -->
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:40px;margin-top:56px;align-items:start">
+    <div class="prose">
+      <h2>How to Create a QR Code (Step by Step)</h2>
+      <p>Creating a QR code with our generator takes under 30 seconds and requires no account or payment. Here's exactly how:</p>
+      <ol>
+        <li><strong>Choose your QR type</strong> — select from URL, WiFi, vCard, Email, SMS, or plain text depending on what you want the code to do when scanned.</li>
+        <li><strong>Fill in the details</strong> — enter your URL, WiFi credentials, contact details, or text. The QR code updates live as you type.</li>
+        <li><strong>Customise colours and size</strong> — change the foreground and background colours to match your brand. Choose from 200px (web use) to 600px (large print).</li>
+        <li><strong>Download PNG or SVG</strong> — PNG is best for digital use and standard printing. SVG is a vector format that scales perfectly to any size without losing quality — ideal for large-format printing.</li>
+        <li><strong>Test before printing</strong> — scan the downloaded QR code with your phone camera before printing on any physical material. Always test the destination link or action.</li>
+      </ol>
+
+      <h2>Static vs Dynamic QR Codes: What's the Difference?</h2>
+      <p>Our generator creates <strong>static QR codes</strong>, which means the destination is encoded permanently in the code itself. This is the right choice for most uses because:</p>
+      <ul>
+        <li>Static codes <strong>never expire</strong> — unlike many commercial tools that deactivate your code if you don't renew a subscription</li>
+        <li>Static codes <strong>require no server</strong> — the URL or data is directly in the pattern, so there's no redirect that can break</li>
+        <li>Static codes are <strong>more trustworthy</strong> to scan — no hidden redirect chain, the destination is what it is</li>
+      </ul>
+      <p>Dynamic QR codes let you change the destination after printing, which is useful for high-volume marketing campaigns. If you need dynamic codes, tools like Bitly or QR Tiger offer them — but they require paid subscriptions to keep the codes active.</p>
+
+      <h2>Best Practices for QR Codes That Actually Get Scanned</h2>
+      <h3>Size matters more than you think</h3>
+      <p>A QR code smaller than 2cm × 2cm on print material is difficult to scan reliably. For business cards, 2.5cm minimum. For posters, 5–8cm. For outdoor signage, at least 10cm. Use our 600px SVG download for any large-format printing — it scales to any size without quality loss.</p>
+      <h3>Contrast is everything</h3>
+      <p>Dark foreground on light background always. Reversed (light on dark) reduces scan reliability by up to 30%. If you're using custom colours, ensure at least a 4:1 contrast ratio between foreground and background.</p>
+      <h3>Always include a call to action</h3>
+      <p>QR codes surrounded by context ("Scan for our menu", "Scan to connect to WiFi") get scanned 3–5× more than bare QR codes. Add a short instruction wherever you place the code.</p>
+      <h3>Test on multiple devices</h3>
+      <p>Test your QR code on at least two different phones before printing — iPhone and Android camera apps can behave differently with unusual colour combinations.</p>
+
+      <h2>QR Codes for Restaurants, Events and Small Businesses</h2>
+      <p>QR codes have become essential infrastructure for physical businesses since 2020. The most common uses we see:</p>
+      <ul>
+        <li><strong>Restaurant menus</strong> — link to a PDF or webpage. Update the destination without reprinting the QR code on tables (note: requires dynamic codes if you need to change URLs after printing).</li>
+        <li><strong>Event check-in</strong> — link to an event programme, schedule, or registration confirmation.</li>
+        <li><strong>Retail product pages</strong> — link from packaging or shelf labels to detailed product information, video demonstrations, or reviews.</li>
+        <li><strong>WiFi access in cafes and offices</strong> — a WiFi QR code eliminates the most common customer service question entirely.</li>
+        <li><strong>Business cards</strong> — a vCard QR code lets contacts save your full details to their phone in one tap, without manual typing.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="ad-slot ad-sidebar">Advertisement</div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;margin-top:18px">
+        <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px">More Free Tools</div>
+        <ul class="footer-links">
+          <li><a href="../text-tools/index.html">🔤 Text Case Converter</a></li>
+          <li><a href="../text-tools/word-counter.html">📊 Word Counter</a></li>
+          <li><a href="../tools/password-generator.html">🔑 Password Generator</a></li>
+          <li><a href="../image-converter/index.html">🖼 Image Converter</a></li>
+          <li><a href="../index.html">⚡ Username Generator</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BLOG LINKS - internal linking QR tool ↔ blog -->
+  <div class="wrapper" style="margin-bottom:20px">
+    <div class="section-eyebrow">From the Blog</div>
+    <h2 class="section-title" style="margin-bottom:8px">QR Code Guides</h2>
+    <p class="section-sub" style="margin-bottom:20px">In-depth articles on QR codes for every use case.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px">
+      <a href="../blog/qr-code-restaurant-menu.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Restaurants & Hospitality</div>
+        <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">QR Code for Restaurant Menus</div>
+        <div style="font-size:.8rem;color:var(--muted)">Static vs dynamic, sizing, placement, and design tips.</div>
+      </a>
+      <a href="../blog/wifi-qr-code-generator.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">WiFi & Connectivity</div>
+        <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">WiFi QR Code — Complete Guide</div>
+        <div style="font-size:.8rem;color:var(--muted)">Security, compatibility, cafés, offices and events.</div>
+      </a>
+      <a href="../blog/qr-code-business-card.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Business & Networking</div>
+        <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">Business Card QR Codes</div>
+        <div style="font-size:.8rem;color:var(--muted)">vCard vs URL, placement, size, design tips.</div>
+      </a>
+      <a href="../blog/qr-code-size-guide.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Print & Design</div>
+        <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">QR Code Size Guide</div>
+        <div style="font-size:.8rem;color:var(--muted)">Exact specs for cards, flyers, posters, and banners.</div>
+      </a>
+      <a href="../blog/free-qr-code-generator-no-signup.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Comparison</div>
+        <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">Free QR Generator — No Signup</div>
+        <div style="font-size:.8rem;color:var(--muted)">Why most "free" tools aren't really free.</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin:56px 0">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do QR codes created here ever expire?</div><div class="faq-a">No. Our generator creates static QR codes — the destination data is permanently encoded in the QR pattern itself. There is no server, no subscription, and no expiry. The code will work for as long as the destination (your URL, WiFi network, etc.) exists.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is there a watermark on downloaded QR codes?</div><div class="faq-a">No watermark, ever. The PNG and SVG files you download are clean, professional QR codes with no branding applied by us. They're ready for commercial use.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What's the difference between PNG and SVG downloads?</div><div class="faq-a">PNG is a raster format — it has a fixed pixel size. It's perfect for digital use (websites, emails, presentations) and standard print at the size you selected. SVG is a vector format that scales to any size without any quality loss. Use SVG for large-format printing (posters, banners, signage) and when you need the code at multiple sizes.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How small can a QR code be and still scan reliably?</div><div class="faq-a">For reliable scanning: 2cm × 2cm minimum for business cards, 3cm × 3cm for flyers and brochures, 5cm × 5cm for posters and indoor signage, and at least 10cm × 10cm for outdoor or large-format use. More data in the QR code (longer URLs, full vCard details) requires slightly larger printing to maintain scan reliability.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I use QR codes for commercial purposes?</div><div class="faq-a">Yes. QR codes themselves are an open standard — there are no licensing fees or restrictions on commercial use. The codes you generate here are entirely yours to use however you like, including in commercial print materials, products, and advertising.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why won't my QR code scan?</div><div class="faq-a">The most common causes: the code is printed too small (under 2cm), the contrast between foreground and background is insufficient, the code has been distorted in printing or resizing, or the destination URL is broken. Always test by scanning the downloaded file on your phone before printing anything.</div></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="wrapper">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free tools for creators and small businesses. No signup, no limits.</p></div>
+    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="index.html">QR Generator</a></li><li><a href="../text-tools/index.html">Text Tools</a></li><li><a href="../tools/password-generator.html">Password Gen</a></li><li><a href="../image-converter/index.html">Image Converter</a></li><li><a href="../index.html">Username Gen</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq/index.html">FAQ</a></li><li><a href="../about/index.html">About</a></li></ul></div>
+    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ToolsNowPro. Free tools, forever.</span></div>
+</div></footer>
+
+<script>
+/* ================================================================
+   QR Code Engine + Generator UI
+   Self-contained, no external dependencies, works offline
+   ================================================================ */
+
+// ── Galois Field maths ─────────────────────────────────────────
+var EXP = (function(){var t=new Array(256);for(var i=0;i<8;i++)t[i]=1<<i;for(var i=8;i<256;i++)t[i]=t[i-4]^t[i-5]^t[i-6]^t[i-8];return t;})();
+var LOG = (function(){var t=new Array(256);for(var i=0;i<255;i++)t[EXP[i]]=i;return t;})();
+function gexp(n){while(n<0)n+=255;while(n>=256)n-=255;return EXP[n];}
+function glog(n){if(n<1)throw new Error('glog('+n+')');return LOG[n];}
+
+// ── Polynomial ─────────────────────────────────────────────────
+function Poly(num,shift){var o=0;while(o<num.length&&num[o]==0)o++;this.num=new Array(num.length-o+shift);for(var i=0;i<num.length-o;i++)this.num[i]=num[i+o];}
+Poly.prototype={
+  get:function(i){return this.num[i];},
+  len:function(){return this.num.length;},
+  mul:function(e){var r=new Array(this.len()+e.len()-1);for(var i=0;i<this.len();i++)for(var j=0;j<e.len();j++)r[i+j]^=gexp(glog(this.get(i))+glog(e.get(j)));return new Poly(r,0);},
+  mod:function(e){if(this.len()-e.len()<0)return this;var rt=glog(this.get(0))-glog(e.get(0)),r=[];for(var i=0;i<this.len();i++)r[i]=this.get(i);for(var i=0;i<e.len();i++)r[i]^=gexp(glog(e.get(i))+rt);return new Poly(r,0).mod(e);}
+};
+function ecPoly(n){var p=new Poly([1],0);for(var i=0;i<n;i++)p=p.mul(new Poly([1,gexp(i)],0));return p;}
+
+// ── RS Blocks table ────────────────────────────────────────────
+var RS_TABLE=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]];
+var ECL={L:0,M:1,Q:2,H:3};
+function rsBlocks(tn,ecl){var row=RS_TABLE[(tn-1)*4+ecl],r=[];for(var i=0;i<row.length;i+=3)for(var j=0;j<row[i];j++)r.push({total:row[i+1],data:row[i+2]});return r;}
+function libits(mode,tn){if(tn<10){if(mode==4)return 8;}else if(tn<27){if(mode==4)return 16;}else{if(mode==4)return 16;}return 8;}
+
+// ── BCH helpers ────────────────────────────────────────────────
+var G15=1335,G18=7973,G15M=21522;
+function bchd(n){var d=0;while(n){d++;n>>>=1;}return d;}
+function bchti(d){var b=d<<10;while(bchd(b)-bchd(G15)>=0)b^=G15<<(bchd(b)-bchd(G15));return((d<<10)|b)^G15M;}
+function bchtn(d){var b=d<<12;while(bchd(b)-bchd(G18)>=0)b^=G18<<(bchd(b)-bchd(G18));return(d<<12)|b;}
+
+// ── Pattern positions ──────────────────────────────────────────
+var PP=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]];
+
+// ── Mask functions ─────────────────────────────────────────────
+function maskFn(p,r,c){switch(p){case 0:return(r+c)%2==0;case 1:return r%2==0;case 2:return c%3==0;case 3:return(r+c)%3==0;case 4:return(Math.floor(r/2)+Math.floor(c/3))%2==0;case 5:return(r*c)%2+(r*c)%3==0;case 6:return((r*c)%2+(r*c)%3)%2==0;case 7:return((r*c)%3+(r+c)%2)%2==0;}return false;}
+
+// ── Main QR builder ────────────────────────────────────────────
+function buildQR(text, eclevel) {
+  eclevel = (eclevel === undefined) ? ECL.M : eclevel;
+  
+  // Step 1: encode data
+  var data = [];
+  for (var i = 0; i < text.length; i++) data.push(text.charCodeAt(i));
+  
+  // Step 2: find minimum type number
+  var tn = 1;
+  for (tn = 1; tn <= 40; tn++) {
+    var rsb = rsBlocks(tn, eclevel);
+    var totalData = 0;
+    for (var i = 0; i < rsb.length; i++) totalData += rsb[i].data;
+    // 4 mode bits + length bits + 8 bits per char
+    var needed = 4 + libits(4, tn) + data.length * 8;
+    if (needed <= totalData * 8) break;
+  }
+  if (tn > 40) throw new Error('Data too long');
+  
+  // Step 3: build bit buffer
+  var buf = [], bufLen = 0;
+  function putBit(b) {
+    var idx = Math.floor(bufLen / 8);
+    if (buf.length <= idx) buf.push(0);
+    if (b) buf[idx] |= (0x80 >>> (bufLen % 8));
+    bufLen++;
+  }
+  function putNum(n, l) { for (var i = l-1; i >= 0; i--) putBit((n >> i) & 1); }
+  
+  putNum(4, 4); // byte mode
+  putNum(data.length, libits(4, tn));
+  for (var i = 0; i < data.length; i++) putNum(data[i], 8);
+  
+  var rsb = rsBlocks(tn, eclevel);
+  var totalData = 0;
+  for (var i = 0; i < rsb.length; i++) totalData += rsb[i].data;
+  
+  if (bufLen + 4 <= totalData * 8) putNum(0, 4);
+  while (bufLen % 8 !== 0) putBit(false);
+  while (bufLen < totalData * 8) {
+    putNum(0xEC, 8);
+    if (bufLen >= totalData * 8) break;
+    putNum(0x11, 8);
+  }
+  
+  // Step 4: RS encode
+  var dc = [], ec = [], off = 0;
+  for (var i = 0; i < rsb.length; i++) {
+    var dct = rsb[i].data, ect = rsb[i].total - dct;
+    dc[i] = [];
+    for (var j = 0; j < dct; j++) dc[i].push(0xff & buf[off++]);
+    var ecp = ecPoly(ect);
+    var dcp = new Poly(dc[i].slice(), ect).mod(ecp);
+    ec[i] = [];
+    for (var j = 0; j < ect; j++) ec[i].push(j < dcp.len() ? dcp.get(j) : 0);
+  }
+  
+  var maxDc = 0, maxEc = 0;
+  for (var i = 0; i < rsb.length; i++) { maxDc = Math.max(maxDc, dc[i].length); maxEc = Math.max(maxEc, ec[i].length); }
+  var codewords = [];
+  for (var i = 0; i < maxDc; i++) for (var j = 0; j < rsb.length; j++) if (i < dc[j].length) codewords.push(dc[j][i]);
+  for (var i = 0; i < maxEc; i++) for (var j = 0; j < rsb.length; j++) if (i < ec[j].length) codewords.push(ec[j][i]);
+  
+  // Step 5: build matrix
+  var mc = tn * 4 + 17;
+  
+  function newMatrix() {
+    var m = [];
+    for (var i = 0; i < mc; i++) { m[i] = []; for (var j = 0; j < mc; j++) m[i][j] = null; }
+    return m;
+  }
+  
+  function placePatterns(m) {
+    // Finder patterns
+    function probe(r, c) {
+      for (var dr = -1; dr <= 7; dr++) {
+        if (r+dr < 0 || r+dr >= mc) continue;
+        for (var dc2 = -1; dc2 <= 7; dc2++) {
+          if (c+dc2 < 0 || c+dc2 >= mc) continue;
+          m[r+dr][c+dc2] = (dr>=0&&dr<=6&&(dc2==0||dc2==6)) || (dc2>=0&&dc2<=6&&(dr==0||dr==6)) || (dr>=2&&dr<=4&&dc2>=2&&dc2<=4);
+        }
+      }
+    }
+    probe(0, 0); probe(mc-7, 0); probe(0, mc-7);
+    // Timing
+    for (var i = 8; i < mc-8; i++) { if (m[i][6]==null) m[i][6]=i%2==0; if (m[6][i]==null) m[6][i]=i%2==0; }
+    // Alignment
+    var pp = PP[tn-1] || [];
+    for (var a = 0; a < pp.length; a++) for (var b2 = 0; b2 < pp.length; b2++) {
+      if (m[pp[a]][pp[b2]] !== null) continue;
+      for (var dr=-2;dr<=2;dr++) for (var dc2=-2;dc2<=2;dc2++) m[pp[a]+dr][pp[b2]+dc2]=(dr==-2||dr==2||dc2==-2||dc2==2||(!dr&&!dc2));
+    }
+  }
+  
+  function placeTypeInfo(m, test, mp) {
+    var bits = bchti((eclevel << 3) | mp);
+    for (var i = 0; i < 15; i++) {
+      var v = !test && ((bits >> i) & 1) == 1;
+      if (i < 6) m[i][8] = v;
+      else if (i < 8) m[i+1][8] = v;
+      else m[mc-15+i][8] = v;
+    }
+    for (var i = 0; i < 15; i++) {
+      var v = !test && ((bits >> i) & 1) == 1;
+      if (i < 8) m[8][mc-i-1] = v;
+      else if (i < 9) m[8][15-i-1+1] = v;
+      else m[8][15-i-1] = v;
+    }
+    m[mc-8][8] = !test;
+  }
+  
+  function mapData(m, mp) {
+    var inc = -1, row = mc-1, bit = 7, byteIdx = 0;
+    for (var col = mc-1; col > 0; col -= 2) {
+      if (col == 6) col--;
+      while (true) {
+        for (var c = 0; c < 2; c++) {
+          if (m[row][col-c] === null) {
+            var dark = byteIdx < codewords.length ? ((codewords[byteIdx] >> bit) & 1) == 1 : false;
+            if (maskFn(mp, row, col-c)) dark = !dark;
+            m[row][col-c] = dark;
+            if (--bit < 0) { byteIdx++; bit = 7; }
+          }
+        }
+        row += inc;
+        if (row < 0 || row >= mc) { row -= inc; inc = -inc; break; }
+      }
+    }
+  }
+  
+  function lostPoint(m) {
+    var lp = 0;
+    for (var r = 0; r < mc; r++) for (var c = 0; c < mc; c++) {
+      var s = 0, dark = m[r][c];
+      for (var dr = -1; dr <= 1; dr++) for (var dc2 = -1; dc2 <= 1; dc2++) {
+        if (!dr && !dc2) continue;
+        if (r+dr<0||r+dr>=mc||c+dc2<0||c+dc2>=mc) continue;
+        if (dark == m[r+dr][c+dc2]) s++;
+      }
+      if (s > 5) lp += 3 + s - 5;
+    }
+    var dc2 = 0;
+    for (var r = 0; r < mc; r++) for (var c = 0; c < mc; c++) if (m[r][c]) dc2++;
+    lp += 10 * Math.abs(Math.abs(100*dc2/mc/mc - 50) / 5);
+    return lp;
+  }
+  
+  // Find best mask
+  var bestMask = 0, bestLoss = Infinity;
+  for (var mp = 0; mp < 8; mp++) {
+    var m = newMatrix();
+    placePatterns(m);
+    placeTypeInfo(m, true, mp);
+    mapData(m, mp);
+    var loss = lostPoint(m);
+    if (loss < bestLoss) { bestLoss = loss; bestMask = mp; }
+  }
+  
+  // Build final matrix
+  var finalMatrix = newMatrix();
+  placePatterns(finalMatrix);
+  placeTypeInfo(finalMatrix, false, bestMask);
+  mapData(finalMatrix, bestMask);
+  
+  return { matrix: finalMatrix, size: mc };
+}
+
+// ── Render QR to canvas ────────────────────────────────────────
+function renderQR(text, fg, bg, displaySize) {
+  var result = buildQR(text, ECL.M);
+  var mc = result.size, m = result.matrix;
+  var canvas = document.createElement('canvas');
+  canvas.width = displaySize; canvas.height = displaySize;
+  var ctx = canvas.getContext('2d');
+  var cw = displaySize / mc;
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, displaySize, displaySize);
+  ctx.fillStyle = fg;
+  for (var r = 0; r < mc; r++) for (var c = 0; c < mc; c++) {
+    if (m[r][c]) {
+      ctx.fillRect(Math.round(c*cw), Math.round(r*cw),
+        Math.ceil((c+1)*cw) - Math.round(c*cw),
+        Math.ceil((r+1)*cw) - Math.round(r*cw));
+    }
+  }
+  return { canvas: canvas, matrix: m, size: mc };
+}
+
+// ── UI State ───────────────────────────────────────────────────
+var currentType = 'url';
+var lastResult  = null;
+
+function setType(type, btn) {
+  currentType = type;
+  document.querySelectorAll('.type-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  ['url','wifi','vcard','email','sms','text'].forEach(function(t) {
+    document.getElementById('form-' + t).style.display = t === type ? 'block' : 'none';
+  });
+  generate();
+}
+
+function getContent() {
+  switch (currentType) {
+    case 'url': {
+      var v = document.getElementById('url-input').value.trim();
+      return v || null;
+    }
+    case 'wifi': {
+      var ssid = document.getElementById('wifi-ssid').value.trim();
+      if (!ssid) return null;
+      var pass = document.getElementById('wifi-pass').value;
+      var sec  = document.getElementById('wifi-sec').value;
+      return 'WIFI:T:' + sec + ';S:' + ssid + ';P:' + pass + ';;';
+    }
+    case 'vcard': {
+      var first = document.getElementById('vc-first').value.trim();
+      var last  = document.getElementById('vc-last').value.trim();
+      if (!first && !last) return null;
+      var phone = document.getElementById('vc-phone').value.trim();
+      var email = document.getElementById('vc-email').value.trim();
+      var org   = document.getElementById('vc-org').value.trim();
+      var url   = document.getElementById('vc-url').value.trim();
+      return 'BEGIN:VCARD\nVERSION:3.0\nN:' + last + ';' + first + '\nFN:' + first + ' ' + last +
+        (org   ? '\nORG:'   + org   : '') +
+        (phone ? '\nTEL:'   + phone : '') +
+        (email ? '\nEMAIL:' + email : '') +
+        (url   ? '\nURL:'   + url   : '') +
+        '\nEND:VCARD';
+    }
+    case 'email': {
+      var to = document.getElementById('em-to').value.trim();
+      if (!to) return null;
+      var subj = encodeURIComponent(document.getElementById('em-subj').value.trim());
+      var body = encodeURIComponent(document.getElementById('em-body').value.trim());
+      return 'mailto:' + to + '?subject=' + subj + '&body=' + body;
+    }
+    case 'sms': {
+      var num = document.getElementById('sms-num').value.trim();
+      if (!num) return null;
+      var msg = encodeURIComponent(document.getElementById('sms-msg').value.trim());
+      return 'sms:' + num + '?body=' + msg;
+    }
+    case 'text': {
+      var t = document.getElementById('txt-content').value.trim();
+      return t || null;
+    }
+  }
+  return null;
+}
+
+function generate() {
+  var content = getContent();
+  var wrap = document.getElementById('qr-wrap');
+  var dlPng = document.getElementById('dl-png');
+  var dlSvg = document.getElementById('dl-svg');
+
+  if (!content) {
+    wrap.innerHTML = '<div class="qr-placeholder"><span class="ph-icon">▦</span>Fill in the form<br>to generate your QR code</div>';
+    dlPng.disabled = true; dlSvg.disabled = true; lastResult = null;
+    return;
+  }
+
+  var fg   = document.getElementById('fg-color').value;
+  var bg   = document.getElementById('bg-color').value;
+  var size = parseInt(document.getElementById('qr-size').value);
+
+  try {
+    var result = renderQR(content, fg, bg, Math.min(size, 260));
+    wrap.innerHTML = '';
+    wrap.appendChild(result.canvas);
+    lastResult = { text: content, fg: fg, bg: bg, matrix: result.matrix, size: result.size };
+    dlPng.disabled = false; dlSvg.disabled = false;
+  } catch(e) {
+    wrap.innerHTML = '<p style="color:var(--muted);font-size:.85rem;padding:20px;text-align:center">⚠ ' + e.message + '</p>';
+    dlPng.disabled = true; dlSvg.disabled = true; lastResult = null;
+  }
+}
+
+function downloadPNG() {
+  if (!lastResult) return;
+  var sz = parseInt(document.getElementById('qr-size').value);
+  var r = renderQR(lastResult.text, lastResult.fg, lastResult.bg, sz);
+  var a = document.createElement('a');
+  a.href = r.canvas.toDataURL('image/png');
+  a.download = 'qrcode.png'; a.click();
+}
+
+function downloadSVG() {
+  if (!lastResult) return;
+  var sz = parseInt(document.getElementById('qr-size').value);
+  var m = lastResult.matrix, mc = lastResult.size;
+  var cw = sz / mc;
+  var rects = '';
+  for (var r = 0; r < mc; r++) for (var c = 0; c < mc; c++) {
+    if (m[r][c]) {
+      var x = Math.round(c*cw), y = Math.round(r*cw);
+      var w = Math.ceil((c+1)*cw)-x, h = Math.ceil((r+1)*cw)-y;
+      rects += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+lastResult.fg+'"/>';
+    }
+  }
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'" viewBox="0 0 '+sz+' '+sz+'"><rect width="'+sz+'" height="'+sz+'" fill="'+lastResult.bg+'"/>'+rects+'</svg>';
+  var blob = new Blob([svg], {type:'image/svg+xml'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'qrcode.svg'; a.click();
+}
+
+function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+
+// Init
+setType('url', document.querySelector('.type-btn'));
+</script>
+
+</body>
+</html>
