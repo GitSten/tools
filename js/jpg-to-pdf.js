@@ -115,6 +115,7 @@ function buildPdf(jpegBytes, imgW, imgH) {
   const content = `q\n${imgW} 0 0 ${imgH} 0 0 cm\n/Im0 Do\nQ\n`;
   const contentBytes = enc.encode(content);
 
+  add('%PDF-1.4\n');
   addObj(1, ['<< /Type /Catalog /Pages 2 0 R >>\n']);
   addObj(2, ['<< /Type /Pages /Kids [3 0 R] /Count 1 >>\n']);
   addObj(3, [`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${imgW} ${imgH}] /Resources << /XObject << /Im0 4 0 R >> /ProcSet [/PDF /ImageC] >> /Contents 5 0 R >>\n`]);
