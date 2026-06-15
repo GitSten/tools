@@ -28,7 +28,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 .ad-slot { background: var(--surface); border: 1px dashed var(--border); border-radius: var(--r); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.7rem; letter-spacing: .08em; text-transform: uppercase; }
 .ad-banner { height: 90px; margin: 20px 0; }
 .ad-rect { height: 250px; margin: 24px 0; }
-.ad-sidebar { height: 600px; }
+.ad-sidebar { height: 600px; display: none !important; }
 .ad-floating-left {
   position: fixed;
   top: 120px;
@@ -37,7 +37,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
   z-index: 150;
   display: none;
 }
+.ad-floating-right {
+  position: fixed;
+  top: 120px;
+  right: max(12px, calc((100vw - 1100px) / 2 - 176px));
+  width: 160px;
+  z-index: 150;
+  display: none;
+}
 .ad-floating-left iframe {
+  display: block;
+  width: 160px;
+  height: 600px;
+  border: 0;
+  background: transparent;
+}
+.ad-floating-right iframe {
   display: block;
   width: 160px;
   height: 600px;
@@ -103,6 +118,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 }
 @media (min-width: 1500px) {
   .ad-floating-left { display: block; }
+  .ad-floating-right { display: block; }
 }
 
 /* ── Dropdown navigation ──────────────────────────────── */
