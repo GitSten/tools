@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JSON Formatter / Beautifier | ToolsNowPro</title>
+<meta name="description" content="Format, beautify and minify JSON instantly. Free JSON formatter with copy button and live error handling.">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.hero{padding:52px 0 28px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px}
+.hero h1 span{color:var(--violet-l)}
+.hero p{color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto}
+.tool-wrap{max-width:1000px;margin:0 auto;padding-bottom:60px}
+.card-tool{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+textarea, select{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:12px 14px;color:var(--text);font-size:.92rem;font-family:inherit}
+textarea:focus, select:focus{outline:none;border-color:var(--violet)}
+.json-input,.json-output{min-height:320px;resize:vertical;line-height:1.7;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn-mini{background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:var(--rs);padding:10px 16px;font-size:.875rem;font-weight:600;cursor:pointer}
+.btn-mini:hover{border-color:var(--violet);color:var(--violet-l)}
+.status{font-size:.78rem;color:var(--muted);margin-top:10px;min-height:1.1em}
+@media(max-width:840px){.layout{grid-template-columns:1fr}}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSDSPEHT0J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-LSDSPEHT0J");</script>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.svg">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<div class="ad-floating-left" aria-label="Sponsored ad"><iframe src="/namecheap-1183668.html" width="160" height="600" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div>
+<div class="ad-floating-right" aria-label="Sponsored ad"><iframe src="/namecheap-1184513.html" width="160" height="600" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div>
+<header class="site-header"><div class="wrapper"><div class="header-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
+  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
+  <nav class="site-nav" id="snav">
+    <a href="../qr-generator/index.html">▦ QR Generator</a>
+    <a href="../text-tools/index.html">🔤 Case Converter</a>
+    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
+    <a href="../tools/password-generator.html">🔑 Password Generator</a>
+    <a href="../tools/lorem-ipsum-generator.html">✎ Lorem Ipsum</a>
+    <a href="../tools/color-picker.html">🎨 Color Picker</a>
+    <a href="../tools/json-formatter.html" class="active">{} JSON Formatter</a>
+    <a href="../tools/favicon-generator.html">◉ Favicon</a>
+  </nav>
+</div></div></header>
+<div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
+<div class="hero wrapper">
+  <div class="badge badge-violet" style="margin-bottom:18px">{ } Structured Data</div>
+  <h1>JSON Formatter <span>/ Beautifier</span></h1>
+  <p>Paste JSON, format it with indentation, or minify it for transport. The tool shows parse errors immediately.</p>
+</div>
+<div class="wrapper">
+  <div class="tool-wrap">
+    <div class="card-tool">
+      <div class="layout">
+        <div class="field"><label>JSON input</label><textarea id="json-input" class="json-input" spellcheck="false" placeholder='{"name":"ToolsNowPro"}'></textarea></div>
+        <div class="field"><label>Formatted output</label><textarea id="json-output" class="json-output" readonly spellcheck="false"></textarea></div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center">
+        <div class="field" style="min-width:120px;margin-bottom:0"><label>Indent</label><select id="json-indent" onchange="formatJson()"><option value="2">2 spaces</option><option value="4">4 spaces</option></select></div>
+        <button class="btn-primary" onclick="formatJson()">Format</button>
+        <button class="btn-mini" onclick="minifyJson()">Minify</button>
+        <button class="btn-mini" onclick="copyJson()">Copy output</button>
+      </div>
+      <div class="status" id="json-status"></div>
+    </div>
+    <div class="card-tool">
+      <h2 style="font-size:1.05rem;font-weight:800;margin-bottom:10px">Tips</h2>
+      <ul style="color:var(--muted);font-size:.9rem;padding-left:18px;display:flex;flex-direction:column;gap:8px">
+        <li>Formatted JSON is easier to read and compare.</li>
+        <li>Minified JSON is smaller for APIs and transport.</li>
+        <li>Invalid JSON is highlighted with a clear error message.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<footer class="site-footer"><div class="wrapper">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators.</p></div>
+    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../index.html">Username Generator</a></li><li><a href="password-generator.html">Password Generator</a></li><li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li><li><a href="color-picker.html">Color Picker</a></li><li><a href="json-formatter.html">JSON Formatter</a></li><li><a href="favicon-generator.html">Favicon Generator</a></li><li><a href="bio-generator.html">Bio Generator</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
+</div></footer>
+<script src="../js/json-formatter.js"></script>
+</body></html>
