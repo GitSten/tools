@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stopwatch / Timer – Online Stopwatch, Pomodoro & Countdown | ToolsNowPro</title>
+<meta name="description" content="Use an online stopwatch, countdown timer, Pomodoro timer, chess clock, and preset minute timers in one free browser tool.">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.hero{padding:52px 0 28px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px}
+.hero h1 span{color:var(--violet-l)}
+.hero p{color:var(--muted);font-size:1rem;max-width:640px;margin:0 auto}
+.tool-wrap{max-width:1140px;margin:0 auto;padding-bottom:60px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+.panel h2{font-size:1.05rem;font-weight:800;margin-bottom:10px}
+.panel p{color:var(--muted);font-size:.9rem}
+.clock{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;letter-spacing:-.04em;background:var(--surface2);border:1px solid var(--border);border-radius:18px;padding:18px;text-align:center;margin:14px 0}
+.clock-label{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700;margin-top:10px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.field label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.field input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:11px 14px;color:var(--text);font-size:.95rem;font-family:inherit}
+.field input:focus{outline:none;border-color:var(--violet)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.preset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px;margin-top:14px}
+.preset-btn{padding:10px 12px;border-radius:14px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s;text-align:center}
+.preset-btn:hover{border-color:var(--violet);color:var(--violet-l);background:var(--glow)}
+.status{font-size:.82rem;color:var(--muted);margin-top:10px}
+.lap-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:14px;max-height:220px;overflow:auto}
+.lap-list li{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:10px 12px;font-size:.86rem;color:var(--text);display:flex;justify-content:space-between;gap:8px}
+.lap-list li span{color:var(--muted)}
+.chess-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.chess-clock{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:14px;text-align:center}
+.chess-clock.active{border-color:var(--violet);box-shadow:0 0 0 1px var(--glow)}
+.chess-clock .name{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:8px}
+.chess-clock .time{font-size:1.6rem;font-weight:900;letter-spacing:-.03em}
+.side-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:18px}
+.side-card h3{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:10px}
+.side-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.side-links a{color:var(--violet-l);text-decoration:none;font-size:.875rem}
+.side-links a:hover{text-decoration:underline}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.chess-grid{grid-template-columns:1fr}}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSDSPEHT0J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-LSDSPEHT0J");</script>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.svg">
+<meta name="theme-color" content="#7C3AED">
+</head>
+<body>
+<div class="ad-floating-left" aria-label="Sponsored ad"><iframe src="/namecheap-1183668.html" width="160" height="600" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div>
+<div class="ad-floating-right" aria-label="Sponsored ad"><iframe src="/namecheap-1184513.html" width="160" height="600" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div>
+<header class="site-header"><div class="wrapper"><div class="header-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
+  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
+  <nav class="site-nav" id="snav">
+    <a href="../qr-generator/index.html">▦ QR Generator</a>
+    <a href="../text-tools/index.html">🔤 Case Converter</a>
+    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
+    <a href="password-generator.html">🔑 Password Generator</a>
+    <a href="jpg-to-pdf.html">📄 JPG to PDF</a>
+    <a href="random-number-generator.html">🎲 Random Number</a>
+    <a href="stopwatch-timer.html" class="active">⏱ Stopwatch / Timer</a>
+    <a href="lorem-ipsum-generator.html">✎ Lorem Ipsum</a>
+    <a href="color-picker.html">🎨 Color Picker</a>
+    <a href="json-formatter.html">{} JSON Formatter</a>
+    <a href="favicon-generator.html">◉ Favicon</a>
+    <a href="../image-converter/index.html">🖼 Image Converter</a>
+    <a href="../gaming/index.html">⚡ Username</a>
+    <a href="../blog/index.html">📝 Blog</a>
+  </nav>
+</div></div></header>
+
+<div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
+
+<div class="hero wrapper">
+  <div class="badge badge-violet" style="margin-bottom:18px">⏱ Stop, start, and count down</div>
+  <h1>Stopwatch / <span>Timer</span></h1>
+  <p>Use an online stopwatch, countdown timer, Pomodoro timer, chess clock, or one of the preset minute timers without installing anything.</p>
+</div>
+
+<div class="wrapper">
+  <div class="tool-wrap">
+    <div class="grid">
+      <section class="panel">
+        <h2>Online Stopwatch</h2>
+        <p>Track elapsed time with lap and split recording.</p>
+        <div class="clock" id="sw-display">00:00.00</div>
+        <div class="clock-label" id="sw-label">Ready</div>
+        <div class="row">
+          <button class="btn-primary" id="sw-toggle-btn" onclick="toggleStopwatch()">Start</button>
+          <button class="btn-ghost" onclick="lapStopwatch()">Lap / Split</button>
+          <button class="btn-ghost" onclick="resetStopwatch()">Reset</button>
+        </div>
+        <ol class="lap-list" id="lap-list"></ol>
+      </section>
+
+      <section class="panel">
+        <h2>Countdown Timer</h2>
+        <p>Start a countdown, enter a custom duration, or use a one-click preset.</p>
+        <div class="clock" id="timer-display">25:00</div>
+        <div class="clock-label" id="timer-label">Custom countdown</div>
+        <div class="field">
+          <label>Minutes</label>
+          <input id="timer-min" type="number" min="0" max="999" value="25">
+        </div>
+        <div class="field">
+          <label>Seconds</label>
+          <input id="timer-sec" type="number" min="0" max="59" value="0">
+        </div>
+        <div class="row">
+          <button class="btn-primary" onclick="startCustomTimer()">Start Timer</button>
+          <button class="btn-ghost" onclick="pauseTimer()">Pause</button>
+          <button class="btn-ghost" onclick="resetTimer()">Reset</button>
+        </div>
+        <div class="preset-grid">
+          <button class="preset-btn" onclick="startPomodoro()">Pomodoro 25/5</button>
+          <button class="preset-btn" onclick="startPreset(5*60,'5 Minute Timer')">5 Minute</button>
+          <button class="preset-btn" onclick="startPreset(10*60,'10 Minute Timer')">10 Minute</button>
+          <button class="preset-btn" onclick="startPreset(30*60,'30 Minute Timer')">30 Minute</button>
+          <button class="preset-btn" onclick="startPreset(60*60,'1 Hour Timer')">1 Hour</button>
+          <button class="preset-btn" onclick="startPreset(6*60,'Egg Timer')">Egg Timer</button>
+          <button class="preset-btn" onclick="startPreset(50*60,'Study Timer')">Study Timer</button>
+          <button class="preset-btn" onclick="startPreset(10*60,'Meditation Timer')">Meditation</button>
+          <button class="preset-btn" onclick="startPreset(20*60,'Workout Timer / HIIT')">Workout / HIIT</button>
+          <button class="preset-btn" onclick="startPreset(15*60,'Presentation Timer')">Presentation</button>
+          <button class="preset-btn" onclick="startPreset(30*60,'Cooking Timer')">Cooking</button>
+          <button class="preset-btn" onclick="startCustomTimer()">Countdown</button>
+        </div>
+        <div class="status" id="timer-status">Set a duration and press start.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Pomodoro Timer</h2>
+        <p>Work 25 minutes, then take a 5 minute break. The tool switches phases automatically.</p>
+        <div class="clock" id="pomodoro-display">25:00</div>
+        <div class="clock-label" id="pomodoro-label">Work phase</div>
+        <div class="row">
+          <button class="btn-primary" onclick="startPomodoro()">Start Pomodoro</button>
+          <button class="btn-ghost" onclick="pausePomodoro()">Pause</button>
+          <button class="btn-ghost" onclick="resetPomodoro()">Reset</button>
+        </div>
+        <div class="status" id="pomodoro-status">25 / 5 cycle</div>
+      </section>
+
+      <section class="panel">
+        <h2>Chess Clock</h2>
+        <p>Set the time for both players, then start and switch turns with one click.</p>
+        <div class="grid" style="grid-template-columns:1fr 1fr;gap:10px">
+          <div class="field"><label>Player A minutes</label><input id="chess-a" type="number" min="1" value="5"></div>
+          <div class="field"><label>Player B minutes</label><input id="chess-b" type="number" min="1" value="5"></div>
+        </div>
+        <div class="chess-grid">
+          <div class="chess-clock" id="chess-a-box"><div class="name">Player A</div><div class="time" id="chess-a-time">05:00</div></div>
+          <div class="chess-clock" id="chess-b-box"><div class="name">Player B</div><div class="time" id="chess-b-time">05:00</div></div>
+        </div>
+        <div class="row">
+          <button class="btn-primary" onclick="startChessClock()">Start Chess Clock</button>
+          <button class="btn-ghost" onclick="swapChessTurn()">Swap Turn</button>
+          <button class="btn-ghost" onclick="resetChessClock()">Reset</button>
+        </div>
+        <div class="status" id="chess-status">Tap Start to begin the first turn.</div>
+      </section>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:24px">
+      <a href="../tools/random-number-generator.html" class="side-card" style="text-decoration:none;color:var(--text)">
+        <h3>Random Number Generator</h3>
+        <p>Need dice, coins, or a lucky pick? Use the companion random tool.</p>
+      </a>
+      <a href="../blog/index.html" class="side-card" style="text-decoration:none;color:var(--text)">
+        <h3>Timer Guides</h3>
+        <p>Read related how-to posts for countdowns, QR codes, and more utility tools.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="wrapper">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators and businesses.</p></div>
+    <div><div class="footer-heading">Tools</div><ul class="footer-links">
+      <li><a href="../index.html">Username Generator</a></li>
+      <li><a href="password-generator.html">Password Generator</a></li>
+      <li><a href="jpg-to-pdf.html">JPG to PDF</a></li>
+      <li><a href="random-number-generator.html">Random Number Generator</a></li>
+      <li><a href="stopwatch-timer.html">Stopwatch / Timer</a></li>
+      <li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li>
+      <li><a href="color-picker.html">Color Picker</a></li>
+      <li><a href="json-formatter.html">JSON Formatter</a></li>
+      <li><a href="favicon-generator.html">Favicon Generator</a></li>
+      <li><a href="bio-generator.html">Bio Generator</a></li>
+    </ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
+</div></footer>
+
+<div class="toast" id="timer-toast">✓ Ready</div>
+<script src="../js/stopwatch-timer.js"></script>
+</body></html>
