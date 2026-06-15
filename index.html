@@ -21,6 +21,20 @@
 .hero-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 
 /* Featured tool (QR) */
+.promo-card{background:linear-gradient(135deg,rgba(124,58,237,.16),rgba(19,19,26,.98));border:1px solid rgba(124,58,237,.4);border-radius:20px;padding:28px 30px;margin:10px 0 56px;display:grid;grid-template-columns:1.35fr .85fr;gap:24px;align-items:center;box-shadow:0 24px 60px rgba(0,0,0,.18)}
+.promo-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.28);color:var(--violet-xl);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px}
+.promo-card h2{font-size:clamp(1.4rem,2.7vw,2.15rem);font-weight:900;letter-spacing:-.03em;line-height:1.15;margin-bottom:10px}
+.promo-card p{color:var(--muted);font-size:.95rem;line-height:1.7;max-width:58ch;margin-bottom:18px}
+.promo-points{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;margin:0 0 22px}
+.promo-points li{display:flex;align-items:flex-start;gap:8px;color:#D8D6EE;font-size:.9rem;line-height:1.45}
+.promo-points li::before{content:'✓';color:var(--success);font-weight:800;flex-shrink:0}
+.promo-cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.promo-note{font-size:.78rem;color:var(--muted)}
+.promo-side{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px;display:grid;gap:10px}
+.promo-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px 16px}
+.promo-metric .pm-top{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--violet-xl);margin-bottom:4px}
+.promo-metric .pm-main{font-size:1rem;font-weight:700;color:var(--text);line-height:1.35}
+.promo-metric .pm-sub{font-size:.8rem;color:var(--muted);margin-top:3px;line-height:1.45}
 .featured-tool{background:var(--surface);border:1px solid rgba(124,58,237,.35);border-radius:16px;padding:0;overflow:hidden;margin-bottom:60px;display:grid;grid-template-columns:1fr 1fr}
 .ft-content{padding:44px 40px}
 .ft-badge{display:inline-flex;align-items:center;gap:6px;background:var(--glow);border:1px solid rgba(124,58,237,.35);color:var(--violet-l);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:20px}
@@ -63,6 +77,8 @@
 .why-card p{font-size:.82rem;color:var(--muted);line-height:1.6}
 
 @media(max-width:768px){
+  .promo-card{grid-template-columns:1fr;padding:22px 18px;margin-bottom:40px}
+  .promo-points{grid-template-columns:1fr}
   .featured-tool{grid-template-columns:1fr}
   .ft-demo{display:none}
   .ft-content{padding:28px 22px}
@@ -112,6 +128,36 @@
     <div class="hero-cta">
       <a href="qr-generator/index.html" class="btn-primary">▦ QR Code Generator</a>
       <a href="text-tools/index.html" class="btn-ghost">🔤 Text Tools</a>
+    </div>
+  </div>
+
+  <div class="promo-card">
+    <div>
+      <div class="promo-badge">Partner Pick</div>
+      <h2>Need a domain for your new brand?</h2>
+      <p>Check Namecheap for .com, .co, and newer TLDs. It is the fastest way to secure a clean domain before someone else takes it.</p>
+      <ul class="promo-points">
+        <li>Simple pricing and domain search</li>
+        <li>DNS management in one place</li>
+        <li>Useful if you are naming a business or project</li>
+        <li>Good fit for the username and branding guides here</li>
+      </ul>
+      <div class="promo-cta">
+        <a href="https://namecheap.pxf.io/c/7408925/1632743/5618" class="btn-primary" rel="nofollow sponsored noopener" target="_blank">Check Namecheap →</a>
+        <span class="promo-note">Affiliate link. Supports ToolsNowPro at no extra cost.</span>
+      </div>
+    </div>
+    <div class="promo-side" aria-label="Domain registration highlights">
+      <div class="promo-metric">
+        <div class="pm-top">Best for</div>
+        <div class="pm-main">Buying a domain for a brand, blog, or side project</div>
+        <div class="pm-sub">If the .com is taken, you can quickly explore alternatives.</div>
+      </div>
+      <div class="promo-metric">
+        <div class="pm-top">Why it is here</div>
+        <div class="pm-main">Your usernames and domains should match when possible</div>
+        <div class="pm-sub">This fits the site’s branding and username strategy content.</div>
+      </div>
     </div>
   </div>
 
