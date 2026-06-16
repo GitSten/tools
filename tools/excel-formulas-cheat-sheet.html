@@ -124,6 +124,18 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 =TEXTJOIN(&quot;, &quot;,TRUE,A1:A5)
 =IFERROR(A1/B1,0)</code></pre>
     </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Dates and rounding</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>=TODAY()
+=NOW()
+=DATEDIF(A1,B1,&quot;d&quot;)
+=ROUND(A1,2)
+=TEXT(A1,&quot;dd-mmm-yyyy&quot;)</code></pre>
+    </section>
   </main>
       <aside>
         <div class="side-card">

@@ -130,6 +130,17 @@ top
 kill 12345
 cat access.log | grep &quot;500&quot; | head</code></pre>
     </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Text processing</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>grep -R &quot;ERROR&quot; .
+sed -n &#39;1,20p&#39; file.txt
+awk &#39;{print $1, $NF}&#39; data.txt
+find . -name &quot;*.js&quot; | xargs grep -n &quot;TODO&quot;</code></pre>
+    </section>
   </main>
       <aside>
         <div class="side-card">

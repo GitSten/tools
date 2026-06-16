@@ -138,6 +138,22 @@ python -m venv .venv
 pip install requests
 python app.py</code></pre>
     </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Loops and venv</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>for index, item in enumerate(items, start=1):
+    print(index, item)
+
+from pathlib import Path
+print(Path(&quot;notes.txt&quot;).exists())
+
+# Dependency hygiene
+python -m pip install --upgrade pip
+python -m pip freeze &gt; requirements.txt</code></pre>
+    </section>
   </main>
       <aside>
         <div class="side-card">

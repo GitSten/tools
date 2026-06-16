@@ -130,6 +130,24 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
   place-items: center;
 }</code></pre>
     </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Template areas</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>.layout {
+  display: grid;
+  grid-template-areas:
+    &quot;header header&quot;
+    &quot;sidebar main&quot;
+    &quot;footer footer&quot;;
+  grid-template-columns: 240px 1fr;
+}
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }</code></pre>
+    </section>
   </main>
       <aside>
         <div class="side-card">

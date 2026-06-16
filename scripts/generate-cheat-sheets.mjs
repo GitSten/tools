@@ -52,6 +52,18 @@ class Person:
 python -m venv .venv
 pip install requests
 python app.py`
+      },
+      {
+        title: 'Loops and venv',
+        code: `for index, item in enumerate(items, start=1):
+    print(index, item)
+
+from pathlib import Path
+print(Path("notes.txt").exists())
+
+# Dependency hygiene
+python -m pip install --upgrade pip
+python -m pip freeze > requirements.txt`
       }
     ],
     related: ['javascript-cheat-sheet', 'sql-cheat-sheet', 'git-cheat-sheet']
@@ -101,6 +113,16 @@ document.getElementById("title").textContent = "Updated";`
   const data = await res.json();
   console.log(data);
 }`
+      },
+      {
+        title: 'Objects and storage',
+        code: `const user = { name: "Alex", role: "admin" };
+const { name, role } = user;
+const copy = { ...user, active: true };
+
+localStorage.setItem("theme", "dark");
+const theme = localStorage.getItem("theme");
+console.log(theme);`
       }
     ],
     related: ['python-cheat-sheet', 'regex-cheat-sheet', 'git-cheat-sheet']
@@ -142,6 +164,22 @@ HAVING COUNT(*) > 5;`
         code: `INSERT INTO users (name, email) VALUES ('Alex', 'a@example.com');
 UPDATE users SET active = 0 WHERE last_login < '2025-01-01';
 DELETE FROM users WHERE id = 10;`
+      },
+      {
+        title: 'CTEs and transactions',
+        code: `WITH recent_orders AS (
+  SELECT customer_id, total
+  FROM orders
+  WHERE created_at >= '2025-01-01'
+)
+SELECT customer_id, SUM(total) AS revenue
+FROM recent_orders
+GROUP BY customer_id;
+
+BEGIN;
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+COMMIT;`
       }
     ],
     related: ['python-cheat-sheet', 'bash-linux-cheat-sheet', 'excel-formulas-cheat-sheet']
@@ -185,6 +223,13 @@ sudo apt install git`
 top
 kill 12345
 cat access.log | grep "500" | head`
+      },
+      {
+        title: 'Text processing',
+        code: `grep -R "ERROR" .
+sed -n '1,20p' file.txt
+awk '{print $1, $NF}' data.txt
+find . -name "*.js" | xargs grep -n "TODO"`
       }
     ],
     related: ['git-cheat-sheet', 'regex-cheat-sheet', 'docker-cheat-sheet']
@@ -216,7 +261,18 @@ https?://\\S+        # URL
       },
       {
         title: 'Groups and quantifiers',
-        code: `(abc)` 
+        code: `(abc)       # capture group
+(?:abc)     # non-capturing group
+\\d+         # one or more digits
+\\d{2,4}     # between 2 and 4 digits`
+      },
+      {
+        title: 'Lookarounds and cleanup',
+        code: `(?=\\d{4})   # lookahead
+(?!test)     # negative lookahead
+(?<=@)\\w+   # lookbehind
+
+text.replace(/\\s+/g, " ").trim()`
       }
     ],
     related: ['javascript-cheat-sheet', 'bash-linux-cheat-sheet', 'markdown-cheat-sheet']
@@ -253,6 +309,20 @@ https?://\\S+        # URL
 /pattern/g   # global
 /pattern/m   # multiline
 /pattern/s   # dotall`
+  },
+  {
+    title: 'Lookarounds and cleanup',
+    code: `(?=\\d{4})   # lookahead
+(?!test)     # negative lookahead
+(?<=@)\\w+   # lookbehind
+
+text.replace(/\\s+/g, " ").trim()`
+  },
+  {
+    title: 'Replacement examples',
+    code: `const cleaned = text.replace(/\\s+/g, " ").trim();
+const emails = text.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}/g);
+const numbers = text.match(/\\d+/g);`
   }
 ];
 
@@ -271,6 +341,8 @@ const moreSheets = [
       { title: 'Daily workflow', code: `git status\ngit add .\ngit commit -m "message"\ngit push origin main` },
       { title: 'Branches', code: `git branch\ngit checkout -b feature-name\ngit merge feature-name\ngit branch -d feature-name` },
       { title: 'Undo', code: `git restore file.txt\ngit reset HEAD file.txt\ngit revert <commit>\ngit log --oneline` }
+      ,
+      { title: 'Stash and rebase', code: `git stash\ngit stash pop\ngit rebase main\ngit cherry-pick <commit>\ngit tag v1.0.0` }
     ],
     related: ['bash-linux-cheat-sheet', 'docker-cheat-sheet', 'vscode-shortcuts-cheat-sheet']
   },
@@ -288,6 +360,8 @@ const moreSheets = [
       { title: 'Logs and shell', code: `docker logs <container>\ndocker exec -it <container> sh\ndocker stop <container>\ndocker rm <container>` },
       { title: 'Volumes', code: `docker volume ls\ndocker volume create data\ndocker run -v data:/app/data app` },
       { title: 'Compose', code: `docker compose up -d\ndocker compose down\ndocker compose logs -f\ndocker compose restart` }
+      ,
+      { title: 'Inspect and network', code: `docker inspect <container>\ndocker port <container>\ndocker network ls\ndocker network prune` }
     ],
     related: ['git-cheat-sheet', 'bash-linux-cheat-sheet', 'vscode-shortcuts-cheat-sheet']
   },
@@ -305,6 +379,8 @@ const moreSheets = [
       { title: 'Search', code: `Mac: ⌘ / Ctrl + P quick open\nMac: ⌘ / Ctrl + Shift + P command palette\nMac: ⌘ / Ctrl + F find\nMac: ⌘ / Ctrl + H replace` },
       { title: 'Multi-cursor', code: `Alt + click add cursor\n⌘ / Ctrl + D select next occurrence\n⌘ / Ctrl + Shift + L select all occurrences\n⌥ / Alt + drag column selection` },
       { title: 'Terminal and files', code: `Mac: Ctrl + \` terminal\nMac: ⌘ / Ctrl + B sidebar\nMac: ⌘ / Ctrl + \\ split editor\n⌘ / Ctrl + K S keyboard shortcuts` }
+      ,
+      { title: 'Panels and extensions', code: `Mac: ⌘ / Ctrl + Shift + E explorer\nMac: ⌘ / Ctrl + Shift + X extensions\nMac: ⌘ / Ctrl + Shift + M problems\nMac: ⌘ / Ctrl + Shift + P command palette` }
     ],
     related: ['git-cheat-sheet', 'markdown-cheat-sheet', 'keyboard-shortcuts-cheat-sheet']
   },
@@ -322,6 +398,8 @@ const moreSheets = [
       { title: 'Movement', code: `h left\nj down\nk up\nl right\nw next word` },
       { title: 'Editing', code: `dd delete line\nyy copy line\np paste\nu undo\nCtrl + r redo` },
       { title: 'Save and quit', code: `:w save\n:q quit\n:wq save and quit\n:q! quit without saving` }
+      ,
+      { title: 'Search and windows', code: `/term search forward\n?term search backward\nn next match\nN previous match\n:split\n:vsplit\nCtrl + w w switch window` }
     ],
     related: ['bash-linux-cheat-sheet', 'markdown-cheat-sheet', 'regex-cheat-sheet']
   },
@@ -339,6 +417,8 @@ const moreSheets = [
       { title: 'Lists and links', code: `- item one\n- item two\n1. first\n[link](https://example.com)` },
       { title: 'Code and quotes', code: `\`inline code\`\n\n\`\`\`js\nconsole.log("hi")\n\`\`\`\n> blockquote` },
       { title: 'Tables', code: `| Name | Value |\n| --- | --- |\n| A | 1 |\n| B | 2 |` }
+      ,
+      { title: 'Images and checklists', code: `![Alt text](image.png)\n- [ ] Todo item\n- [x] Finished item\n\\* escape special characters` }
     ],
     related: ['html-tags-cheat-sheet', 'css-flexbox-cheat-sheet', 'css-grid-cheat-sheet']
   },
@@ -356,6 +436,8 @@ const moreSheets = [
       { title: 'Wrapping', code: `.wrap {\n  display: flex;\n  flex-wrap: wrap;\n  align-content: start;\n}` },
       { title: 'Items', code: `.item {\n  flex: 1 1 240px;\n  align-self: center;\n}` },
       { title: 'Center a box', code: `.center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}` }
+      ,
+      { title: 'Nav bars and cards', code: `.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 16px;\n}\n\n.cards {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 16px;\n}` }
     ],
     related: ['css-grid-cheat-sheet', 'html-tags-cheat-sheet', 'markdown-cheat-sheet']
   },
@@ -373,6 +455,8 @@ const moreSheets = [
       { title: 'Responsive columns', code: `.grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\n  gap: 16px;\n}` },
       { title: 'Placement', code: `.card {\n  grid-column: 1 / 3;\n  grid-row: 1 / 2;\n}` },
       { title: 'Center content', code: `.grid-center {\n  display: grid;\n  place-items: center;\n}` }
+      ,
+      { title: 'Template areas', code: `.layout {\n  display: grid;\n  grid-template-areas:\n    \"header header\"\n    \"sidebar main\"\n    \"footer footer\";\n  grid-template-columns: 240px 1fr;\n}\n.header { grid-area: header; }\n.sidebar { grid-area: sidebar; }\n.main { grid-area: main; }` }
     ],
     related: ['css-flexbox-cheat-sheet', 'html-tags-cheat-sheet', 'markdown-cheat-sheet']
   },
@@ -390,6 +474,8 @@ const moreSheets = [
       { title: 'Text and links', code: `<h1>Title</h1>\n<p>Paragraph</p>\n<strong>Bold</strong>\n<em>Italic</em>\n<a href="/">Link</a>` },
       { title: 'Forms', code: `<form>\n  <input type="text">\n  <textarea></textarea>\n  <button type="submit">Send</button>\n</form>` },
       { title: 'Media and head', code: `<img src="image.jpg" alt="Alt text">\n<video controls></video>\n<title>Page title</title>\n<meta name="description" content="...">` }
+      ,
+      { title: 'Common form inputs', code: `<label for="email">Email</label>\n<input id="email" type="email">\n<input type="password">\n<input type="date">\n<select><option>One</option></select>` }
     ],
     related: ['css-flexbox-cheat-sheet', 'css-grid-cheat-sheet', 'markdown-cheat-sheet']
   },
@@ -407,6 +493,8 @@ const moreSheets = [
       { title: 'Logic and counts', code: `=IF(A1>10,"Yes","No")\n=COUNTIF(A:A,"Done")\n=SUMIF(B:B,"North",C:C)` },
       { title: 'Lookups', code: `=XLOOKUP(E2,A:A,B:B)\n=INDEX(B:B,MATCH(E2,A:A,0))` },
       { title: 'Text and errors', code: `=CONCAT(A1," ",B1)\n=TEXTJOIN(", ",TRUE,A1:A5)\n=IFERROR(A1/B1,0)` }
+      ,
+      { title: 'Dates and rounding', code: `=TODAY()\n=NOW()\n=DATEDIF(A1,B1,"d")\n=ROUND(A1,2)\n=TEXT(A1,"dd-mmm-yyyy")` }
     ],
     related: ['google-sheets-formulas-cheat-sheet', 'keyboard-shortcuts-cheat-sheet', 'sql-cheat-sheet']
   },
@@ -424,6 +512,8 @@ const moreSheets = [
       { title: 'Data tools', code: `=FILTER(A2:C, C2:C="Yes")\n=UNIQUE(A2:A)\n=SORT(A2:B,1,TRUE)` },
       { title: 'Query', code: `=QUERY(A1:C,"select A, sum(C) where B='North' group by A label sum(C) ''",1)` },
       { title: 'Text helpers', code: `=ARRAYFORMULA(A2:A & " " & B2:B)\n=SPLIT(A2,",")\n=TEXTJOIN(", ",TRUE,A2:A5)` }
+      ,
+      { title: 'Dates and matching', code: `=TODAY()\n=DATEVALUE("2026-06-15")\n=REGEXMATCH(A2,"pattern")\n=IFNA(VLOOKUP(A2,D:E,2,FALSE),"Not found")` }
     ],
     related: ['excel-formulas-cheat-sheet', 'keyboard-shortcuts-cheat-sheet', 'markdown-cheat-sheet']
   },
@@ -441,6 +531,8 @@ const moreSheets = [
       { title: 'File actions', code: `Save: ⌘ / Ctrl + S\nOpen: ⌘ / Ctrl + O\nNew tab: ⌘ / Ctrl + T\nClose tab: ⌘ / Ctrl + W` },
       { title: 'Search and windows', code: `Find: ⌘ / Ctrl + F\nReplace: ⌘ / Ctrl + H\nSwitch app: ⌘ + Tab / Alt + Tab\nClose window: ⌘ / Ctrl + Shift + W` },
       { title: 'Browser basics', code: `Refresh: ⌘ / Ctrl + R\nReopen tab: ⌘ / Ctrl + Shift + T\nBookmark: ⌘ / Ctrl + D\nAddress bar: ⌘ / Ctrl + L` }
+      ,
+      { title: 'Navigation', code: `Next tab: ⌘ / Ctrl + Tab\nPrevious tab: ⌘ / Ctrl + Shift + Tab\nMove line: Alt + Up / Down\nScreenshot: Shift + Cmd + 4 / Win + Shift + S` }
     ],
     related: ['vscode-shortcuts-cheat-sheet', 'markdown-cheat-sheet', 'excel-formulas-cheat-sheet']
   }
@@ -754,7 +846,8 @@ function filterCards(){
     card.style.display=(matchTitle && matchCat) ? '' : 'none';
   });
   document.querySelectorAll('.library-group').forEach(group=>{
-    group.style.display = group.querySelectorAll('[data-card] .library-card:not([style*="display: none"])').length ? '' : '';
+    const visible = group.querySelectorAll('[data-card]:not([style*="display: none"])').length;
+    group.style.display = visible ? '' : 'none';
   });
 }
 </script>

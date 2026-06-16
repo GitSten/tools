@@ -249,7 +249,8 @@ function filterCards(){
     card.style.display=(matchTitle && matchCat) ? '' : 'none';
   });
   document.querySelectorAll('.library-group').forEach(group=>{
-    group.style.display = group.querySelectorAll('[data-card] .library-card:not([style*="display: none"])').length ? '' : '';
+    const visible = group.querySelectorAll('[data-card]:not([style*="display: none"])').length;
+    group.style.display = visible ? '' : 'none';
   });
 }
 </script>

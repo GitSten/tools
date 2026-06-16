@@ -129,6 +129,28 @@ https?://\S+        # URL
 /pattern/m   # multiline
 /pattern/s   # dotall</code></pre>
     </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Lookarounds and cleanup</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>(?=\d{4})   # lookahead
+(?!test)     # negative lookahead
+(?&lt;=@)\w+   # lookbehind
+
+text.replace(/\s+/g, &quot; &quot;).trim()</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Replacement examples</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>const cleaned = text.replace(/\s+/g, &quot; &quot;).trim();
+const emails = text.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g);
+const numbers = text.match(/\d+/g);</code></pre>
+    </section>
   </main>
       <aside>
         <div class="side-card">

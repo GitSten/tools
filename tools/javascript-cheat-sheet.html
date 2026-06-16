@@ -136,6 +136,20 @@ document.getElementById(&quot;title&quot;).textContent = &quot;Updated&quot;;</c
   console.log(data);
 }</code></pre>
     </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Objects and storage</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>const user = { name: &quot;Alex&quot;, role: &quot;admin&quot; };
+const { name, role } = user;
+const copy = { ...user, active: true };
+
+localStorage.setItem(&quot;theme&quot;, &quot;dark&quot;);
+const theme = localStorage.getItem(&quot;theme&quot;);
+console.log(theme);</code></pre>
+    </section>
   </main>
       <aside>
         <div class="side-card">

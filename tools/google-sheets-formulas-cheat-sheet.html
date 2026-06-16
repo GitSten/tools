@@ -123,6 +123,17 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 =SPLIT(A2,&quot;,&quot;)
 =TEXTJOIN(&quot;, &quot;,TRUE,A2:A5)</code></pre>
     </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Dates and matching</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>=TODAY()
+=DATEVALUE(&quot;2026-06-15&quot;)
+=REGEXMATCH(A2,&quot;pattern&quot;)
+=IFNA(VLOOKUP(A2,D:E,2,FALSE),&quot;Not found&quot;)</code></pre>
+    </section>
   </main>
       <aside>
         <div class="side-card">
