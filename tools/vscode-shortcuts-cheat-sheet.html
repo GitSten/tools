@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VS Code Shortcuts Cheat Sheet – Essential Editor Shortcuts | ToolsNowPro</title>
-<meta name="description" content="VS Code shortcuts cheat sheet with editing, search, multi-cursor, terminal and file navigation shortcuts.">
+<title>VS Code Shortcuts Cheat Sheet – Editing, Search, Terminal &amp; More | ToolsNowPro</title>
+<meta name="description" content="VS Code shortcuts cheat sheet with editing, search, multi-cursor, terminal, file navigation, formatting and panel shortcuts.">
 <link rel="stylesheet" href="../shared.css">
 <style>
 .hero{padding:52px 0 28px;text-align:center}
@@ -77,8 +77,8 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 <div class="hero wrapper">
   <div class="badge badge-violet" style="margin-bottom:18px">🧩 VS Code</div>
   <h1>VS Code Shortcuts Cheat Sheet</h1>
-  <p>Useful VS Code shortcuts for editing, search, multi-cursor work and terminal access.</p>
-  <div class="sheet-pills"><span class="sheet-pill">Editing</span><span class="sheet-pill">Search and replace</span><span class="sheet-pill">Multi-cursor</span><span class="sheet-pill">Terminal and files</span></div>
+  <p>A practical VS Code shortcut cheat sheet for editing, file navigation, search, multi-cursor work, terminal access and settings.</p>
+  <div class="sheet-pills"><span class="sheet-pill">Editing</span><span class="sheet-pill">Search and replace</span><span class="sheet-pill">Explorer and panels</span><span class="sheet-pill">Terminal and files</span></div>
 </div>
 
 <div class="wrapper">
@@ -90,21 +90,23 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
         <h2>Editing</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>Mac: ⌘ / Ctrl + X cut line
-Mac: ⌘ / Ctrl + D duplicate selection
-Mac: ⌥ / Alt + ↑↓ move line
-Mac: ⌘ / Ctrl + / comment line</code></pre>
+      <pre><code>Cut line: ⌘ / Ctrl + X
+Copy line: ⌘ / Ctrl + C
+Move line: ⌥ / Alt + ↑↓
+Duplicate line: ⌘ / Ctrl + Shift + D
+Toggle comment: ⌘ / Ctrl + /</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Search</h2>
+        <h2>Search and replace</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>Mac: ⌘ / Ctrl + P quick open
-Mac: ⌘ / Ctrl + Shift + P command palette
-Mac: ⌘ / Ctrl + F find
-Mac: ⌘ / Ctrl + H replace</code></pre>
+      <pre><code>Quick open: ⌘ / Ctrl + P
+Command palette: ⌘ / Ctrl + Shift + P
+Find: ⌘ / Ctrl + F
+Replace: ⌘ / Ctrl + H
+Find in files: ⌘ / Ctrl + Shift + F</code></pre>
     </section>
   
     <section class="sheet-block">
@@ -112,10 +114,23 @@ Mac: ⌘ / Ctrl + H replace</code></pre>
         <h2>Multi-cursor</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>Alt + click add cursor
-⌘ / Ctrl + D select next occurrence
-⌘ / Ctrl + Shift + L select all occurrences
-⌥ / Alt + drag column selection</code></pre>
+      <pre><code>Add cursor: Alt + click
+Select next occurrence: ⌘ / Ctrl + D
+Select all occurrences: ⌘ / Ctrl + Shift + L
+Column selection: ⌥ / Alt + drag
+Expand selection: Shift + Alt + →</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Explorer and panels</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>Explorer: ⌘ / Ctrl + Shift + E
+Search panel: ⌘ / Ctrl + Shift + F
+Source control: ⌘ / Ctrl + Shift + G
+Run and debug: ⌘ / Ctrl + Shift + D
+Extensions: ⌘ / Ctrl + Shift + X</code></pre>
     </section>
   
     <section class="sheet-block">
@@ -123,21 +138,47 @@ Mac: ⌘ / Ctrl + H replace</code></pre>
         <h2>Terminal and files</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>Mac: Ctrl + ` terminal
-Mac: ⌘ / Ctrl + B sidebar
-Mac: ⌘ / Ctrl + \ split editor
-⌘ / Ctrl + K S keyboard shortcuts</code></pre>
+      <pre><code>Terminal: Ctrl + `
+New terminal: ⌘ / Ctrl + Shift + `
+Split editor: ⌘ / Ctrl + \
+Close editor: ⌘ / Ctrl + W
+Save all: ⌘ / Ctrl + K S</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Panels and extensions</h2>
+        <h2>Navigation</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>Mac: ⌘ / Ctrl + Shift + E explorer
-Mac: ⌘ / Ctrl + Shift + X extensions
-Mac: ⌘ / Ctrl + Shift + M problems
-Mac: ⌘ / Ctrl + Shift + P command palette</code></pre>
+      <pre><code>Go to file: ⌘ / Ctrl + P
+Go to line: ⌘ / Ctrl + G
+Go to symbol: ⌘ / Ctrl + Shift + O
+Next tab: ⌘ / Ctrl + Tab
+Previous tab: ⌘ / Ctrl + Shift + Tab</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Formatting and refactoring</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>Format document: Shift + Alt + F
+Rename symbol: F2
+Quick fix: ⌘ / Ctrl + .
+Organize imports: Shift + Alt + O
+Indent line: Tab / Shift + Tab</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Settings and help</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>Settings: ⌘ / Ctrl + ,
+Keyboard shortcuts: ⌘ / Ctrl + K S
+Toggle sidebar: ⌘ / Ctrl + B
+Toggle terminal: Ctrl + `
+About / update: Help → About</code></pre>
     </section>
   </main>
       <aside>

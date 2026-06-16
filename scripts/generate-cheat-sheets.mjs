@@ -434,17 +434,19 @@ const moreSheets = [
     title: 'VS Code Shortcuts Cheat Sheet',
     category: 'Dev Tools',
     badge: '🧩 VS Code',
-    intro: 'Useful VS Code shortcuts for editing, search, multi-cursor work and terminal access.',
-    metaTitle: 'VS Code Shortcuts Cheat Sheet – Essential Editor Shortcuts | ToolsNowPro',
-    metaDescription: 'VS Code shortcuts cheat sheet with editing, search, multi-cursor, terminal and file navigation shortcuts.',
-    quick: ['Editing', 'Search and replace', 'Multi-cursor', 'Terminal and files'],
+    intro: 'A practical VS Code shortcut cheat sheet for editing, file navigation, search, multi-cursor work, terminal access and settings.',
+    metaTitle: 'VS Code Shortcuts Cheat Sheet – Editing, Search, Terminal & More | ToolsNowPro',
+    metaDescription: 'VS Code shortcuts cheat sheet with editing, search, multi-cursor, terminal, file navigation, formatting and panel shortcuts.',
+    quick: ['Editing', 'Search and replace', 'Explorer and panels', 'Terminal and files'],
     sections: [
-      { title: 'Editing', code: `Mac: ⌘ / Ctrl + X cut line\nMac: ⌘ / Ctrl + D duplicate selection\nMac: ⌥ / Alt + ↑↓ move line\nMac: ⌘ / Ctrl + / comment line` },
-      { title: 'Search', code: `Mac: ⌘ / Ctrl + P quick open\nMac: ⌘ / Ctrl + Shift + P command palette\nMac: ⌘ / Ctrl + F find\nMac: ⌘ / Ctrl + H replace` },
-      { title: 'Multi-cursor', code: `Alt + click add cursor\n⌘ / Ctrl + D select next occurrence\n⌘ / Ctrl + Shift + L select all occurrences\n⌥ / Alt + drag column selection` },
-      { title: 'Terminal and files', code: `Mac: Ctrl + \` terminal\nMac: ⌘ / Ctrl + B sidebar\nMac: ⌘ / Ctrl + \\ split editor\n⌘ / Ctrl + K S keyboard shortcuts` }
-      ,
-      { title: 'Panels and extensions', code: `Mac: ⌘ / Ctrl + Shift + E explorer\nMac: ⌘ / Ctrl + Shift + X extensions\nMac: ⌘ / Ctrl + Shift + M problems\nMac: ⌘ / Ctrl + Shift + P command palette` }
+      { title: 'Editing', code: `Cut line: ⌘ / Ctrl + X\nCopy line: ⌘ / Ctrl + C\nMove line: ⌥ / Alt + ↑↓\nDuplicate line: ⌘ / Ctrl + Shift + D\nToggle comment: ⌘ / Ctrl + /` },
+      { title: 'Search and replace', code: `Quick open: ⌘ / Ctrl + P\nCommand palette: ⌘ / Ctrl + Shift + P\nFind: ⌘ / Ctrl + F\nReplace: ⌘ / Ctrl + H\nFind in files: ⌘ / Ctrl + Shift + F` },
+      { title: 'Multi-cursor', code: `Add cursor: Alt + click\nSelect next occurrence: ⌘ / Ctrl + D\nSelect all occurrences: ⌘ / Ctrl + Shift + L\nColumn selection: ⌥ / Alt + drag\nExpand selection: Shift + Alt + →` },
+      { title: 'Explorer and panels', code: `Explorer: ⌘ / Ctrl + Shift + E\nSearch panel: ⌘ / Ctrl + Shift + F\nSource control: ⌘ / Ctrl + Shift + G\nRun and debug: ⌘ / Ctrl + Shift + D\nExtensions: ⌘ / Ctrl + Shift + X` },
+      { title: 'Terminal and files', code: `Terminal: Ctrl + \`\nNew terminal: ⌘ / Ctrl + Shift + \`\nSplit editor: ⌘ / Ctrl + \\\nClose editor: ⌘ / Ctrl + W\nSave all: ⌘ / Ctrl + K S` },
+      { title: 'Navigation', code: `Go to file: ⌘ / Ctrl + P\nGo to line: ⌘ / Ctrl + G\nGo to symbol: ⌘ / Ctrl + Shift + O\nNext tab: ⌘ / Ctrl + Tab\nPrevious tab: ⌘ / Ctrl + Shift + Tab` },
+      { title: 'Formatting and refactoring', code: `Format document: Shift + Alt + F\nRename symbol: F2\nQuick fix: ⌘ / Ctrl + .\nOrganize imports: Shift + Alt + O\nIndent line: Tab / Shift + Tab` },
+      { title: 'Settings and help', code: `Settings: ⌘ / Ctrl + ,\nKeyboard shortcuts: ⌘ / Ctrl + K S\nToggle sidebar: ⌘ / Ctrl + B\nToggle terminal: Ctrl + \`\nAbout / update: Help → About` }
     ],
     related: ['git-cheat-sheet', 'markdown-cheat-sheet', 'keyboard-shortcuts-cheat-sheet']
   },
