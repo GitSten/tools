@@ -12,6 +12,15 @@
 - [Password Generator](https://toolsnowpro.com/tools/password-generator.html): Generate cryptographically random passwords. Configurable length, symbols, uppercase, numbers. All generation happens client-side.
 - [Image Converter](https://toolsnowpro.com/image-converter/): Convert images between JPG, PNG, and WebP formats. Resize and compress. Runs entirely in the browser — images never leave the user's device.
 - [Username Generator](https://toolsnowpro.com/gaming/): Generate usernames for gaming, TikTok, Instagram, aesthetic, and business purposes. Client-side JavaScript generation.
+- [JPG to PDF Converter](https://toolsnowpro.com/tools/jpg-to-pdf.html): Convert JPG, PNG, and WebP images into PDFs in the browser for scans, receipts, menus, and screenshots.
+- [Random Number Generator](https://toolsnowpro.com/tools/random-number-generator.html): Roll dice, flip coins, pick a random number, and choose random names or colors.
+- [Stopwatch / Timer](https://toolsnowpro.com/tools/stopwatch-timer.html): Use preset countdown timers, stopwatch mode, Pomodoro sessions, and study or cooking timers.
+- [Lorem Ipsum Generator](https://toolsnowpro.com/tools/lorem-ipsum-generator.html): Generate placeholder text for mockups, wireframes, and layout previews.
+- [Color Picker](https://toolsnowpro.com/tools/color-picker.html): Pick colors and convert between HEX and RGB values.
+- [JSON Formatter](https://toolsnowpro.com/tools/json-formatter.html): Beautify and validate JSON payloads before debugging or sharing them.
+- [Favicon Generator](https://toolsnowpro.com/tools/favicon-generator.html): Turn a logo or icon into a browser-ready favicon.
+- [Emoji Library](https://toolsnowpro.com/tools/emoji-library.html): Browse and copy emojis from a dedicated browser-based library.
+- [Cheat Sheet Library](https://toolsnowpro.com/tools/cheat-sheet-library.html): Find concise quick-reference cheat sheets for programming and productivity.
 
 
 ## QR Code guides
@@ -43,6 +52,21 @@
 - [Twitch Username Guide](https://toolsnowpro.com/blog/twitch-usernames.html)
 - [Matching Usernames for Best Friends & Twins](https://toolsnowpro.com/blog/twin-usernames.html)
 - [Unique Username Ideas](https://toolsnowpro.com/blog/unique-usernames.html)
+
+## Utility guides
+
+- [How to Convert JPG to PDF Online Without Losing Quality](https://toolsnowpro.com/blog/how-to-convert-jpg-to-pdf-online.html)
+- [Best JPG to PDF Converter Online for Scans, Receipts, and Menus](https://toolsnowpro.com/blog/best-jpg-to-pdf-converter-online-for-scans.html)
+- [Best Random Number Generator Online for Dice, Coins, and Name Picks](https://toolsnowpro.com/blog/best-random-number-generator-online.html)
+- [Dice Roller Online: Random Number Generator for Quick Picks](https://toolsnowpro.com/blog/dice-roller-online-random-number-generator.html)
+- [Online Stopwatch Timer for Pomodoro, Countdown, and 5 Minute Timers](https://toolsnowpro.com/blog/online-stopwatch-timer-guide.html)
+- [5 Minute Timer Online: Fast Countdown for Study, Cooking, and Breaks](https://toolsnowpro.com/blog/5-minute-timer-online.html)
+- [How to Generate Strong Passwords Online Without Reusing Anything](https://toolsnowpro.com/blog/how-to-generate-strong-passwords-online.html)
+- [Best Color Picker Online for HEX and RGB Websites](https://toolsnowpro.com/blog/best-color-picker-online-for-hex-and-rgb.html)
+- [How to Format JSON for API Responses Online](https://toolsnowpro.com/blog/how-to-format-json-for-api-responses-online.html)
+- [JSON Formatter Online: Beautify and Validate JSON Instantly](https://toolsnowpro.com/blog/json-formatter-online-guide.html)
+- [How to Create a Favicon from a Logo Online](https://toolsnowpro.com/blog/how-to-create-a-favicon-from-a-logo-online.html)
+- [Favicon Generator Online: Create a Website Icon in Minutes](https://toolsnowpro.com/blog/favicon-generator-online-guide.html)
 
 ## About
 
