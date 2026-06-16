@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Python Cheat Sheet – Syntax, Lists, Dicts &amp; Files | ToolsNowPro</title>
-<meta name="description" content="Python cheat sheet with syntax, lists, dictionaries, functions, files, virtualenv and common commands.">
+<title>Python Cheat Sheet – Syntax, Data Types, Files, Venv &amp; More | ToolsNowPro</title>
+<meta name="description" content="Python cheat sheet with syntax, data types, lists, dictionaries, loops, functions, files, exceptions, virtualenv and common commands.">
 <link rel="stylesheet" href="../shared.css">
 <style>
 .hero{padding:52px 0 28px;text-align:center}
@@ -59,7 +59,7 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
     <a href="../tools/json-formatter.html">{} JSON Formatter</a>
     <a href="../tools/favicon-generator.html">◉ Favicon</a>
     <a href="../tools/emoji-library.html">😄 Emoji Library</a>
-    <a href="../tools/cheat-sheet-library.html" >📚 Cheat Sheets</a>
+    <a href="../tools/cheat-sheet-library.html">📚 Cheat Sheets</a>
     <a href="../image-converter/index.html">🖼 Image Converter</a>
     <a href="../gaming/index.html">⚡ Username</a>
     <a href="../blog/index.html">📝 Blog</a></nav>
@@ -77,8 +77,8 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 <div class="hero wrapper">
   <div class="badge badge-violet" style="margin-bottom:18px">🐍 Python</div>
   <h1>Python Cheat Sheet</h1>
-  <p>A practical Python cheat sheet for syntax, collections, files, and everyday workflows.</p>
-  <div class="sheet-pills"><span class="sheet-pill">Syntax basics</span><span class="sheet-pill">Lists and dicts</span><span class="sheet-pill">Functions and classes</span><span class="sheet-pill">Files, pip and venv</span></div>
+  <p>A practical Python cheat sheet for syntax, data structures, files, exceptions, and everyday workflows.</p>
+  <div class="sheet-pills"><span class="sheet-pill">Syntax basics</span><span class="sheet-pill">Data structures</span><span class="sheet-pill">Functions and classes</span><span class="sheet-pill">Files, pip and venv</span></div>
 </div>
 
 <div class="wrapper">
@@ -87,72 +87,156 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
       <main>
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Basics</h2>
+        <h2>Basics and output</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>print(&quot;Hello, world!&quot;)
 name = &quot;Alex&quot;
 age = 27
+is_admin = True
+
 if age &gt;= 18:
-    print(&quot;Adult&quot;)</code></pre>
+    print(&quot;Adult&quot;)
+else:
+    print(&quot;Minor&quot;)</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Lists and dictionaries</h2>
+        <h2>Data types</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>name = &quot;Alex&quot;      # str
+age = 27           # int
+price = 12.5       # float
+active = True      # bool
+nothing = None     # NoneType</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Lists, tuples, sets and dicts</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>items = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
 items.append(&quot;d&quot;)
 first = items[0]
 
-user = {&quot;name&quot;: &quot;Alex&quot;, &quot;role&quot;: &quot;admin&quot;}
-user.get(&quot;role&quot;, &quot;guest&quot;)
+coords = (10, 20)
+unique = {1, 2, 2, 3}
 
-squares = [n * n for n in range(5)]</code></pre>
+user = {&quot;name&quot;: &quot;Alex&quot;, &quot;role&quot;: &quot;admin&quot;}
+role = user.get(&quot;role&quot;, &quot;guest&quot;)
+user[&quot;active&quot;] = True</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Functions and classes</h2>
+        <h2>Loops and comprehensions</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>def greet(name):
-    return f&quot;Hi, {name}!&quot;
+      <pre><code>for item in items:
+    print(item)
 
-class Person:
-    def __init__(self, name):
-        self.name = name</code></pre>
+for index, item in enumerate(items, start=1):
+    print(index, item)
+
+squares = [n * n for n in range(5)]
+evens = [n for n in range(10) if n % 2 == 0]</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Files and packages</h2>
+        <h2>Functions and imports</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>def greet(name, title=&quot;Mr/Ms&quot;):
+    return f&quot;Hi, {title} {name}!&quot;
+
+from pathlib import Path
+from datetime import datetime
+
+print(Path(&quot;notes.txt&quot;).exists())
+print(datetime.now())</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Exceptions</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>try:
+    value = int(user_input)
+except ValueError:
+    value = 0
+finally:
+    print(&quot;Done&quot;)
+
+assert value &gt;= 0, &quot;Value must be non-negative&quot;
+raise ValueError(&quot;Invalid input&quot;)</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Classes and dataclasses</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>class Person:
+    def __init__(self, name, age=0):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f&quot;Hi, I&#39;m {self.name}&quot;
+
+from dataclasses import dataclass
+
+@dataclass
+class Product:
+    name: str
+    price: float</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Files and JSON</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>with open(&quot;notes.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
     content = f.read()
 
-# Terminal
-python -m venv .venv
-pip install requests
-python app.py</code></pre>
+import json
+data = {&quot;name&quot;: &quot;Alex&quot;, &quot;active&quot;: True}
+with open(&quot;data.json&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+    json.dump(data, f, indent=2)
+
+with open(&quot;data.json&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+    loaded = json.load(f)</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Loops and venv</h2>
+        <h2>Venv and pip</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>for index, item in enumerate(items, start=1):
-    print(index, item)
+      <pre><code>python -m venv .venv
+source .venv/bin/activate   # macOS/Linux
+.venv\Scripts\activate     # Windows
 
-from pathlib import Path
-print(Path(&quot;notes.txt&quot;).exists())
-
-# Dependency hygiene
 python -m pip install --upgrade pip
-python -m pip freeze &gt; requirements.txt</code></pre>
+pip install requests
+pip freeze &gt; requirements.txt</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Run and debug</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>python app.py
+python -m http.server 8000
+python -m pip list
+python -m pip show requests</code></pre>
     </section>
   </main>
       <aside>

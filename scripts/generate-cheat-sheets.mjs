@@ -10,60 +10,124 @@ const sheets = [
     title: 'Python Cheat Sheet',
     category: 'Programming',
     badge: '🐍 Python',
-    intro: 'A practical Python cheat sheet for syntax, collections, files, and everyday workflows.',
-    metaTitle: 'Python Cheat Sheet – Syntax, Lists, Dicts & Files | ToolsNowPro',
-    metaDescription: 'Python cheat sheet with syntax, lists, dictionaries, functions, files, virtualenv and common commands.',
-    quick: ['Syntax basics', 'Lists and dicts', 'Functions and classes', 'Files, pip and venv'],
+    intro: 'A practical Python cheat sheet for syntax, data structures, files, exceptions, and everyday workflows.',
+    metaTitle: 'Python Cheat Sheet – Syntax, Data Types, Files, Venv & More | ToolsNowPro',
+    metaDescription: 'Python cheat sheet with syntax, data types, lists, dictionaries, loops, functions, files, exceptions, virtualenv and common commands.',
+    quick: ['Syntax basics', 'Data structures', 'Functions and classes', 'Files, pip and venv'],
     sections: [
       {
-        title: 'Basics',
+        title: 'Basics and output',
         code: `print("Hello, world!")
 name = "Alex"
 age = 27
+is_admin = True
+
 if age >= 18:
-    print("Adult")`
+    print("Adult")
+else:
+    print("Minor")`
       },
       {
-        title: 'Lists and dictionaries',
+        title: 'Data types',
+        code: `name = "Alex"      # str
+age = 27           # int
+price = 12.5       # float
+active = True      # bool
+nothing = None     # NoneType`
+      },
+      {
+        title: 'Lists, tuples, sets and dicts',
         code: `items = ["a", "b", "c"]
 items.append("d")
 first = items[0]
 
+coords = (10, 20)
+unique = {1, 2, 2, 3}
+
 user = {"name": "Alex", "role": "admin"}
-user.get("role", "guest")
-
-squares = [n * n for n in range(5)]`
+role = user.get("role", "guest")
+user["active"] = True`
       },
       {
-        title: 'Functions and classes',
-        code: `def greet(name):
-    return f"Hi, {name}!"
+        title: 'Loops and comprehensions',
+        code: `for item in items:
+    print(item)
 
-class Person:
-    def __init__(self, name):
-        self.name = name`
+for index, item in enumerate(items, start=1):
+    print(index, item)
+
+squares = [n * n for n in range(5)]
+evens = [n for n in range(10) if n % 2 == 0]`
       },
       {
-        title: 'Files and packages',
+        title: 'Functions and imports',
+        code: `def greet(name, title="Mr/Ms"):
+    return f"Hi, {title} {name}!"
+
+from pathlib import Path
+from datetime import datetime
+
+print(Path("notes.txt").exists())
+print(datetime.now())`
+      },
+      {
+        title: 'Exceptions',
+        code: `try:
+    value = int(user_input)
+except ValueError:
+    value = 0
+finally:
+    print("Done")
+
+assert value >= 0, "Value must be non-negative"
+raise ValueError("Invalid input")`
+      },
+      {
+        title: 'Classes and dataclasses',
+        code: `class Person:
+    def __init__(self, name, age=0):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hi, I'm {self.name}"
+
+from dataclasses import dataclass
+
+@dataclass
+class Product:
+    name: str
+    price: float`
+      },
+      {
+        title: 'Files and JSON',
         code: `with open("notes.txt", "r", encoding="utf-8") as f:
     content = f.read()
 
-# Terminal
-python -m venv .venv
-pip install requests
-python app.py`
+import json
+data = {"name": "Alex", "active": True}
+with open("data.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, indent=2)
+
+with open("data.json", "r", encoding="utf-8") as f:
+    loaded = json.load(f)`
       },
       {
-        title: 'Loops and venv',
-        code: `for index, item in enumerate(items, start=1):
-    print(index, item)
+        title: 'Venv and pip',
+        code: `python -m venv .venv
+source .venv/bin/activate   # macOS/Linux
+.venv\\Scripts\\activate     # Windows
 
-from pathlib import Path
-print(Path("notes.txt").exists())
-
-# Dependency hygiene
 python -m pip install --upgrade pip
-python -m pip freeze > requirements.txt`
+pip install requests
+pip freeze > requirements.txt`
+      },
+      {
+        title: 'Run and debug',
+        code: `python app.py
+python -m http.server 8000
+python -m pip list
+python -m pip show requests`
       }
     ],
     related: ['javascript-cheat-sheet', 'sql-cheat-sheet', 'git-cheat-sheet']
@@ -564,7 +628,7 @@ function navHtml(activeSlug) {
     <a href="../tools/json-formatter.html">{} JSON Formatter</a>
     <a href="../tools/favicon-generator.html">◉ Favicon</a>
     <a href="../tools/emoji-library.html">😄 Emoji Library</a>
-    <a href="../tools/cheat-sheet-library.html" ${active}>📚 Cheat Sheets</a>
+    <a href="../tools/cheat-sheet-library.html"${active ? ` ${active}` : ''}>📚 Cheat Sheets</a>
     <a href="../image-converter/index.html">🖼 Image Converter</a>
     <a href="../gaming/index.html">⚡ Username</a>
     <a href="../blog/index.html">📝 Blog</a>`;
