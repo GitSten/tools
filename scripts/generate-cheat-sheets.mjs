@@ -586,17 +586,18 @@ const moreSheets = [
     title: 'Keyboard Shortcuts Cheat Sheet',
     category: 'Productivity',
     badge: '⌨ Shortcuts',
-    intro: 'A compact cheat sheet for the shortcuts people use every day on Mac and Windows.',
-    metaTitle: 'Keyboard Shortcuts Cheat Sheet – Mac and Windows Shortcuts | ToolsNowPro',
-    metaDescription: 'Keyboard shortcuts cheat sheet with common Mac and Windows shortcuts for copy, paste, save, undo, search and tabs.',
-    quick: ['Copy / paste', 'Save / undo', 'Search', 'Browser tabs'],
+    intro: 'A practical shortcut cheat sheet for Mac and Windows with editing, windows, browser, screenshots and app-switching shortcuts.',
+    metaTitle: 'Keyboard Shortcuts Cheat Sheet – Mac, Windows, Browser & More | ToolsNowPro',
+    metaDescription: 'Keyboard shortcuts cheat sheet with Mac and Windows shortcuts for editing, file actions, search, browser tabs, screenshots and app switching.',
+    quick: ['Editing', 'Search and replace', 'Browser tabs', 'Screenshots'],
     sections: [
-      { title: 'Editing', code: `Copy: ⌘ / Ctrl + C\nPaste: ⌘ / Ctrl + V\nCut: ⌘ / Ctrl + X\nUndo: ⌘ / Ctrl + Z` },
-      { title: 'File actions', code: `Save: ⌘ / Ctrl + S\nOpen: ⌘ / Ctrl + O\nNew tab: ⌘ / Ctrl + T\nClose tab: ⌘ / Ctrl + W` },
-      { title: 'Search and windows', code: `Find: ⌘ / Ctrl + F\nReplace: ⌘ / Ctrl + H\nSwitch app: ⌘ + Tab / Alt + Tab\nClose window: ⌘ / Ctrl + Shift + W` },
-      { title: 'Browser basics', code: `Refresh: ⌘ / Ctrl + R\nReopen tab: ⌘ / Ctrl + Shift + T\nBookmark: ⌘ / Ctrl + D\nAddress bar: ⌘ / Ctrl + L` }
-      ,
-      { title: 'Navigation', code: `Next tab: ⌘ / Ctrl + Tab\nPrevious tab: ⌘ / Ctrl + Shift + Tab\nMove line: Alt + Up / Down\nScreenshot: Shift + Cmd + 4 / Win + Shift + S` }
+      { title: 'Editing', code: `Copy: ⌘ / Ctrl + C\nPaste: ⌘ / Ctrl + V\nCut: ⌘ / Ctrl + X\nUndo: ⌘ / Ctrl + Z\nRedo: ⌘ / Ctrl + Shift + Z\nSelect all: ⌘ / Ctrl + A\nDuplicate line: ⌘ / Ctrl + D` },
+      { title: 'File actions', code: `Save: ⌘ / Ctrl + S\nOpen: ⌘ / Ctrl + O\nNew tab: ⌘ / Ctrl + T\nClose tab: ⌘ / Ctrl + W\nClose window: ⌘ / Ctrl + Shift + W\nPrint: ⌘ / Ctrl + P` },
+      { title: 'Search and windows', code: `Find: ⌘ / Ctrl + F\nReplace: ⌘ / Ctrl + H\nFind next: Enter / F3\nFind previous: Shift + Enter / Shift + F3\nCommand palette: ⌘ / Ctrl + Shift + P\nSpotlight / Run: ⌘ + Space / Win + R` },
+      { title: 'Browser basics', code: `Refresh: ⌘ / Ctrl + R\nReopen tab: ⌘ / Ctrl + Shift + T\nBookmark: ⌘ / Ctrl + D\nAddress bar: ⌘ / Ctrl + L\nNew window: ⌘ / Ctrl + N\nHistory: ⌘ / Ctrl + H` },
+      { title: 'Navigation', code: `Next tab: ⌘ / Ctrl + Tab\nPrevious tab: ⌘ / Ctrl + Shift + Tab\nMove line: Alt + Up / Down\nMove by word: Option / Ctrl + Arrow\nTop / bottom: ⌘ / Ctrl + Home / End` },
+      { title: 'Screenshots', code: `Mac selected area: Shift + Cmd + 4\nMac full screen: Shift + Cmd + 3\nWindows snip: Win + Shift + S\nWindows full screen: Win + PrtScn` },
+      { title: 'System and apps', code: `Switch app: ⌘ + Tab / Alt + Tab\nTask manager / Force quit: Ctrl + Shift + Esc / Cmd + Option + Esc\nLock screen: Win + L / Ctrl + Cmd + Q\nEmoji picker: Win + . / Ctrl + Cmd + Space` }
     ],
     related: ['vscode-shortcuts-cheat-sheet', 'markdown-cheat-sheet', 'excel-formulas-cheat-sheet']
   }
