@@ -67,6 +67,8 @@
 - [JSON Formatter Online: Beautify and Validate JSON Instantly](https://toolsnowpro.com/blog/json-formatter-online-guide.html)
 - [How to Create a Favicon from a Logo Online](https://toolsnowpro.com/blog/how-to-create-a-favicon-from-a-logo-online.html)
 - [Favicon Generator Online: Create a Website Icon in Minutes](https://toolsnowpro.com/blog/favicon-generator-online-guide.html)
+- [Python Cheat Sheet Online: Essential Syntax, Lists, Loops, and Functions](https://toolsnowpro.com/blog/python-cheat-sheet-online-complete-guide.html)
+- [Keyboard Shortcuts Cheat Sheet for Mac: Copy, Save, and Switch Faster](https://toolsnowpro.com/blog/mac-keyboard-shortcuts-cheat-sheet.html)
 
 ## About
 
