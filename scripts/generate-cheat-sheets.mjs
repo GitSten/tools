@@ -469,16 +469,20 @@ const moreSheets = [
     intro: 'A practical VS Code shortcut cheat sheet for editing, file navigation, search, multi-cursor work, terminal access and settings.',
     metaTitle: 'VS Code Shortcuts Cheat Sheet – Editing, Search, Terminal & More | ToolsNowPro',
     metaDescription: 'VS Code shortcuts cheat sheet with editing, search, multi-cursor, terminal, file navigation, formatting and panel shortcuts.',
-    quick: ['Editing', 'Search and replace', 'Explorer and panels', 'Terminal and files'],
+    quick: ['Mac shortcuts', 'Windows shortcuts', 'Explorer and panels', 'Terminal and files'],
     sections: [
-      { title: 'Editing', code: `Cut line: ⌘ / Ctrl + X\nCopy line: ⌘ / Ctrl + C\nMove line: ⌥ / Alt + ↑↓\nDuplicate line: ⌘ / Ctrl + Shift + D\nToggle comment: ⌘ / Ctrl + /` },
-      { title: 'Search and replace', code: `Quick open: ⌘ / Ctrl + P\nCommand palette: ⌘ / Ctrl + Shift + P\nFind: ⌘ / Ctrl + F\nReplace: ⌘ / Ctrl + H\nFind in files: ⌘ / Ctrl + Shift + F` },
-      { title: 'Multi-cursor', code: `Add cursor: Alt + click\nSelect next occurrence: ⌘ / Ctrl + D\nSelect all occurrences: ⌘ / Ctrl + Shift + L\nColumn selection: ⌥ / Alt + drag\nExpand selection: Shift + Alt + →` },
-      { title: 'Explorer and panels', code: `Explorer: ⌘ / Ctrl + Shift + E\nSearch panel: ⌘ / Ctrl + Shift + F\nSource control: ⌘ / Ctrl + Shift + G\nRun and debug: ⌘ / Ctrl + Shift + D\nExtensions: ⌘ / Ctrl + Shift + X` },
-      { title: 'Terminal and files', code: `Terminal: Ctrl + \`\nNew terminal: ⌘ / Ctrl + Shift + \`\nSplit editor: ⌘ / Ctrl + \\\nClose editor: ⌘ / Ctrl + W\nSave all: ⌘ / Ctrl + K S` },
-      { title: 'Navigation', code: `Go to file: ⌘ / Ctrl + P\nGo to line: ⌘ / Ctrl + G\nGo to symbol: ⌘ / Ctrl + Shift + O\nNext tab: ⌘ / Ctrl + Tab\nPrevious tab: ⌘ / Ctrl + Shift + Tab` },
-      { title: 'Formatting and refactoring', code: `Format document: Shift + Alt + F\nRename symbol: F2\nQuick fix: ⌘ / Ctrl + .\nOrganize imports: Shift + Alt + O\nIndent line: Tab / Shift + Tab` },
-      { title: 'Settings and help', code: `Settings: ⌘ / Ctrl + ,\nKeyboard shortcuts: ⌘ / Ctrl + K S\nToggle sidebar: ⌘ / Ctrl + B\nToggle terminal: Ctrl + \`\nAbout / update: Help → About` }
+      { title: 'Mac editing', code: `Cut line: ⌘ + X\nCopy line: ⌘ + C\nMove line: ⌥ + ↑ / ↓\nDuplicate line: ⌘ + Shift + D\nToggle comment: ⌘ + /` },
+      { title: 'Windows editing', code: `Cut line: Ctrl + X\nCopy line: Ctrl + C\nMove line: Alt + ↑ / ↓\nDuplicate line: Ctrl + Shift + D\nToggle comment: Ctrl + /` },
+      { title: 'Mac search and files', code: `Quick open: ⌘ + P\nCommand palette: ⌘ + Shift + P\nFind: ⌘ + F\nReplace: ⌘ + H\nFind in files: ⌘ + Shift + F\nGo to file: ⌘ + P` },
+      { title: 'Windows search and files', code: `Quick open: Ctrl + P\nCommand palette: Ctrl + Shift + P\nFind: Ctrl + F\nReplace: Ctrl + H\nFind in files: Ctrl + Shift + F\nGo to file: Ctrl + P` },
+      { title: 'Mac explorer and panels', code: `Explorer: ⌘ + Shift + E\nSearch panel: ⌘ + Shift + F\nSource control: ⌘ + Shift + G\nRun and debug: ⌘ + Shift + D\nExtensions: ⌘ + Shift + X` },
+      { title: 'Windows explorer and panels', code: `Explorer: Ctrl + Shift + E\nSearch panel: Ctrl + Shift + F\nSource control: Ctrl + Shift + G\nRun and debug: Ctrl + Shift + D\nExtensions: Ctrl + Shift + X` },
+      { title: 'Mac terminal and navigation', code: `Terminal: Ctrl + \`\nNew terminal: ⌘ + Shift + \`\nSplit editor: ⌘ + \\\nClose editor: ⌘ + W\nSave all: ⌘ + K S\nGo to line: ⌘ + G\nGo to symbol: ⌘ + Shift + O` },
+      { title: 'Windows terminal and navigation', code: `Terminal: Ctrl + \`\nNew terminal: Ctrl + Shift + \`\nSplit editor: Ctrl + \\\nClose editor: Ctrl + W\nSave all: Ctrl + K S\nGo to line: Ctrl + G\nGo to symbol: Ctrl + Shift + O` },
+      { title: 'Mac formatting and refactoring', code: `Format document: Shift + Alt + F\nRename symbol: F2\nQuick fix: ⌘ + .\nOrganize imports: Shift + Alt + O\nIndent line: Tab / Shift + Tab` },
+      { title: 'Windows formatting and refactoring', code: `Format document: Shift + Alt + F\nRename symbol: F2\nQuick fix: Ctrl + .\nOrganize imports: Shift + Alt + O\nIndent line: Tab / Shift + Tab` },
+      { title: 'Mac settings and help', code: `Settings: ⌘ + ,\nKeyboard shortcuts: ⌘ + K S\nToggle sidebar: ⌘ + B\nToggle terminal: Ctrl + \`\nAbout / update: Help → About` },
+      { title: 'Windows settings and help', code: `Settings: Ctrl + ,\nKeyboard shortcuts: Ctrl + K S\nToggle sidebar: Ctrl + B\nToggle terminal: Ctrl + \`\nAbout / update: Help → About` }
     ],
     related: ['git-cheat-sheet', 'markdown-cheat-sheet', 'keyboard-shortcuts-cheat-sheet']
   },
@@ -623,15 +627,17 @@ const moreSheets = [
     intro: 'A practical shortcut cheat sheet for Mac and Windows with editing, windows, browser, screenshots and app-switching shortcuts.',
     metaTitle: 'Keyboard Shortcuts Cheat Sheet – Mac, Windows, Browser & More | ToolsNowPro',
     metaDescription: 'Keyboard shortcuts cheat sheet with Mac and Windows shortcuts for editing, file actions, search, browser tabs, screenshots and app switching.',
-    quick: ['Editing', 'Search and replace', 'Browser tabs', 'Screenshots'],
+    quick: ['Mac shortcuts', 'Windows shortcuts', 'Browser tabs', 'Screenshots'],
     sections: [
-      { title: 'Editing', code: `Copy: ⌘ / Ctrl + C\nPaste: ⌘ / Ctrl + V\nCut: ⌘ / Ctrl + X\nUndo: ⌘ / Ctrl + Z\nRedo: ⌘ / Ctrl + Shift + Z\nSelect all: ⌘ / Ctrl + A\nDuplicate line: ⌘ / Ctrl + D` },
-      { title: 'File actions', code: `Save: ⌘ / Ctrl + S\nOpen: ⌘ / Ctrl + O\nNew tab: ⌘ / Ctrl + T\nClose tab: ⌘ / Ctrl + W\nClose window: ⌘ / Ctrl + Shift + W\nPrint: ⌘ / Ctrl + P` },
-      { title: 'Search and windows', code: `Find: ⌘ / Ctrl + F\nReplace: ⌘ / Ctrl + H\nFind next: Enter / F3\nFind previous: Shift + Enter / Shift + F3\nCommand palette: ⌘ / Ctrl + Shift + P\nSpotlight / Run: ⌘ + Space / Win + R` },
-      { title: 'Browser basics', code: `Refresh: ⌘ / Ctrl + R\nReopen tab: ⌘ / Ctrl + Shift + T\nBookmark: ⌘ / Ctrl + D\nAddress bar: ⌘ / Ctrl + L\nNew window: ⌘ / Ctrl + N\nHistory: ⌘ / Ctrl + H` },
-      { title: 'Navigation', code: `Next tab: ⌘ / Ctrl + Tab\nPrevious tab: ⌘ / Ctrl + Shift + Tab\nMove line: Alt + Up / Down\nMove by word: Option / Ctrl + Arrow\nTop / bottom: ⌘ / Ctrl + Home / End` },
+      { title: 'Mac editing and files', code: `Copy: ⌘ + C\nPaste: ⌘ + V\nCut: ⌘ + X\nUndo: ⌘ + Z\nRedo: ⌘ + Shift + Z\nSelect all: ⌘ + A\nDuplicate line: ⌘ + D\nSave: ⌘ + S\nOpen: ⌘ + O\nNew tab: ⌘ + T\nClose tab: ⌘ + W\nPrint: ⌘ + P` },
+      { title: 'Windows editing and files', code: `Copy: Ctrl + C\nPaste: Ctrl + V\nCut: Ctrl + X\nUndo: Ctrl + Z\nRedo: Ctrl + Shift + Z\nSelect all: Ctrl + A\nDuplicate line: Ctrl + D\nSave: Ctrl + S\nOpen: Ctrl + O\nNew tab: Ctrl + T\nClose tab: Ctrl + W\nPrint: Ctrl + P` },
+      { title: 'Mac search and browser', code: `Find: ⌘ + F\nReplace: ⌘ + H\nFind next: Enter\nFind previous: Shift + Enter\nCommand palette: ⌘ + Shift + P\nRefresh: ⌘ + R\nReopen tab: ⌘ + Shift + T\nBookmark: ⌘ + D\nAddress bar: ⌘ + L\nNew window: ⌘ + N\nHistory: ⌘ + H` },
+      { title: 'Windows search and browser', code: `Find: Ctrl + F\nReplace: Ctrl + H\nFind next: F3\nFind previous: Shift + F3\nCommand palette: Ctrl + Shift + P\nRefresh: Ctrl + R\nReopen tab: Ctrl + Shift + T\nBookmark: Ctrl + D\nAddress bar: Ctrl + L\nNew window: Ctrl + N\nHistory: Ctrl + H` },
+      { title: 'Mac navigation', code: `Next tab: ⌘ + Tab\nPrevious tab: ⌘ + Shift + Tab\nMove by word: Option + Arrow\nTop or bottom: ⌘ + Up / Down` },
+      { title: 'Windows navigation', code: `Next tab: Ctrl + Tab\nPrevious tab: Ctrl + Shift + Tab\nMove by word: Ctrl + Arrow\nTop or bottom: Ctrl + Home / End` },
       { title: 'Screenshots', code: `Mac selected area: Shift + Cmd + 4\nMac full screen: Shift + Cmd + 3\nWindows snip: Win + Shift + S\nWindows full screen: Win + PrtScn` },
-      { title: 'System and apps', code: `Switch app: ⌘ + Tab / Alt + Tab\nTask manager / Force quit: Ctrl + Shift + Esc / Cmd + Option + Esc\nLock screen: Win + L / Ctrl + Cmd + Q\nEmoji picker: Win + . / Ctrl + Cmd + Space` }
+      { title: 'Mac system and apps', code: `Switch app: ⌘ + Tab\nForce quit: ⌘ + Option + Esc\nLock screen: Ctrl + Cmd + Q\nEmoji picker: Ctrl + Cmd + Space` },
+      { title: 'Windows system and apps', code: `Switch app: Alt + Tab\nTask manager: Ctrl + Shift + Esc\nLock screen: Win + L\nEmoji picker: Win + .` }
     ],
     related: ['vscode-shortcuts-cheat-sheet', 'markdown-cheat-sheet', 'excel-formulas-cheat-sheet']
   }
