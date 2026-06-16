@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bash / Linux Commands Cheat Sheet – Terminal Basics | ToolsNowPro</title>
-<meta name="description" content="Bash and Linux commands cheat sheet with pwd, ls, cd, grep, find, chmod, ps, and piping basics.">
+<title>Bash / Linux Commands Cheat Sheet – Terminal, Pipes &amp; Text Tools | ToolsNowPro</title>
+<meta name="description" content="Bash and Linux cheat sheet with navigation, file operations, redirects, pipes, permissions, variables, text processing and package managers.">
 <link rel="stylesheet" href="../shared.css">
 <style>
 .hero{padding:52px 0 28px;text-align:center}
@@ -77,8 +77,8 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 <div class="hero wrapper">
   <div class="badge badge-violet" style="margin-bottom:18px">⌨ Bash</div>
   <h1>Bash / Linux Commands Cheat Sheet</h1>
-  <p>Terminal basics for navigating files, searching text, permissions and processes.</p>
-  <div class="sheet-pills"><span class="sheet-pill">Navigation</span><span class="sheet-pill">Search files</span><span class="sheet-pill">Permissions</span><span class="sheet-pill">Processes and pipes</span></div>
+  <p>A more complete terminal reference for navigation, redirects, permissions, variables and text processing.</p>
+  <div class="sheet-pills"><span class="sheet-pill">Navigate faster</span><span class="sheet-pill">Redirect output</span><span class="sheet-pill">Permissions and ownership</span><span class="sheet-pill">Process and text tools</span></div>
 </div>
 
 <div class="wrapper">
@@ -91,9 +91,10 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>pwd
-ls -la
+ls -lah
 cd /path/to/project
-mkdir new-folder
+cd -
+mkdir -p new-folder/sub-folder
 touch notes.txt</code></pre>
     </section>
   
@@ -104,9 +105,22 @@ touch notes.txt</code></pre>
       </div>
       <pre><code>cp source.txt backup.txt
 mv old-name.txt new-name.txt
+cp -r folder backup-folder
 rm -r folder
-grep -R &quot;query&quot; .
+grep -Rin &quot;query&quot; .
 find . -name &quot;*.js&quot;</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Redirects and pipes</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>command &gt; output.txt
+command &gt;&gt; output.txt
+command 2&gt; errors.txt
+command | tee output.txt
+cat file.txt | grep &quot;term&quot; | head</code></pre>
     </section>
   
     <section class="sheet-block">
@@ -115,20 +129,36 @@ find . -name &quot;*.js&quot;</code></pre>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>chmod +x script.sh
+chmod 755 deploy.sh
 chown user:group file.txt
-sudo apt update
-sudo apt install git</code></pre>
+sudo chown -R user:group folder
+umask 022</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Processes and pipes</h2>
+        <h2>Processes and jobs</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>ps aux
 top
 kill 12345
-cat access.log | grep &quot;500&quot; | head</code></pre>
+pkill node
+jobs
+fg
+bg</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Variables and quoting</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>name=&quot;Alex&quot;
+echo &quot;$name&quot;
+echo &#39;$name&#39;
+export API_KEY=&quot;secret&quot;
+echo ${name:-Guest}</code></pre>
     </section>
   
     <section class="sheet-block">
@@ -137,9 +167,24 @@ cat access.log | grep &quot;500&quot; | head</code></pre>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>grep -R &quot;ERROR&quot; .
+cut -d, -f1,3 data.csv
+sort names.txt | uniq
 sed -n &#39;1,20p&#39; file.txt
 awk &#39;{print $1, $NF}&#39; data.txt
+tr &#39;[:lower:]&#39; &#39;[:upper:]&#39;
 find . -name &quot;*.js&quot; | xargs grep -n &quot;TODO&quot;</code></pre>
+    </section>
+  
+    <section class="sheet-block">
+      <div class="sheet-head">
+        <h2>Package managers</h2>
+        <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
+      </div>
+      <pre><code>sudo apt update &amp;&amp; sudo apt upgrade
+sudo apt install git curl
+sudo dnf install git
+brew update &amp;&amp; brew upgrade
+brew install jq</code></pre>
     </section>
   </main>
       <aside>
@@ -158,7 +203,7 @@ find . -name &quot;*.js&quot; | xargs grep -n &quot;TODO&quot;</code></pre>
         </div>
         <div class="side-card">
           <h3>Related</h3>
-          <div class="related-grid"><a href="git-cheat-sheet.html" class="related-card"><strong>Git Cheat Sheet</strong><span>Essential Git commands for everyday branching, syncing and fixing mistakes.</span></a><a href="regex-cheat-sheet.html" class="related-card"><strong>Regex Cheat Sheet</strong><span>A compact regex cheat sheet with common symbols, patterns and practical examples.</span></a><a href="docker-cheat-sheet.html" class="related-card"><strong>Docker Cheat Sheet</strong><span>Quick Docker commands for images, containers, ports, volumes and Compose.</span></a></div>
+          <div class="related-grid"><a href="git-cheat-sheet.html" class="related-card"><strong>Git Cheat Sheet</strong><span>Practical Git reference for cloning, branching, syncing remotes and recovering from mistakes.</span></a><a href="regex-cheat-sheet.html" class="related-card"><strong>Regex Cheat Sheet</strong><span>A compact regex cheat sheet with common symbols, patterns and practical examples.</span></a><a href="docker-cheat-sheet.html" class="related-card"><strong>Docker Cheat Sheet</strong><span>Quick Docker commands for images, containers, ports, volumes and Compose.</span></a></div>
         </div>
       </aside>
     </div>

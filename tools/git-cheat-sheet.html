@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Git Cheat Sheet – Essential Git Commands | ToolsNowPro</title>
-<meta name="description" content="Git cheat sheet with init, clone, status, add, commit, push, pull, branch, merge and undo commands.">
+<title>Git Cheat Sheet – Branching, Remotes, Recovery &amp; Release Tags | ToolsNowPro</title>
+<meta name="description" content="Git cheat sheet with clone, status, add, commit, branch, merge, pull, push, stash, rebase, reset and tag commands.">
 <link rel="stylesheet" href="../shared.css">
 <style>
 .hero{padding:52px 0 28px;text-align:center}
@@ -77,8 +77,8 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 <div class="hero wrapper">
   <div class="badge badge-violet" style="margin-bottom:18px">🌿 Git</div>
   <h1>Git Cheat Sheet</h1>
-  <p>Essential Git commands for everyday branching, syncing and fixing mistakes.</p>
-  <div class="sheet-pills"><span class="sheet-pill">Setup and clone</span><span class="sheet-pill">Daily workflow</span><span class="sheet-pill">Branches and merges</span><span class="sheet-pill">Undo common mistakes</span></div>
+  <p>Practical Git reference for cloning, branching, syncing remotes and recovering from mistakes.</p>
+  <div class="sheet-pills"><span class="sheet-pill">Setup and remotes</span><span class="sheet-pill">Daily workflow</span><span class="sheet-pill">Branches and merges</span><span class="sheet-pill">Recover and inspect</span></div>
 </div>
 
 <div class="wrapper">
@@ -87,13 +87,16 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
       <main>
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Setup</h2>
+        <h2>Setup and remotes</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>git init
 git clone &lt;repo-url&gt;
 git config --global user.name &quot;Your Name&quot;
-git config --global user.email &quot;you@example.com&quot;</code></pre>
+git config --global user.email &quot;you@example.com&quot;
+git remote -v
+git remote add origin &lt;repo-url&gt;
+git fetch origin</code></pre>
     </section>
   
     <section class="sheet-block">
@@ -104,41 +107,47 @@ git config --global user.email &quot;you@example.com&quot;</code></pre>
       <pre><code>git status
 git add .
 git commit -m &quot;message&quot;
-git push origin main</code></pre>
+git pull --rebase origin main
+git push -u origin main</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Branches</h2>
+        <h2>Branches and merges</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>git branch
-git checkout -b feature-name
+git switch -c feature-name
+git switch main
 git merge feature-name
-git branch -d feature-name</code></pre>
+git branch -d feature-name
+git log --graph --oneline --decorate --all</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Undo</h2>
+        <h2>Recover and inspect</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
       <pre><code>git restore file.txt
-git reset HEAD file.txt
+git restore --staged file.txt
+git reset --soft HEAD~1
+git reset --hard HEAD~1
 git revert &lt;commit&gt;
-git log --oneline</code></pre>
+git reflog</code></pre>
     </section>
   
     <section class="sheet-block">
       <div class="sheet-head">
-        <h2>Stash and rebase</h2>
+        <h2>Stash, rebase and release</h2>
         <button class="btn-copy" onclick="copyBlock(this)">Copy</button>
       </div>
-      <pre><code>git stash
+      <pre><code>git stash push -m &quot;wip&quot;
 git stash pop
 git rebase main
 git cherry-pick &lt;commit&gt;
-git tag v1.0.0</code></pre>
+git tag -a v1.0.0 -m &quot;Release v1.0.0&quot;
+git push --tags</code></pre>
     </section>
   </main>
       <aside>
@@ -157,7 +166,7 @@ git tag v1.0.0</code></pre>
         </div>
         <div class="side-card">
           <h3>Related</h3>
-          <div class="related-grid"><a href="bash-linux-cheat-sheet.html" class="related-card"><strong>Bash / Linux Commands Cheat Sheet</strong><span>Terminal basics for navigating files, searching text, permissions and processes.</span></a><a href="docker-cheat-sheet.html" class="related-card"><strong>Docker Cheat Sheet</strong><span>Quick Docker commands for images, containers, ports, volumes and Compose.</span></a><a href="vscode-shortcuts-cheat-sheet.html" class="related-card"><strong>VS Code Shortcuts Cheat Sheet</strong><span>A practical VS Code shortcut cheat sheet for editing, file navigation, search, multi-cursor work, terminal access and settings.</span></a></div>
+          <div class="related-grid"><a href="bash-linux-cheat-sheet.html" class="related-card"><strong>Bash / Linux Commands Cheat Sheet</strong><span>A more complete terminal reference for navigation, redirects, permissions, variables and text processing.</span></a><a href="docker-cheat-sheet.html" class="related-card"><strong>Docker Cheat Sheet</strong><span>Quick Docker commands for images, containers, ports, volumes and Compose.</span></a><a href="vscode-shortcuts-cheat-sheet.html" class="related-card"><strong>VS Code Shortcuts Cheat Sheet</strong><span>A practical VS Code shortcut cheat sheet for editing, file navigation, search, multi-cursor work, terminal access and settings.</span></a></div>
         </div>
       </aside>
     </div>

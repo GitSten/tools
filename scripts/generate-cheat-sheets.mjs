@@ -253,47 +253,80 @@ COMMIT;`
     title: 'Bash / Linux Commands Cheat Sheet',
     category: 'Dev Tools',
     badge: '⌨ Bash',
-    intro: 'Terminal basics for navigating files, searching text, permissions and processes.',
-    metaTitle: 'Bash / Linux Commands Cheat Sheet – Terminal Basics | ToolsNowPro',
-    metaDescription: 'Bash and Linux commands cheat sheet with pwd, ls, cd, grep, find, chmod, ps, and piping basics.',
-    quick: ['Navigation', 'Search files', 'Permissions', 'Processes and pipes'],
+    intro: 'A more complete terminal reference for navigation, redirects, permissions, variables and text processing.',
+    metaTitle: 'Bash / Linux Commands Cheat Sheet – Terminal, Pipes & Text Tools | ToolsNowPro',
+    metaDescription: 'Bash and Linux cheat sheet with navigation, file operations, redirects, pipes, permissions, variables, text processing and package managers.',
+    quick: ['Navigate faster', 'Redirect output', 'Permissions and ownership', 'Process and text tools'],
     sections: [
       {
         title: 'Navigation',
         code: `pwd
-ls -la
+ls -lah
 cd /path/to/project
-mkdir new-folder
+cd -
+mkdir -p new-folder/sub-folder
 touch notes.txt`
       },
       {
         title: 'Files and search',
         code: `cp source.txt backup.txt
 mv old-name.txt new-name.txt
+cp -r folder backup-folder
 rm -r folder
-grep -R "query" .
+grep -Rin "query" .
 find . -name "*.js"`
+      },
+      {
+        title: 'Redirects and pipes',
+        code: `command > output.txt
+command >> output.txt
+command 2> errors.txt
+command | tee output.txt
+cat file.txt | grep "term" | head`
       },
       {
         title: 'Permissions',
         code: `chmod +x script.sh
+chmod 755 deploy.sh
 chown user:group file.txt
-sudo apt update
-sudo apt install git`
+sudo chown -R user:group folder
+umask 022`
       },
       {
-        title: 'Processes and pipes',
+        title: 'Processes and jobs',
         code: `ps aux
 top
 kill 12345
-cat access.log | grep "500" | head`
+pkill node
+jobs
+fg
+bg`
+      },
+      {
+        title: 'Variables and quoting',
+        code: `name="Alex"
+echo "$name"
+echo '$name'
+export API_KEY="secret"
+echo \${name:-Guest}`
       },
       {
         title: 'Text processing',
         code: `grep -R "ERROR" .
+cut -d, -f1,3 data.csv
+sort names.txt | uniq
 sed -n '1,20p' file.txt
 awk '{print $1, $NF}' data.txt
+tr '[:lower:]' '[:upper:]'
 find . -name "*.js" | xargs grep -n "TODO"`
+      },
+      {
+        title: 'Package managers',
+        code: `sudo apt update && sudo apt upgrade
+sudo apt install git curl
+sudo dnf install git
+brew update && brew upgrade
+brew install jq`
       }
     ],
     related: ['git-cheat-sheet', 'regex-cheat-sheet', 'docker-cheat-sheet']
@@ -396,17 +429,16 @@ const moreSheets = [
     title: 'Git Cheat Sheet',
     category: 'Dev Tools',
     badge: '🌿 Git',
-    intro: 'Essential Git commands for everyday branching, syncing and fixing mistakes.',
-    metaTitle: 'Git Cheat Sheet – Essential Git Commands | ToolsNowPro',
-    metaDescription: 'Git cheat sheet with init, clone, status, add, commit, push, pull, branch, merge and undo commands.',
-    quick: ['Setup and clone', 'Daily workflow', 'Branches and merges', 'Undo common mistakes'],
+    intro: 'Practical Git reference for cloning, branching, syncing remotes and recovering from mistakes.',
+    metaTitle: 'Git Cheat Sheet – Branching, Remotes, Recovery & Release Tags | ToolsNowPro',
+    metaDescription: 'Git cheat sheet with clone, status, add, commit, branch, merge, pull, push, stash, rebase, reset and tag commands.',
+    quick: ['Setup and remotes', 'Daily workflow', 'Branches and merges', 'Recover and inspect'],
     sections: [
-      { title: 'Setup', code: `git init\ngit clone <repo-url>\ngit config --global user.name "Your Name"\ngit config --global user.email "you@example.com"` },
-      { title: 'Daily workflow', code: `git status\ngit add .\ngit commit -m "message"\ngit push origin main` },
-      { title: 'Branches', code: `git branch\ngit checkout -b feature-name\ngit merge feature-name\ngit branch -d feature-name` },
-      { title: 'Undo', code: `git restore file.txt\ngit reset HEAD file.txt\ngit revert <commit>\ngit log --oneline` }
-      ,
-      { title: 'Stash and rebase', code: `git stash\ngit stash pop\ngit rebase main\ngit cherry-pick <commit>\ngit tag v1.0.0` }
+      { title: 'Setup and remotes', code: `git init\ngit clone <repo-url>\ngit config --global user.name "Your Name"\ngit config --global user.email "you@example.com"\ngit remote -v\ngit remote add origin <repo-url>\ngit fetch origin` },
+      { title: 'Daily workflow', code: `git status\ngit add .\ngit commit -m "message"\ngit pull --rebase origin main\ngit push -u origin main` },
+      { title: 'Branches and merges', code: `git branch\ngit switch -c feature-name\ngit switch main\ngit merge feature-name\ngit branch -d feature-name\ngit log --graph --oneline --decorate --all` },
+      { title: 'Recover and inspect', code: `git restore file.txt\ngit restore --staged file.txt\ngit reset --soft HEAD~1\ngit reset --hard HEAD~1\ngit revert <commit>\ngit reflog` },
+      { title: 'Stash, rebase and release', code: `git stash push -m "wip"\ngit stash pop\ngit rebase main\ngit cherry-pick <commit>\ngit tag -a v1.0.0 -m "Release v1.0.0"\ngit push --tags` }
     ],
     related: ['bash-linux-cheat-sheet', 'docker-cheat-sheet', 'vscode-shortcuts-cheat-sheet']
   },
