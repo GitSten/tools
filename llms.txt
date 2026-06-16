@@ -69,6 +69,8 @@
 - [Favicon Generator Online: Create a Website Icon in Minutes](https://toolsnowpro.com/blog/favicon-generator-online-guide.html)
 - [Python Cheat Sheet Online: Essential Syntax, Lists, Loops, and Functions](https://toolsnowpro.com/blog/python-cheat-sheet-online-complete-guide.html)
 - [Keyboard Shortcuts Cheat Sheet for Mac: Copy, Save, and Switch Faster](https://toolsnowpro.com/blog/mac-keyboard-shortcuts-cheat-sheet.html)
+- [How to Generate Lorem Ipsum for Wireframes Online](https://toolsnowpro.com/blog/how-to-generate-lorem-ipsum-for-wireframes-online.html)
+- [How to Find the Exact HEX Color from a Screenshot Online](https://toolsnowpro.com/blog/how-to-find-the-exact-hex-color-from-a-screenshot-online.html)
 
 ## About
 
