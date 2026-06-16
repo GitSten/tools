@@ -562,6 +562,13 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
   <nav class="site-nav" id="snav">${navHtml(sheet.slug)}</nav>
 </div></div></header>
 
+<div class="wrapper">
+  <details class="bookmark-strip">
+    <summary>Bookmark this page</summary>
+    <div class="bookmark-hint">Press Ctrl+D (Windows) or Cmd+D (Mac) to bookmark this page.</div>
+  </details>
+</div>
+
 <div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
 
 <div class="hero wrapper">
@@ -686,6 +693,13 @@ function renderLibraryPage() {
   <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
   <nav class="site-nav" id="snav">${navHtml('cheat-sheet-library')}</nav>
 </div></div></header>
+
+<div class="wrapper">
+  <details class="bookmark-strip">
+    <summary>Bookmark this page</summary>
+    <div class="bookmark-hint">Press Ctrl+D (Windows) or Cmd+D (Mac) to bookmark this page.</div>
+  </details>
+</div>
 
 <div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
 
