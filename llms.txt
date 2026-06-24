@@ -75,6 +75,7 @@
 ## About
 
 - [About & Privacy Policy](https://toolsnowpro.com/about/)
+- [Editorial Standards](https://toolsnowpro.com/editorial/): How we create helpful content, avoid thin pages, and keep the site people-first.
 - [FAQ](https://toolsnowpro.com/faq/)
 
 ## Optional: full content versions
