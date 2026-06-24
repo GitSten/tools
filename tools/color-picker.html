@@ -23,7 +23,17 @@
 .btn-mini{background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:var(--rs);padding:10px 16px;font-size:.875rem;font-weight:600;cursor:pointer}
 .btn-mini:hover{border-color:var(--violet);color:var(--violet-l)}
 .swatch{font-size:.8rem;color:var(--muted);margin-top:10px}
-@media(max-width:720px){.layout{grid-template-columns:1fr}.rgb-grid{grid-template-columns:1fr}}
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+.guide-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+.guide-card h2{font-size:1.05rem;font-weight:800;margin-bottom:12px}
+.guide-card p{color:var(--muted);font-size:.92rem;line-height:1.75;margin-bottom:12px}
+.guide-card ul,.guide-card ol{color:var(--muted);font-size:.92rem;line-height:1.75;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.pill-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pill-list span{background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:7px 11px;font-size:.8rem;color:var(--muted)}
+.small-callout{margin-top:14px;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,rgba(124,58,237,.09),rgba(124,58,237,.02));border:1px solid rgba(124,58,237,.2);color:var(--muted);font-size:.9rem;line-height:1.7}
+.mini-link{display:inline-flex;align-items:center;gap:6px;color:var(--violet-l);font-weight:700;text-decoration:none}
+.mini-link:hover{text-decoration:underline}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.rgb-grid{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSDSPEHT0J"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-LSDSPEHT0J");</script>
@@ -96,11 +106,61 @@
     </div>
   </div>
 </div>
+<div class="wrapper">
+  <div class="guide-grid">
+    <section class="guide-card">
+      <h2>When to use HEX vs RGB</h2>
+      <p>HEX is the easiest format to paste into CSS, design systems, and brand style guides. It is short, clean, and the format most developers expect when they are working on web colors.</p>
+      <p>RGB is useful when you need to reason about channels separately, such as in overlays, canvas work, or image editing. If you are tuning opacity, gradients, or visual effects, RGB is often the more practical format.</p>
+      <h2>How to pick a usable color</h2>
+      <ul>
+        <li>Start with the base brand color or a screenshot sample</li>
+        <li>Check the color on both light and dark backgrounds</li>
+        <li>Compare the value against your button, text, or card surface</li>
+        <li>Copy the result into your CSS or design file and test the contrast</li>
+      </ul>
+      <div class="small-callout">A color that looks good in the picker can still fail in the layout. Always test the color where it will actually be used, especially for text and button states.</div>
+    </section>
+    <aside class="guide-card">
+      <h2>Common use cases</h2>
+      <div class="pill-list">
+        <span>Brand colors</span>
+        <span>UI accents</span>
+        <span>Button states</span>
+        <span>Gradients</span>
+        <span>Screenshot match</span>
+      </div>
+      <p style="margin-top:14px">If you are matching a color from a design or a screenshot, start by sampling the closest visible pixel and then adjust slightly for contrast. That usually gets you a cleaner result than copying a random nearby shade.</p>
+      <p>For UI work, a slightly darker or lighter tone is often more readable than the exact pixel match. The exact match is useful, but readable text and clear controls matter more than perfect visual sameness.</p>
+      <a class="mini-link" href="../blog/how-to-find-the-exact-hex-color-from-a-screenshot-online.html">Read the screenshot color guide →</a>
+    </aside>
+  </div>
+  <div class="guide-grid">
+    <section class="guide-card">
+      <h2>Practical workflow</h2>
+      <ol>
+        <li>Open the picker and choose the starting color.</li>
+        <li>Adjust the HEX or RGB fields until the shade feels right.</li>
+        <li>Copy the format that fits your workflow.</li>
+        <li>Paste it into CSS, a design file, or a product mockup.</li>
+        <li>Review the contrast against the background and text.</li>
+      </ol>
+      <p>If the color is for a page element, test it at the exact size and font weight you plan to ship. Small text needs more contrast than a large decorative heading.</p>
+    </section>
+    <section class="guide-card">
+      <h2>FAQ</h2>
+      <p><strong>Why does the same color look different on screen?</strong><br>Display brightness, surrounding colors, and contrast all change perception.</p>
+      <p><strong>Should I store colors in HEX or RGB?</strong><br>Use the format that matches your codebase, but HEX is usually the default for web styles.</p>
+      <p><strong>Can I use this for brand matching?</strong><br>Yes, especially if you need a quick match from an existing screenshot or visual asset.</p>
+      <p style="margin-bottom:0"><strong>Want a deeper guide?</strong><br><a class="mini-link" href="../blog/best-color-picker-online-for-hex-and-rgb.html">Open the color picker guide →</a></p>
+    </section>
+  </div>
+</div>
 <footer class="site-footer"><div class="wrapper">
   <div class="footer-grid">
     <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free color and conversion tools.</p></div>
     <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../index.html">Username Generator</a></li><li><a href="password-generator.html">Password Generator</a></li><li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li><li><a href="color-picker.html">Color Picker</a></li><li><a href="json-formatter.html">JSON Formatter</a></li><li><a href="favicon-generator.html">Favicon Generator</a></li><li><a href="emoji-library.html">Emoji Library</a></li><li><a href="cheat-sheet-library.html">Cheat Sheets</a></li><li><a href="bio-generator.html">Bio Generator</a></li></ul></div>
-    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li><li><a href="../blog/best-color-picker-online-for-hex-and-rgb.html">Color Guide</a></li></ul></div>
     <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
   </div>
   <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>

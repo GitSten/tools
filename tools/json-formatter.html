@@ -22,7 +22,17 @@ textarea:focus, select:focus{outline:none;border-color:var(--violet)}
 .btn-mini{background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:var(--rs);padding:10px 16px;font-size:.875rem;font-weight:600;cursor:pointer}
 .btn-mini:hover{border-color:var(--violet);color:var(--violet-l)}
 .status{font-size:.78rem;color:var(--muted);margin-top:10px;min-height:1.1em}
-@media(max-width:840px){.layout{grid-template-columns:1fr}}
+.guide-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;margin-top:24px}
+.guide-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px}
+.guide-card h2{font-size:1.05rem;font-weight:800;margin-bottom:12px}
+.guide-card p{color:var(--muted);font-size:.92rem;line-height:1.75;margin-bottom:12px}
+.guide-card ul,.guide-card ol{color:var(--muted);font-size:.92rem;line-height:1.75;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.pill-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pill-list span{background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:7px 11px;font-size:.8rem;color:var(--muted)}
+.small-callout{margin-top:14px;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,rgba(124,58,237,.09),rgba(124,58,237,.02));border:1px solid rgba(124,58,237,.2);color:var(--muted);font-size:.9rem;line-height:1.7}
+.mini-link{display:inline-flex;align-items:center;gap:6px;color:var(--violet-l);font-weight:700;text-decoration:none}
+.mini-link:hover{text-decoration:underline}
+@media(max-width:840px){.layout,.guide-grid{grid-template-columns:1fr}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSDSPEHT0J"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-LSDSPEHT0J");</script>
@@ -93,11 +103,63 @@ textarea:focus, select:focus{outline:none;border-color:var(--violet)}
     </div>
   </div>
 </div>
+<div class="wrapper">
+  <div class="guide-grid">
+    <section class="guide-card">
+      <h2>Why JSON formatting matters</h2>
+      <p>JSON is compact by design, but compact text is hard to review when you are debugging API responses, webhooks, configuration files, or test payloads. Formatting turns a dense block into something you can read line by line.</p>
+      <p>That matters when you need to spot a missing bracket, a bad quote, or a value that does not match the shape you expected. The faster you can see the structure, the faster you can fix the issue.</p>
+      <h2>Common JSON mistakes</h2>
+      <ul>
+        <li>Trailing commas after the last item in an object or array</li>
+        <li>Single quotes instead of double quotes for keys and strings</li>
+        <li>Missing brackets, braces, or a closing quote inside a string</li>
+        <li>Comments pasted from JavaScript into pure JSON</li>
+        <li>Escaping problems inside nested text values</li>
+      </ul>
+      <div class="small-callout">If the output still looks wrong after formatting, check the outer structure first. Most JSON errors come from one small syntax issue near the top or inside the deepest nested block.</div>
+    </section>
+    <aside class="guide-card">
+      <h2>Fast workflow</h2>
+      <ol>
+        <li>Paste the JSON into the left panel.</li>
+        <li>Format it with 2 or 4 spaces.</li>
+        <li>Review the structure and fix syntax errors.</li>
+        <li>Minify it when you need a compact payload.</li>
+        <li>Copy the result back into your app, editor, or docs.</li>
+      </ol>
+      <div class="pill-list">
+        <span>API responses</span>
+        <span>Webhooks</span>
+        <span>Config files</span>
+        <span>Debugging</span>
+        <span>Team review</span>
+      </div>
+      <div class="small-callout">Pretty JSON is best for humans. Minified JSON is best for transport. Use both, depending on whether you are reviewing or sending the payload.</div>
+    </aside>
+  </div>
+  <div class="guide-grid">
+    <section class="guide-card">
+      <h2>When to format, and when to minify</h2>
+      <p>Use formatted JSON when you are reading data, comparing responses, or explaining an issue to someone else. Indentation makes nesting obvious, so arrays and objects are much easier to scan.</p>
+      <p>Use minified JSON when size matters more than readability. That is useful for sending payloads, storing compact sample data, or preparing responses for transport. The structure is the same either way, but the visual presentation serves a different goal.</p>
+      <p>For the cleanest workflow, format first, validate the shape, and only then minify if you need the smaller version.</p>
+      <a class="mini-link" href="../blog/how-to-format-json-for-api-responses-online.html">Read the JSON API formatting guide →</a>
+    </section>
+    <section class="guide-card">
+      <h2>FAQ</h2>
+      <p><strong>Does this tool keep my JSON?</strong><br>No, the formatter runs in your browser so you can work locally.</p>
+      <p><strong>What if my JSON is invalid?</strong><br>The formatter helps you surface the syntax issue faster, which is usually the real problem.</p>
+      <p><strong>Can I change indentation?</strong><br>Yes, choose 2 spaces or 4 spaces depending on your preferred style.</p>
+      <p style="margin-bottom:0"><strong>Need more help?</strong><br><a class="mini-link" href="../blog/json-formatter-online-guide.html">Open the JSON formatter guide →</a></p>
+    </section>
+  </div>
+</div>
 <footer class="site-footer"><div class="wrapper">
   <div class="footer-grid">
     <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators.</p></div>
     <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../index.html">Username Generator</a></li><li><a href="password-generator.html">Password Generator</a></li><li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li><li><a href="color-picker.html">Color Picker</a></li><li><a href="json-formatter.html">JSON Formatter</a></li><li><a href="favicon-generator.html">Favicon Generator</a></li><li><a href="emoji-library.html">Emoji Library</a></li><li><a href="cheat-sheet-library.html">Cheat Sheets</a></li><li><a href="bio-generator.html">Bio Generator</a></li></ul></div>
-    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
+    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li><li><a href="../blog/json-formatter-online-guide.html">JSON Guide</a></li></ul></div>
     <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
   </div>
   <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
