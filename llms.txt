@@ -56,21 +56,17 @@
 ## Utility guides
 
 - [How to Convert JPG to PDF Online Without Losing Quality](https://toolsnowpro.com/blog/how-to-convert-jpg-to-pdf-online.html)
-- [Best JPG to PDF Converter Online for Scans, Receipts, and Menus](https://toolsnowpro.com/blog/best-jpg-to-pdf-converter-online-for-scans.html)
 - [Best Random Number Generator Online for Dice, Coins, and Name Picks](https://toolsnowpro.com/blog/best-random-number-generator-online.html)
-- [Dice Roller Online: Random Number Generator for Quick Picks](https://toolsnowpro.com/blog/dice-roller-online-random-number-generator.html)
 - [Online Stopwatch Timer for Pomodoro, Countdown, and 5 Minute Timers](https://toolsnowpro.com/blog/online-stopwatch-timer-guide.html)
-- [5 Minute Timer Online: Fast Countdown for Study, Cooking, and Breaks](https://toolsnowpro.com/blog/5-minute-timer-online.html)
 - [How to Generate Strong Passwords Online Without Reusing Anything](https://toolsnowpro.com/blog/how-to-generate-strong-passwords-online.html)
 - [Best Color Picker Online for HEX and RGB Websites](https://toolsnowpro.com/blog/best-color-picker-online-for-hex-and-rgb.html)
-- [How to Format JSON for API Responses Online](https://toolsnowpro.com/blog/how-to-format-json-for-api-responses-online.html)
+- [What Is a HEX Color Code? Complete Guide](https://toolsnowpro.com/blog/what-is-a-hex-color-code.html)
 - [JSON Formatter Online: Beautify and Validate JSON Instantly](https://toolsnowpro.com/blog/json-formatter-online-guide.html)
-- [How to Create a Favicon from a Logo Online](https://toolsnowpro.com/blog/how-to-create-a-favicon-from-a-logo-online.html)
 - [Favicon Generator Online: Create a Website Icon in Minutes](https://toolsnowpro.com/blog/favicon-generator-online-guide.html)
 - [Python Cheat Sheet Online: Essential Syntax, Lists, Loops, and Functions](https://toolsnowpro.com/blog/python-cheat-sheet-online-complete-guide.html)
 - [Keyboard Shortcuts Cheat Sheet for Mac: Copy, Save, and Switch Faster](https://toolsnowpro.com/blog/mac-keyboard-shortcuts-cheat-sheet.html)
-- [How to Generate Lorem Ipsum for Wireframes Online](https://toolsnowpro.com/blog/how-to-generate-lorem-ipsum-for-wireframes-online.html)
-- [How to Find the Exact HEX Color from a Screenshot Online](https://toolsnowpro.com/blog/how-to-find-the-exact-hex-color-from-a-screenshot-online.html)
+- [How to Generate Lorem Ipsum Text Online](https://toolsnowpro.com/blog/how-to-generate-lorem-ipsum-text-online.html)
+- [What Is Lorem Ipsum Placeholder Text? Complete Guide](https://toolsnowpro.com/blog/what-is-lorem-ipsum-placeholder-text.html)
 
 ## About
 
