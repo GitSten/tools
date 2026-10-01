@@ -101,21 +101,15 @@ find . -name "*.html" -exec sed -i '' 's/ca-pub-XXXX/ca-pub-SINUNUMBER/g' {} +
 └── wrangler.toml               ← Cloudflare Pages konfiguratsioon
 ```
 
-## Kontaktivormi aktiveerimine
+## Kontaktivorm
 
-Vorm kasutab [Formspree AJAX saatmist](https://help.formspree.io/articles/building-your-form/submit-forms-with-javascript-ajax/).
-
-1. Loo Formspree vorm ja kinnita sõnumeid vastu võttev e-posti aadress.
-2. Määra `about/index.html` vormi `data-endpoint` väärtuseks oma vormi URL kujul `https://formspree.io/f/…`.
-3. Avalda muudatus ja saada üks mittetundlik kontrollsõnum. Kontrolli nii teenuse vastust kui ka sõnumi saabumist postkasti.
-
-Tühja või sobimatu endpoint'iga on saatmisnupp keelatud ja leht ütleb, et vorm pole saadaval. Edukat teadet näidatakse ainult pärast Formspree HTTP-edukust ja JSON-vastust `ok: true`. Vea korral säilivad väljad. Teenuse kinnitatud vastus ei tõenda postkasti kohaletoimetamist. Avalikku HTML-i ei lisata API-võtmeid.
+Kontaktivorm ei vaja eraldi saatmisteenust. See avab kasutaja enda e-posti rakenduse `mailto:` lingiga, täites aadressi, teema ja sõnumi automaatselt. Muuda `about/index.html` vormi `data-contact-email` väärtus oma päris kontaktiaadressiks. Veebileht ei saa sel viisil kohaletoimetamist kinnitada: kasutaja peab avanenud e-posti rakenduses ise vajutama Send.
 
 About-lehe avaliku haldaja nimi tuleb lisada omaniku kinnitatud andmete põhjal. Projekti failides sellist identiteeti ei olnud.
 
 ## Sisuparanduste kontroll (2026-10-01)
 
-Chrome'i brauseris kontrolliti 66 muudetud HTML-lehe skriptide käivitumist, JSON-i ja värvikoodi näiteid, FAQ avamist ilma JavaScriptita, näidisnimede kopeerimist klaviatuuriga ning kontaktivormi viit olekut (seadistamata, HTTP-viga, võrguviga, kinnitamata vastus, kinnitatud vastus). Kontaktiteenuse vastused olid simuleeritud; päris postkasti saatmist pole kontrollitud. Kuue põhilehe paigutus kontrolliti ka 390 px laiusega.
+Chrome'i brauseris kontrolliti muudetud HTML-lehtede skriptide käivitumist, JSON-i ja värvikoodi näiteid, FAQ avamist ilma JavaScriptita, näidisnimede kopeerimist klaviatuuriga ning kontaktivormi `mailto:` aadressi koostamist. Päris postkasti saatmist ei saa brauseritest automaatselt kontrollida. Kuue põhilehe paigutus kontrolliti ka 390 px laiusega.
 
 PDF-juhendi näidisfailid asuvad `blog/examples/` ja päris tööriista kuvatõmmised `blog/images/`. Näidis-PDF-id loodi tööriista enda allalaadimisfunktsiooniga. Failide suurused ja PDF-i lehe/pildi mõõtmed on kontrollitud; mõõdetud tulemused ja piirangud on juhendis.
 

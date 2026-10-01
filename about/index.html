@@ -130,10 +130,10 @@
         <p>The site stores saved tool IDs, recent tool IDs, and your analytics preference in local storage. It does not automatically save your tool inputs. Google services may set cookies as described in Google’s privacy policy. You can delete or block cookies through your browser settings.</p>
 
         <h3>Contact messages</h3>
-        <p>If the contact form is enabled, the name, email address, and message you submit are sent to Formspree for forwarding to the site operator. Contact messages are separate from tool inputs. Do not include passwords or sensitive files in a message.</p>
+        <p>When you use the contact form, your email application opens with the message addressed to <a href="mailto:hello@toolsnowpro.com">hello@toolsnowpro.com</a>. Your email provider handles delivery; ToolsNowPro does not receive the message through the website itself. Contact messages are separate from tool inputs. Do not include passwords or sensitive files in a message.</p>
 
         <h3>Third parties</h3>
-        <p>We do not sell, trade, or share your data with any third parties except the services described above, including Formspree when you submit the contact form.</p>
+        <p>We do not sell, trade, or share your data with third parties through the contact form. Your email provider may process the message when you choose to send it.</p>
 
         <h3>Children</h3>
         <p>ToolsNowPro is not directed at children under 13. We do not knowingly collect data from children.</p>
@@ -171,16 +171,15 @@
       <div id="contact" class="legal-section">
         <h2>Contact</h2>
         <p>Found a bug? Have a suggestion for a new tool? Use the form below.</p>
-        <!-- Set data-endpoint to your verified Formspree form URL before deployment. -->
-        <form id="contact-form" class="contact-form" data-endpoint="" method="post">
+        <form id="contact-form" class="contact-form" data-contact-email="hello@toolsnowpro.com" method="post">
           <label for="c-name">Your name</label>
           <input type="text" name="name" placeholder="Your name" id="c-name" autocomplete="name" maxlength="100" required>
           <label for="c-email">Your email</label>
           <input type="email" name="email" placeholder="Your email" id="c-email" autocomplete="email" maxlength="254" required>
           <label for="c-msg">Your message</label>
           <textarea name="message" placeholder="Your message…" id="c-msg" maxlength="5000" required></textarea>
-          <button id="contact-submit" class="btn-primary" type="submit" disabled>Send Message</button>
-          <p id="contact-status" role="status" aria-live="polite" style="color:var(--muted);margin-top:10px;font-size:.875rem">Contact form temporarily unavailable. No message has been sent.</p>
+          <button id="contact-submit" class="btn-primary" type="submit">Open Email App</button>
+          <p id="contact-status" role="status" aria-live="polite" style="color:var(--muted);margin-top:10px;font-size:.875rem">Your email app will open with the message filled in. You will still need to press Send there.</p>
           <noscript><p>JavaScript is required to send a message through this form.</p></noscript>
         </form>
       </div>
