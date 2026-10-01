@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>JPG to PDF Converter – Free Image to PDF Tool | ToolsNowPro</title>
-<meta name="description" content="Upload a JPG, PNG, or WebP image and convert it to a PDF instantly in your browser. Free, simple, and no signup required.">
-<link rel="canonical" href="https://toolsnowpro.com/tools/jpg-to-pdf.html">
+<title>JPG to PDF Converter — Combine Images into a PDF | ToolsNowPro</title>
+<meta name="description" content="Combine JPG, PNG and WebP images into one PDF. Reorder and rotate pages, choose A4 or Letter, and download locally. No signup or file uploads.">
+<link rel="canonical" href="https://toolsnowpro.com/tools/jpg-to-pdf">
 <link rel="stylesheet" href="../shared.css">
 <style>
 .hero{padding:52px 0 28px;text-align:center}
@@ -48,50 +48,39 @@
 .mini-link{display:inline-flex;align-items:center;gap:6px;color:var(--violet-l);font-weight:700;text-decoration:none}
 .mini-link:hover{text-decoration:underline}
 @media(max-width:860px){.layout{grid-template-columns:1fr}.preview-wrap{grid-template-columns:1fr}.preview{width:100%;height:220px}.guide-grid{grid-template-columns:1fr}}
+.preview-wrap{grid-template-columns:1.3fr 1fr}.pdf-page-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-height:560px;overflow:auto;padding:3px}.pdf-page-card{background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:10px;min-width:0}.pdf-thumbnail{height:145px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#FFFFFF;border-radius:4px}.pdf-thumbnail img{width:100%;height:100%;object-fit:contain}.pdf-page-name{font-size:.65rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:7px 0}.pdf-page-actions{display:flex;gap:6px}.pdf-page-actions button{flex:1;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:4px;cursor:pointer;padding:5px}.drop-zone:focus-visible{border-color:var(--violet-l)}@media(max-width:860px){.preview-wrap{grid-template-columns:1fr}.pdf-page-grid{max-height:400px}}
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSDSPEHT0J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-LSDSPEHT0J");</script>
+
+
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="apple-touch-icon" href="../favicon-180.svg">
 <meta name="theme-color" content="#7C3AED">
+<script src="/js/analytics.js" defer></script>
+<script src="/js/site.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Images to PDF", "url": "https://toolsnowpro.com/tools/jpg-to-pdf", "description": "Combine JPG, PNG or WebP images into a PDF, right in your browser.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript and a modern web browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 </head>
-<body>
+<body data-tool-id="pdf">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header"><div class="wrapper"><div class="header-inner">
-  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
-  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
-  <nav class="site-nav" id="snav">
-    <a href="../qr-generator/index.html">▦ QR Generator</a>
-    <a href="../text-tools/index.html">🔤 Case Converter</a>
-    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
-    <a href="password-generator.html">🔑 Password Generator</a>
-    <a href="jpg-to-pdf.html" class="active">📄 JPG to PDF</a>
-    <a href="random-number-generator.html">🎲 Random Number</a>
-    <a href="stopwatch-timer.html">⏱ Stopwatch / Timer</a>
-    <a href="lorem-ipsum-generator.html">✎ Lorem Ipsum</a>
-    <a href="color-picker.html">🎨 Color Picker</a>
-    <a href="json-formatter.html">{} JSON Formatter</a>
-    <a href="favicon-generator.html">◉ Favicon</a>
-    <a href="emoji-library.html">😄 Emoji Library</a>
-    <a href="cheat-sheet-library.html">📚 Cheat Sheets</a>
-    <a href="../image-converter/index.html">🖼 Image Converter</a>
-    <a href="../gaming/index.html">⚡ Username</a>
-    <a href="../blog/index.html">📝 Blog</a>
-  </nav>
+<a href="/" class="logo" aria-label="ToolsNowPro home"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a>
+<nav class="site-nav" id="snav" aria-label="Main navigation"><a href="/#tools">All tools</a><a href="/qr-generator/">QR codes</a><a href="/tools/username-generator">Usernames</a><a href="/blog/">Guides</a></nav>
+<div class="header-actions"><button type="button" class="site-search-button" data-open-search aria-label="Search tools"><span aria-hidden="true">⌕</span><span class="search-button-label">Find a tool</span><kbd aria-hidden="true">⌘ K</kbd></button><button type="button" class="nav-toggle" aria-controls="snav" aria-expanded="false" aria-label="Toggle navigation">☰</button></div>
 </div></div></header>
+<main id="main-content">
+<div class="wrapper tool-breadcrumbs"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/?category=Images#tools">Images</a><span aria-hidden="true">/</span><span>Images to PDF</span></nav><button type="button" class="save-tool-button" data-save-current aria-pressed="false" hidden>☆ Save tool</button></div>
 
-<div class="wrapper">
-  <details class="bookmark-strip">
-    <summary>Bookmark this page</summary>
-    <div class="bookmark-hint">Press Ctrl+D (Windows) or Cmd+D (Mac) to bookmark this page.</div>
-  </details>
-</div>
 
-<div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
+
+
+
+
+
+
 
 <div class="hero wrapper">
   <div class="badge badge-violet" style="margin-bottom:18px">📄 Image to PDF</div>
-  <h1>JPG to <span>PDF</span> Converter</h1>
-  <p>Upload an image, convert it to a PDF instantly, and download the result in one click. Everything runs in your browser.</p>
+  <h1>Images to <span>PDF</span></h1>
+  <p>Combine images into a PDF. Arrange and rotate the pages, choose a paper size, and download without uploading your files.</p>
 </div>
 
 <div class="wrapper">
@@ -99,37 +88,37 @@
     <div class="layout">
       <div>
         <div class="card-tool">
-          <div class="drop-zone" id="drop-zone" onclick="document.getElementById('jpg-file').click()" ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
+          <div class="drop-zone" id="drop-zone" role="button" tabindex="0" aria-label="Choose images for your PDF" onclick="document.getElementById('jpg-file').click()" ondragover="onDragOver(event)" ondragleave="onDragLeave(event)" ondrop="onDrop(event)">
             <div class="drop-icon">📄</div>
-            <div class="drop-title">Drop an image here or click to upload</div>
-            <div class="drop-sub">Supports JPG, PNG and WebP. The PDF page matches the image size.</div>
-            <input id="jpg-file" type="file" accept="image/*" style="display:none" onchange="loadImage(this.files[0])">
+            <div class="drop-title">Drop images here or choose files</div>
+            <div class="drop-sub">JPG, PNG and WebP · multiple images supported</div>
+            <input id="jpg-file" type="file" accept="image/jpeg,image/png,image/webp" multiple style="display:none" onchange="loadImages(this.files)">
           </div>
           <div class="preview-wrap" style="margin-top:18px">
-            <div class="preview" id="preview-box"><div style="color:var(--muted);text-align:center;padding:20px">Preview appears here</div></div>
+            <div class="pdf-page-grid" id="preview-box"><div style="color:var(--muted);text-align:center;padding:20px">Preview appears here</div></div>
             <div>
               <div class="field">
-                <label>PDF filename</label>
+                <label for="pdf-name">PDF filename</label>
                 <input id="pdf-name" type="text" value="image-to-pdf.pdf" placeholder="image-to-pdf.pdf">
               </div>
               <div class="field">
-                <label>JPEG quality</label>
+                <label for="jpg-quality">JPEG quality (re-encodes images)</label>
                 <select id="jpg-quality">
                   <option value="0.98">High quality</option>
                   <option value="0.92" selected>Balanced</option>
                   <option value="0.85">Smaller file</option>
                 </select>
               </div>
-              <div class="info" id="file-info">
-                <div class="info-row"><span>Status</span><b id="status">Upload an image to begin</b></div>
+              <div class="field"><label for="pdf-paper-size">Page size</label><select id="pdf-paper-size"><option value="image">Image dimensions (points)</option><option value="a4">A4 · portrait</option><option value="letter">US Letter · portrait</option></select></div><div class="info" id="file-info">
+                <div class="info-row"><span>Status</span><b id="status">Choose images to begin</b></div>
                 <div class="info-row"><span>Image size</span><b id="img-size">—</b></div>
-                <div class="info-row"><span>Output</span><b>Single-page PDF</b></div>
+                <div class="info-row"><span>Output</span><b><span id="pdf-page-count">0 pages</span></b></div>
               </div>
               <div class="row">
-                <button class="btn-primary" id="convert-btn" onclick="convertToPdf()" disabled>📄 Convert to PDF</button>
+                <button class="btn-primary" id="convert-btn" onclick="convertToPdf()" disabled>Download PDF</button>
                 <button class="btn-ghost" onclick="resetTool()">Reset</button>
               </div>
-              <div class="mini-note">Tip: the generated PDF keeps the same aspect ratio as your image.</div>
+              <div class="mini-note">Up to 20 images · 10 MB per file · 20 megapixels per image · 60 megapixels total. Images are re-encoded as JPEG; transparent areas become white.</div>
             </div>
           </div>
         </div>
@@ -138,14 +127,14 @@
         <div class="side-card">
           <h3>Why this works well</h3>
           <p>It is a fast way to turn product photos, scans, screenshots, and menu images into a PDF without uploading files to a server.</p>
-          <a href="../image-converter/index.html" class="btn-primary" style="display:flex;justify-content:center;width:100%">🖼 Try Image Converter</a>
+          <a href="../image-converter/" class="btn-primary" style="display:flex;justify-content:center;width:100%">🖼 Try Image Converter</a>
         </div>
         <div class="side-card">
           <h3>Related tools</h3>
           <ul class="side-links">
-            <li><a href="random-number-generator.html">Random Number Generator</a></li>
-            <li><a href="stopwatch-timer.html">Stopwatch / Timer</a></li>
-            <li><a href="../tools/password-generator.html">Password Generator</a></li>
+            <li><a href="random-number-generator">Random Number Generator</a></li>
+            <li><a href="stopwatch-timer">Stopwatch / Timer</a></li>
+            <li><a href="../tools/password-generator">Password Generator</a></li>
           </ul>
         </div>
 </aside>
@@ -178,7 +167,7 @@
       </div>
       <p style="margin-top:14px">This tool is ideal when you only need one image turned into one PDF page. If you need a multi-page document, use a dedicated PDF editor or combine multiple pages afterward.</p>
       <p>That makes the workflow simple: convert the image, verify the output, and then share the PDF in email, storage, or a project folder.</p>
-      <a class="mini-link" href="../blog/how-to-convert-jpg-to-pdf-online.html">Read the JPG to PDF guide →</a>
+      <a class="mini-link" href="../blog/how-to-convert-jpg-to-pdf-online">Read the JPG to PDF guide →</a>
     </aside>
   </div>
   <div class="guide-grid">
@@ -198,31 +187,18 @@
       <p><strong>Does this work in the browser?</strong><br>Yes, the conversion happens locally in your browser.</p>
       <p><strong>Can I convert PNG or WebP too?</strong><br>Yes, the tool accepts JPG, PNG, and WebP images.</p>
       <p><strong>Can I make a multi-page PDF?</strong><br>This tool creates a single-page PDF, which is best for one image at a time.</p>
-      <p style="margin-bottom:0"><strong>Need a broader tutorial?</strong><br><a class="mini-link" href="../blog/how-to-convert-jpg-to-pdf-online.html">Open the JPG to PDF guide →</a></p>
+      <p style="margin-bottom:0"><strong>Need a broader tutorial?</strong><br><a class="mini-link" href="../blog/how-to-convert-jpg-to-pdf-online">Open the JPG to PDF guide →</a></p>
     </section>
   </div>
 </div>
 
-<footer class="site-footer"><div class="wrapper">
-  <div class="footer-grid">
-    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators and businesses.</p></div>
-    <div><div class="footer-heading">Tools</div><ul class="footer-links">
-      <li><a href="../index.html">Username Generator</a></li>
-      <li><a href="password-generator.html">Password Generator</a></li>
-      <li><a href="jpg-to-pdf.html">JPG to PDF</a></li>
-      <li><a href="random-number-generator.html">Random Number Generator</a></li>
-      <li><a href="stopwatch-timer.html">Stopwatch / Timer</a></li>
-      <li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li>
-      <li><a href="color-picker.html">Color Picker</a></li>
-      <li><a href="json-formatter.html">JSON Formatter</a></li>
-      <li><a href="favicon-generator.html">Favicon Generator</a></li><li><a href="emoji-library.html">Emoji Library</a></li><li><a href="cheat-sheet-library.html">Cheat Sheets</a></li>
-      <li><a href="bio-generator.html">Bio Generator</a></li>
-    </ul></div>
-    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li><li><a href="../blog/how-to-convert-jpg-to-pdf-online.html">JPG to PDF Guide</a></li></ul></div>
-    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
-</div></footer>
+</main>
+<footer class="site-footer"><div class="wrapper"><div class="footer-grid"><div class="footer-brand"><a href="/" class="logo"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a><p>Small tools for everyday work.<br>Free to use. Built for your browser.</p></div><div><div class="footer-heading">Your toolkit</div><ul class="footer-links"><li><a href="/tools/json-formatter">JSON Formatter</a></li><li><a href="/tools/jpg-to-pdf">Images to PDF</a></li><li><a href="/tools/color-picker">Color & Contrast</a></li><li><a href="/qr-generator/">QR Code Generator</a></li><li><a href="/#tools">All 21 tools</a></li></ul></div><div><div class="footer-heading">Ideas & reference</div><ul class="footer-links"><li><a href="/tools/username-generator">Username Generator</a></li><li><a href="/gaming/">Gaming Usernames</a></li><li><a href="/tools/cheat-sheet-library">Cheat Sheets</a></li><li><a href="/blog/">Practical Guides</a></li></ul></div><div><div class="footer-heading">ToolsNowPro</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/editorial/">Editorial Standards</a></li><li><a href="/about/#contact">Contact & Feedback</a></li><li><a href="/about/#privacy">Privacy</a></li><li><a href="/about/#terms">Terms</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 ToolsNowPro · <button type="button" class="analytics-toggle" data-analytics-toggle aria-pressed="false">Analytics settings</button></span><span>Need a domain? <a href="https://namecheap.pxf.io/c/7408925/1632743/5618" rel="sponsored nofollow noopener" target="_blank">Search Namecheap ↗</a> <span class="affiliate-label">Affiliate link</span></span></div></div></footer>
+<dialog class="tool-search-dialog" id="tool-search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-header"><h2 id="search-dialog-title">Find your next tool</h2><button type="button" data-close-search class="dialog-close" aria-label="Close tool search">×</button></div><label class="sr-only" for="site-search-input">Search tool names and tasks</label><input type="search" id="site-search-input" placeholder="Try JSON, PDF, QR or username…" autocomplete="off"><p id="site-search-count" class="sr-only" role="status" aria-live="polite"></p><div id="site-search-results" class="site-search-results"></div><div class="search-dialog-footer"><a href="/#tools">Browse all tools →</a><span>Esc to close</span></div></dialog>
+
+
+
+
 
 <div class="toast" id="toast">✓ Download ready</div>
 <script src="../js/jpg-to-pdf.js"></script>

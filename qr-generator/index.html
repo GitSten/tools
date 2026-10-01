@@ -80,39 +80,27 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="apple-touch-icon" href="../favicon-180.svg">
 <meta name="theme-color" content="#7C3AED">
+<script src="/js/analytics.js" defer></script>
+<script src="/js/site.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "QR Code Generator", "url": "https://toolsnowpro.com/qr-generator/", "description": "Create URL, WiFi and contact QR codes. Download PNG or SVG.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript and a modern web browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 </head>
-<body>
+<body data-tool-id="qr">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header"><div class="wrapper"><div class="header-inner">
-  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
-  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
-  <nav class="site-nav" id="snav">
-    <a href="../qr-generator/index.html" class="active">▦ QR Generator</a>
-    <a href="../text-tools/index.html">🔤 Case Converter</a>
-    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
-    <a href="../tools/password-generator.html">🔑 Password Generator</a>
-    <a href="../tools/jpg-to-pdf.html">📄 JPG to PDF</a>
-    <a href="../tools/random-number-generator.html">🎲 Random Number</a>
-    <a href="../tools/stopwatch-timer.html">⏱ Stopwatch / Timer</a>
-    <a href="../tools/lorem-ipsum-generator.html">✎ Lorem Ipsum</a>
-    <a href="../tools/color-picker.html">🎨 Color Picker</a>
-    <a href="../tools/json-formatter.html">{} JSON Formatter</a>
-    <a href="../tools/favicon-generator.html">◉ Favicon</a>
-    <a href="../tools/emoji-library.html">😄 Emoji Library</a>
-    <a href="../tools/cheat-sheet-library.html">📚 Cheat Sheets</a>
-    <a href="../image-converter/index.html">🖼 Image Converter</a>
-    <a href="../gaming/index.html">⚡ Username</a>
-    <a href="../blog/index.html">📝 Blog</a>
-  </nav>
+<a href="/" class="logo" aria-label="ToolsNowPro home"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a>
+<nav class="site-nav" id="snav" aria-label="Main navigation"><a href="/#tools">All tools</a><a href="/qr-generator/">QR codes</a><a href="/tools/username-generator">Usernames</a><a href="/blog/">Guides</a></nav>
+<div class="header-actions"><button type="button" class="site-search-button" data-open-search aria-label="Search tools"><span aria-hidden="true">⌕</span><span class="search-button-label">Find a tool</span><kbd aria-hidden="true">⌘ K</kbd></button><button type="button" class="nav-toggle" aria-controls="snav" aria-expanded="false" aria-label="Toggle navigation">☰</button></div>
 </div></div></header>
+<main id="main-content">
+<div class="wrapper tool-breadcrumbs"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/?category=Everyday#tools">Everyday</a><span aria-hidden="true">/</span><span>QR Code Generator</span></nav><button type="button" class="save-tool-button" data-save-current aria-pressed="false" hidden>☆ Save tool</button></div>
 
-<div class="wrapper">
-  <details class="bookmark-strip">
-    <summary>Bookmark this page</summary>
-    <div class="bookmark-hint">Press Ctrl+D (Windows) or Cmd+D (Mac) to bookmark this page.</div>
-  </details>
-</div>
 
-<div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
+
+
+
+
+
+
 
 <div class="wrapper">
   <div class="qr-hero">
@@ -144,13 +132,13 @@
 
       <!-- URL -->
       <div id="form-url">
-        <div class="field"><label>Website URL</label><input type="url" id="url-input" placeholder="https://yourwebsite.com" oninput="generate()"></div>
+        <div class="field"><label for="url-input">Website URL</label><input type="url" id="url-input" placeholder="https://yourwebsite.com" oninput="generate()"></div>
       </div>
       <!-- WiFi -->
       <div id="form-wifi" style="display:none">
-        <div class="field"><label>Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="MyHomeWiFi" oninput="generate()"></div>
-        <div class="field"><label>Password</label><input type="text" id="wifi-pass" placeholder="WiFi password" oninput="generate()"></div>
-        <div class="field"><label>Security</label>
+        <div class="field"><label for="wifi-ssid">Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="MyHomeWiFi" oninput="generate()"></div>
+        <div class="field"><label for="wifi-pass">Password</label><input type="text" id="wifi-pass" placeholder="WiFi password" oninput="generate()"></div>
+        <div class="field"><label for="wifi-sec">Security</label>
           <select id="wifi-sec" onchange="generate()">
             <option value="WPA">WPA/WPA2 (recommended)</option>
             <option value="WEP">WEP</option>
@@ -161,28 +149,28 @@
       <!-- vCard -->
       <div id="form-vcard" style="display:none">
         <div class="field-row">
-          <div class="field"><label>First Name</label><input type="text" id="vc-first" placeholder="Jane" oninput="generate()"></div>
-          <div class="field"><label>Last Name</label><input type="text" id="vc-last" placeholder="Smith" oninput="generate()"></div>
+          <div class="field"><label for="vc-first">First Name</label><input type="text" id="vc-first" placeholder="Jane" oninput="generate()"></div>
+          <div class="field"><label for="vc-last">Last Name</label><input type="text" id="vc-last" placeholder="Smith" oninput="generate()"></div>
         </div>
-        <div class="field"><label>Phone</label><input type="tel" id="vc-phone" placeholder="+1 555 000 0000" oninput="generate()"></div>
-        <div class="field"><label>Email</label><input type="email" id="vc-email" placeholder="jane@example.com" oninput="generate()"></div>
-        <div class="field"><label>Company</label><input type="text" id="vc-org" placeholder="Acme Inc." oninput="generate()"></div>
-        <div class="field"><label>Website</label><input type="url" id="vc-url" placeholder="https://janesmith.com" oninput="generate()"></div>
+        <div class="field"><label for="vc-phone">Phone</label><input type="tel" id="vc-phone" placeholder="+1 555 000 0000" oninput="generate()"></div>
+        <div class="field"><label for="vc-email">Email</label><input type="email" id="vc-email" placeholder="jane@example.com" oninput="generate()"></div>
+        <div class="field"><label for="vc-org">Company</label><input type="text" id="vc-org" placeholder="Acme Inc." oninput="generate()"></div>
+        <div class="field"><label for="vc-url">Website</label><input type="url" id="vc-url" placeholder="https://janesmith.com" oninput="generate()"></div>
       </div>
       <!-- Email -->
       <div id="form-email" style="display:none">
-        <div class="field"><label>To (email address)</label><input type="email" id="em-to" placeholder="hello@example.com" oninput="generate()"></div>
-        <div class="field"><label>Subject</label><input type="text" id="em-subj" placeholder="Subject line" oninput="generate()"></div>
-        <div class="field"><label>Body (optional)</label><textarea id="em-body" placeholder="Email body..." oninput="generate()"></textarea></div>
+        <div class="field"><label for="em-to">To (email address)</label><input type="email" id="em-to" placeholder="hello@example.com" oninput="generate()"></div>
+        <div class="field"><label for="em-subj">Subject</label><input type="text" id="em-subj" placeholder="Subject line" oninput="generate()"></div>
+        <div class="field"><label for="em-body">Body (optional)</label><textarea id="em-body" placeholder="Email body..." oninput="generate()"></textarea></div>
       </div>
       <!-- SMS -->
       <div id="form-sms" style="display:none">
-        <div class="field"><label>Phone Number</label><input type="tel" id="sms-num" placeholder="+1 555 000 0000" oninput="generate()"></div>
-        <div class="field"><label>Message (optional)</label><textarea id="sms-msg" placeholder="Pre-filled message..." oninput="generate()"></textarea></div>
+        <div class="field"><label for="sms-num">Phone Number</label><input type="tel" id="sms-num" placeholder="+1 555 000 0000" oninput="generate()"></div>
+        <div class="field"><label for="sms-msg">Message (optional)</label><textarea id="sms-msg" placeholder="Pre-filled message..." oninput="generate()"></textarea></div>
       </div>
       <!-- Text -->
       <div id="form-text" style="display:none">
-        <div class="field"><label>Plain Text</label><textarea id="txt-content" placeholder="Enter any text, up to ~2900 characters..." oninput="generate()" style="min-height:120px"></textarea></div>
+        <div class="field"><label for="txt-content">Plain Text</label><textarea id="txt-content" placeholder="Enter any text, up to ~2900 characters..." oninput="generate()" style="min-height:120px"></textarea></div>
       </div>
 
       <div class="panel-title" style="margin-top:20px">3. Customise</div>
@@ -262,11 +250,11 @@
 
       <h2>Best Practices for QR Codes That Actually Get Scanned</h2>
       <h3>Size matters more than you think</h3>
-      <p>A QR code smaller than 2cm × 2cm on print material is difficult to scan reliably. For business cards, 2.5cm minimum. For posters, 5–8cm. For outdoor signage, at least 10cm. Use our 600px SVG download for any large-format printing — it scales to any size without quality loss.</p>
+      <p>Print a sample at the intended size and test it from the expected viewing distance. Longer encoded content creates a denser pattern, so one minimum size does not suit every code. Keep the light margin around the code and use SVG for scalable print artwork.</p>
       <h3>Contrast is everything</h3>
-      <p>Dark foreground on light background always. Reversed (light on dark) reduces scan reliability by up to 30%. If you're using custom colours, ensure at least a 4:1 contrast ratio between foreground and background.</p>
+      <p>Use a dark foreground on a light background and preserve the light margin around the code. Unusual colours and reversed light-on-dark codes may behave differently across scanners. Test the actual printed result; a text contrast ratio does not guarantee that a QR code will scan.</p>
       <h3>Always include a call to action</h3>
-      <p>QR codes surrounded by context ("Scan for our menu", "Scan to connect to WiFi") get scanned 3–5× more than bare QR codes. Add a short instruction wherever you place the code.</p>
+      <p>Add a short instruction such as "Scan for our menu" or "Scan to connect to WiFi" so visitors know what opening the code will do. We have not measured a scan-rate increase for this generator.</p>
       <h3>Test on multiple devices</h3>
       <p>Test your QR code on at least two different phones before printing — iPhone and Android camera apps can behave differently with unusual colour combinations.</p>
 
@@ -285,11 +273,11 @@
 <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;margin-top:18px">
         <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px">More Free Tools</div>
         <ul class="footer-links">
-          <li><a href="../text-tools/index.html">🔤 Text Case Converter</a></li>
-          <li><a href="../text-tools/word-counter.html">📊 Word Counter</a></li>
-          <li><a href="../tools/password-generator.html">🔑 Password Generator</a></li>
-          <li><a href="../image-converter/index.html">🖼 Image Converter</a></li>
-          <li><a href="../index.html">⚡ Username Generator</a></li>
+          <li><a href="../text-tools/">🔤 Text Case Converter</a></li>
+          <li><a href="../text-tools/word-counter">📊 Word Counter</a></li>
+          <li><a href="../tools/password-generator">🔑 Password Generator</a></li>
+          <li><a href="../image-converter/">🖼 Image Converter</a></li>
+          <li><a href="/gaming/">⚡ Username Generator</a></li>
         </ul>
       </div>
     </div>
@@ -302,27 +290,27 @@
     <h2 class="section-title" style="margin-bottom:8px">QR Code Guides</h2>
     <p class="section-sub" style="margin-bottom:20px">In-depth articles on QR codes for every use case.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px">
-      <a href="../blog/qr-code-restaurant-menu.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+      <a href="../blog/qr-code-restaurant-menu" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
         <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Restaurants & Hospitality</div>
         <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">QR Code for Restaurant Menus</div>
         <div style="font-size:.8rem;color:var(--muted)">Static vs dynamic, sizing, placement, and design tips.</div>
       </a>
-      <a href="../blog/wifi-qr-code-generator.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+      <a href="../blog/wifi-qr-code-generator" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
         <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">WiFi & Connectivity</div>
         <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">WiFi QR Code — Complete Guide</div>
         <div style="font-size:.8rem;color:var(--muted)">Security, compatibility, cafés, offices and events.</div>
       </a>
-      <a href="../blog/qr-code-business-card.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+      <a href="../blog/qr-code-business-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
         <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Business & Networking</div>
         <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">Business Card QR Codes</div>
         <div style="font-size:.8rem;color:var(--muted)">vCard vs URL, placement, size, design tips.</div>
       </a>
-      <a href="../blog/qr-code-size-guide.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+      <a href="../blog/qr-code-size-guide" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
         <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Print & Design</div>
         <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">QR Code Size Guide</div>
         <div style="font-size:.8rem;color:var(--muted)">Exact specs for cards, flyers, posters, and banners.</div>
       </a>
-      <a href="../blog/free-qr-code-generator-no-signup.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
+      <a href="../blog/free-qr-code-generator-no-signup" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:var(--text);display:block;transition:all .18s" onmouseover="this.style.borderColor='var(--violet)'" onmouseout="this.style.borderColor='var(--border)'">
         <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--violet-l);margin-bottom:7px">Comparison</div>
         <div style="font-size:.92rem;font-weight:700;margin-bottom:5px">Free QR Generator — No Signup</div>
         <div style="font-size:.8rem;color:var(--muted)">Why most "free" tools aren't really free.</div>
@@ -338,22 +326,20 @@
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do QR codes created here ever expire?</div><div class="faq-a">No. Our generator creates static QR codes — the destination data is permanently encoded in the QR pattern itself. There is no server, no subscription, and no expiry. The code will work for as long as the destination (your URL, WiFi network, etc.) exists.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is there a watermark on downloaded QR codes?</div><div class="faq-a">No watermark, ever. The PNG and SVG files you download are clean, professional QR codes with no branding applied by us. They're ready for commercial use.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What's the difference between PNG and SVG downloads?</div><div class="faq-a">PNG is a raster format — it has a fixed pixel size. It's perfect for digital use (websites, emails, presentations) and standard print at the size you selected. SVG is a vector format that scales to any size without any quality loss. Use SVG for large-format printing (posters, banners, signage) and when you need the code at multiple sizes.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How small can a QR code be and still scan reliably?</div><div class="faq-a">For reliable scanning: 2cm × 2cm minimum for business cards, 3cm × 3cm for flyers and brochures, 5cm × 5cm for posters and indoor signage, and at least 10cm × 10cm for outdoor or large-format use. More data in the QR code (longer URLs, full vCard details) requires slightly larger printing to maintain scan reliability.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How small can a QR code be and still scan reliably?</div><div class="faq-a">There is no single size that guarantees a scan. Code density, viewing distance, printer quality, contrast, and the scanner all matter. Print a sample at the intended size and test it from the expected distance on more than one device.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I use QR codes for commercial purposes?</div><div class="faq-a">Yes. QR codes themselves are an open standard — there are no licensing fees or restrictions on commercial use. The codes you generate here are entirely yours to use however you like, including in commercial print materials, products, and advertising.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why won't my QR code scan?</div><div class="faq-a">The most common causes: the code is printed too small (under 2cm), the contrast between foreground and background is insufficient, the code has been distorted in printing or resizing, or the destination URL is broken. Always test by scanning the downloaded file on your phone before printing anything.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why won't my QR code scan?</div><div class="faq-a">The most common causes: the code is printed too small for its density and viewing distance, the contrast between foreground and background is insufficient, the code has been distorted in printing or resizing, or the destination URL is broken. Always test by scanning the downloaded file on your phone before printing anything.</div></div>
     </div>
   </div>
 </div>
 
-<footer class="site-footer"><div class="wrapper">
-  <div class="footer-grid">
-    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free tools for creators and small businesses. No signup, no limits.</p></div>
-    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="index.html">QR Generator</a></li><li><a href="../text-tools/index.html">Text Tools</a></li><li><a href="../tools/password-generator.html">Password Generator</a></li><li><a href="../image-converter/index.html">Image Converter</a></li><li><a href="../index.html">Username Gen</a></li></ul></div>
-    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li><li><a href="../about/index.html">About</a></li></ul></div>
-    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 ToolsNowPro. Free tools, forever.</span></div>
-</div></footer>
+</main>
+<footer class="site-footer"><div class="wrapper"><div class="footer-grid"><div class="footer-brand"><a href="/" class="logo"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a><p>Small tools for everyday work.<br>Free to use. Built for your browser.</p></div><div><div class="footer-heading">Your toolkit</div><ul class="footer-links"><li><a href="/tools/json-formatter">JSON Formatter</a></li><li><a href="/tools/jpg-to-pdf">Images to PDF</a></li><li><a href="/tools/color-picker">Color & Contrast</a></li><li><a href="/qr-generator/">QR Code Generator</a></li><li><a href="/#tools">All 21 tools</a></li></ul></div><div><div class="footer-heading">Ideas & reference</div><ul class="footer-links"><li><a href="/tools/username-generator">Username Generator</a></li><li><a href="/gaming/">Gaming Usernames</a></li><li><a href="/tools/cheat-sheet-library">Cheat Sheets</a></li><li><a href="/blog/">Practical Guides</a></li></ul></div><div><div class="footer-heading">ToolsNowPro</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/editorial/">Editorial Standards</a></li><li><a href="/about/#contact">Contact & Feedback</a></li><li><a href="/about/#privacy">Privacy</a></li><li><a href="/about/#terms">Terms</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 ToolsNowPro · <button type="button" class="analytics-toggle" data-analytics-toggle aria-pressed="false">Analytics settings</button></span><span>Need a domain? <a href="https://namecheap.pxf.io/c/7408925/1632743/5618" rel="sponsored nofollow noopener" target="_blank">Search Namecheap ↗</a> <span class="affiliate-label">Affiliate link</span></span></div></div></footer>
+<dialog class="tool-search-dialog" id="tool-search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-header"><h2 id="search-dialog-title">Find your next tool</h2><button type="button" data-close-search class="dialog-close" aria-label="Close tool search">×</button></div><label class="sr-only" for="site-search-input">Search tool names and tasks</label><input type="search" id="site-search-input" placeholder="Try JSON, PDF, QR or username…" autocomplete="off"><p id="site-search-count" class="sr-only" role="status" aria-live="polite"></p><div id="site-search-results" class="site-search-results"></div><div class="search-dialog-footer"><a href="/#tools">Browse all tools →</a><span>Esc to close</span></div></dialog>
+
+
+
+
 
 <script>
 /* ================================================================

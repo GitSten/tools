@@ -4,7 +4,7 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Markdown Cheat Sheet – Headings, Lists, Links, Code &amp; Tables | ToolsNowPro</title>
 <meta name="description" content="Markdown cheat sheet with headings, bold, lists, links, images, code blocks and tables.">
-<link rel="canonical" href="https://toolsnowpro.com/tools/markdown-cheat-sheet.html">
+<link rel="canonical" href="https://toolsnowpro.com/tools/markdown-cheat-sheet">
 <link rel="stylesheet" href="../shared.css">
 <style>
 .hero{padding:52px 0 28px;text-align:center}
@@ -35,43 +35,25 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 .sheet-pill{padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-size:.78rem;font-weight:700}
 @media(max-width:900px){.sheet-layout{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}}
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSDSPEHT0J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-LSDSPEHT0J");</script>
+
+
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="apple-touch-icon" href="../favicon-180.svg">
 <meta name="theme-color" content="#7C3AED">
+<script src="/js/analytics.js" defer></script>
+<script src="/js/site.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header"><div class="wrapper"><div class="header-inner">
-  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
-  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
-  <nav class="site-nav" id="snav">
-    <a href="../qr-generator/index.html">▦ QR Generator</a>
-    <a href="../text-tools/index.html">🔤 Case Converter</a>
-    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
-    <a href="../tools/password-generator.html">🔑 Password Generator</a>
-    <a href="../tools/jpg-to-pdf.html">📄 JPG to PDF</a>
-    <a href="../tools/random-number-generator.html">🎲 Random Number</a>
-    <a href="../tools/stopwatch-timer.html">⏱ Stopwatch / Timer</a>
-    <a href="../tools/lorem-ipsum-generator.html">✎ Lorem Ipsum</a>
-    <a href="../tools/color-picker.html">🎨 Color Picker</a>
-    <a href="../tools/json-formatter.html">{} JSON Formatter</a>
-    <a href="../tools/favicon-generator.html">◉ Favicon</a>
-    <a href="../tools/emoji-library.html">😄 Emoji Library</a>
-    <a href="../tools/cheat-sheet-library.html">📚 Cheat Sheets</a>
-    <a href="../image-converter/index.html">🖼 Image Converter</a>
-    <a href="../gaming/index.html">⚡ Username</a>
-    <a href="../blog/index.html">📝 Blog</a></nav>
+<a href="/" class="logo" aria-label="ToolsNowPro home"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a>
+<nav class="site-nav" id="snav" aria-label="Main navigation"><a href="/#tools">All tools</a><a href="/qr-generator/">QR codes</a><a href="/tools/username-generator">Usernames</a><a href="/blog/">Guides</a></nav>
+<div class="header-actions"><button type="button" class="site-search-button" data-open-search aria-label="Search tools"><span aria-hidden="true">⌕</span><span class="search-button-label">Find a tool</span><kbd aria-hidden="true">⌘ K</kbd></button><button type="button" class="nav-toggle" aria-controls="snav" aria-expanded="false" aria-label="Toggle navigation">☰</button></div>
 </div></div></header>
 
-<div class="wrapper">
-  <details class="bookmark-strip">
-    <summary>Bookmark this page</summary>
-    <div class="bookmark-hint">Press Ctrl+D (Windows) or Cmd+D (Mac) to bookmark this page.</div>
-  </details>
-</div>
 
-<div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
+
+
 
 <div class="hero wrapper">
   <div class="badge badge-violet" style="margin-bottom:18px">📝 Markdown</div>
@@ -83,7 +65,7 @@ code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospac
 <div class="wrapper">
   <div class="tool-wrap">
     <div class="sheet-layout">
-      <main>
+      <main id="main-content">
     <section class="sheet-block">
       <div class="sheet-head">
         <h2>Headings and emphasis</h2>
@@ -153,38 +135,23 @@ console.log(&quot;hi&quot;)
         <div class="side-card">
           <h3>Library</h3>
           <p style="color:var(--muted);font-size:.9rem;line-height:1.6;margin-bottom:14px">Browse the full cheat sheet library and jump to other topics.</p>
-          <a href="cheat-sheet-library.html" class="btn-primary" style="display:flex;justify-content:center;width:100%">📚 Open Library</a>
+          <a href="cheat-sheet-library" class="btn-primary" style="display:flex;justify-content:center;width:100%">📚 Open Library</a>
         </div>
         <div class="side-card">
           <h3>Related</h3>
-          <div class="related-grid"><a href="html-tags-cheat-sheet.html" class="related-card"><strong>HTML Tags Cheat Sheet</strong><span>A practical HTML tags cheat sheet with semantic tags, forms, media and head elements.</span></a><a href="css-flexbox-cheat-sheet.html" class="related-card"><strong>CSS Flexbox Cheat Sheet</strong><span>Flexbox essentials for direction, alignment, spacing and item sizing.</span></a><a href="css-grid-cheat-sheet.html" class="related-card"><strong>CSS Grid Cheat Sheet</strong><span>Grid templates, repeats, gaps and placement snippets for responsive layouts.</span></a></div>
+          <div class="related-grid"><a href="html-tags-cheat-sheet" class="related-card"><strong>HTML Tags Cheat Sheet</strong><span>A practical HTML tags cheat sheet with semantic tags, forms, media and head elements.</span></a><a href="css-flexbox-cheat-sheet" class="related-card"><strong>CSS Flexbox Cheat Sheet</strong><span>Flexbox essentials for direction, alignment, spacing and item sizing.</span></a><a href="css-grid-cheat-sheet" class="related-card"><strong>CSS Grid Cheat Sheet</strong><span>Grid templates, repeats, gaps and placement snippets for responsive layouts.</span></a></div>
         </div>
       </aside>
     </div>
   </div>
 </div>
 
-<footer class="site-footer"><div class="wrapper">
-  <div class="footer-grid">
-    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators and businesses.</p></div>
-    
-    <div><div class="footer-heading">Tools</div><ul class="footer-links">
-      <li><a href="../index.html">Username Generator</a></li>
-      <li><a href="../tools/password-generator.html">Password Generator</a></li>
-      <li><a href="../tools/emoji-library.html">Emoji Library</a></li>
-      <li><a href="../tools/cheat-sheet-library.html">Cheat Sheets</a></li>
-      <li><a href="../tools/lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li>
-      <li><a href="../tools/color-picker.html">Color Picker</a></li>
-      <li><a href="../tools/json-formatter.html">JSON Formatter</a></li>
-      <li><a href="../tools/favicon-generator.html">Favicon Generator</a></li>
-      <li><a href="../tools/bio-generator.html">Bio Generator</a></li>
-      <li><a href="../tools/hashtag-generator.html">Hashtag Generator</a></li>
-    </ul></div>
-    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li></ul></div>
-    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
-</div></footer>
+<footer class="site-footer"><div class="wrapper"><div class="footer-grid"><div class="footer-brand"><a href="/" class="logo"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a><p>Small tools for everyday work.<br>Free to use. Built for your browser.</p></div><div><div class="footer-heading">Your toolkit</div><ul class="footer-links"><li><a href="/tools/json-formatter">JSON Formatter</a></li><li><a href="/tools/jpg-to-pdf">Images to PDF</a></li><li><a href="/tools/color-picker">Color & Contrast</a></li><li><a href="/qr-generator/">QR Code Generator</a></li><li><a href="/#tools">All 21 tools</a></li></ul></div><div><div class="footer-heading">Ideas & reference</div><ul class="footer-links"><li><a href="/tools/username-generator">Username Generator</a></li><li><a href="/gaming/">Gaming Usernames</a></li><li><a href="/tools/cheat-sheet-library">Cheat Sheets</a></li><li><a href="/blog/">Practical Guides</a></li></ul></div><div><div class="footer-heading">ToolsNowPro</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/editorial/">Editorial Standards</a></li><li><a href="/about/#contact">Contact & Feedback</a></li><li><a href="/about/#privacy">Privacy</a></li><li><a href="/about/#terms">Terms</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 ToolsNowPro · <button type="button" class="analytics-toggle" data-analytics-toggle aria-pressed="false">Analytics settings</button></span><span>Need a domain? <a href="https://namecheap.pxf.io/c/7408925/1632743/5618" rel="sponsored nofollow noopener" target="_blank">Search Namecheap ↗</a> <span class="affiliate-label">Affiliate link</span></span></div></div></footer>
+<dialog class="tool-search-dialog" id="tool-search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-header"><h2 id="search-dialog-title">Find your next tool</h2><button type="button" data-close-search class="dialog-close" aria-label="Close tool search">×</button></div><label class="sr-only" for="site-search-input">Search tool names and tasks</label><input type="search" id="site-search-input" placeholder="Try JSON, PDF, QR or username…" autocomplete="off"><p id="site-search-count" class="sr-only" role="status" aria-live="polite"></p><div id="site-search-results" class="site-search-results"></div><div class="search-dialog-footer"><a href="/#tools">Browse all tools →</a><span>Esc to close</span></div></dialog>
+
+
+
+
 
 <div class="toast" id="toast">✓ Copied!</div>
 <script>

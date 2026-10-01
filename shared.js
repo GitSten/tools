@@ -14,7 +14,7 @@ const NAV_HTML = `
       </a>
       <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
       <nav class="site-nav" id="site-nav">
-        <a href="/index.html">Generator</a>
+        <a href="/gaming/index.html">Generator</a>
         <a href="/gaming/index.html">Gaming</a>
         <a href="/tiktok/index.html">TikTok</a>
         <a href="/blog/index.html">Blog</a>
@@ -38,7 +38,7 @@ const FOOTER_HTML = `
       <div>
         <div class="footer-heading">Tools</div>
         <ul class="footer-links">
-          <li><a href="/index.html">Username Generator</a></li>
+          <li><a href="/gaming/index.html">Username Generator</a></li>
           <li><a href="/gaming/index.html">Gaming Usernames</a></li>
           <li><a href="/tiktok/index.html">TikTok Usernames</a></li>
           <li><a href="/instagram/index.html">Instagram Usernames</a></li>

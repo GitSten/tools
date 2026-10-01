@@ -3,17 +3,35 @@
 # No redirect rules needed for 404 — it's handled natively
 
 # Consolidated thin/duplicate blog posts merged into single comprehensive guides (2026-07-23)
-/blog/free-lorem-ipsum-generator-online.html /blog/how-to-generate-lorem-ipsum-text-online.html 301
-/blog/how-to-generate-lorem-ipsum-for-wireframes-online.html /blog/what-is-lorem-ipsum-placeholder-text.html 301
-/blog/lorem-ipsum-vs-dummy-text.html /blog/what-is-lorem-ipsum-placeholder-text.html 301
-/blog/best-way-to-create-mockup-text.html /blog/how-to-generate-lorem-ipsum-text-online.html 301
-/blog/hex-vs-rgb-color-format.html /blog/what-is-a-hex-color-code.html 301
-/blog/how-to-find-the-exact-hex-color-from-a-screenshot-online.html /blog/what-is-a-hex-color-code.html 301
-/blog/best-way-to-choose-accessible-website-colors.html /blog/best-color-picker-online-for-hex-and-rgb.html 301
-/blog/how-to-pick-a-brand-color-palette-online.html /blog/best-color-picker-online-for-hex-and-rgb.html 301
-/blog/free-color-picker-for-css-online.html /blog/best-color-picker-online-for-hex-and-rgb.html 301
-/blog/how-to-format-json-for-api-responses-online.html /blog/json-formatter-online-guide.html 301
-/blog/how-to-create-a-favicon-from-a-logo-online.html /blog/favicon-generator-online-guide.html 301
-/blog/best-jpg-to-pdf-converter-online-for-scans.html /blog/how-to-convert-jpg-to-pdf-online.html 301
-/blog/dice-roller-online-random-number-generator.html /blog/best-random-number-generator-online.html 301
-/blog/5-minute-timer-online.html /blog/online-stopwatch-timer-guide.html 301
+/blog/free-lorem-ipsum-generator-online.html /blog/how-to-generate-lorem-ipsum-text-online 301
+/blog/free-lorem-ipsum-generator-online /blog/how-to-generate-lorem-ipsum-text-online 301
+/blog/how-to-generate-lorem-ipsum-for-wireframes-online.html /blog/what-is-lorem-ipsum-placeholder-text 301
+/blog/how-to-generate-lorem-ipsum-for-wireframes-online /blog/what-is-lorem-ipsum-placeholder-text 301
+/blog/lorem-ipsum-vs-dummy-text.html /blog/what-is-lorem-ipsum-placeholder-text 301
+/blog/lorem-ipsum-vs-dummy-text /blog/what-is-lorem-ipsum-placeholder-text 301
+/blog/best-way-to-create-mockup-text.html /blog/how-to-generate-lorem-ipsum-text-online 301
+/blog/best-way-to-create-mockup-text /blog/how-to-generate-lorem-ipsum-text-online 301
+/blog/hex-vs-rgb-color-format.html /blog/what-is-a-hex-color-code 301
+/blog/hex-vs-rgb-color-format /blog/what-is-a-hex-color-code 301
+/blog/how-to-find-the-exact-hex-color-from-a-screenshot-online.html /blog/what-is-a-hex-color-code 301
+/blog/how-to-find-the-exact-hex-color-from-a-screenshot-online /blog/what-is-a-hex-color-code 301
+/blog/best-way-to-choose-accessible-website-colors.html /blog/best-color-picker-online-for-hex-and-rgb 301
+/blog/best-way-to-choose-accessible-website-colors /blog/best-color-picker-online-for-hex-and-rgb 301
+/blog/how-to-pick-a-brand-color-palette-online.html /blog/best-color-picker-online-for-hex-and-rgb 301
+/blog/how-to-pick-a-brand-color-palette-online /blog/best-color-picker-online-for-hex-and-rgb 301
+/blog/free-color-picker-for-css-online.html /blog/best-color-picker-online-for-hex-and-rgb 301
+/blog/free-color-picker-for-css-online /blog/best-color-picker-online-for-hex-and-rgb 301
+/blog/how-to-format-json-for-api-responses-online.html /blog/json-formatter-online-guide 301
+/blog/how-to-format-json-for-api-responses-online /blog/json-formatter-online-guide 301
+/blog/how-to-create-a-favicon-from-a-logo-online.html /blog/favicon-generator-online-guide 301
+/blog/how-to-create-a-favicon-from-a-logo-online /blog/favicon-generator-online-guide 301
+/blog/best-jpg-to-pdf-converter-online-for-scans.html /blog/how-to-convert-jpg-to-pdf-online 301
+/blog/best-jpg-to-pdf-converter-online-for-scans /blog/how-to-convert-jpg-to-pdf-online 301
+/blog/dice-roller-online-random-number-generator.html /blog/best-random-number-generator-online 301
+/blog/dice-roller-online-random-number-generator /blog/best-random-number-generator-online 301
+/blog/5-minute-timer-online.html /blog/online-stopwatch-timer-guide 301
+/blog/5-minute-timer-online /blog/online-stopwatch-timer-guide 301
+
+# Use the maintained QR generator for the former duplicate tool page.
+/tools/qr-generator.html /qr-generator/ 301
+/tools/qr-generator /qr-generator/ 301

@@ -8,65 +8,65 @@
 
 - [QR Code Generator](https://toolsnowpro.com/qr-generator/): Generate static QR codes for URLs, WiFi credentials, vCards, email, SMS, and plain text. Outputs PNG and SVG. No signup, no watermark, codes never expire.
 - [Text Case Converter](https://toolsnowpro.com/text-tools/): Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and AlTeRnAtInG case. Live statistics included.
-- [Word Counter](https://toolsnowpro.com/text-tools/word-counter.html): Count words, characters (with and without spaces), sentences, paragraphs and reading time. Supports word limit targets for SEO and social media.
-- [Password Generator](https://toolsnowpro.com/tools/password-generator.html): Generate cryptographically random passwords. Configurable length, symbols, uppercase, numbers. All generation happens client-side.
+- [Word Counter](https://toolsnowpro.com/text-tools/word-counter): Count words, characters (with and without spaces), sentences, paragraphs and reading time. Supports word limit targets for SEO and social media.
+- [Password Generator](https://toolsnowpro.com/tools/password-generator): Generate cryptographically random passwords. Configurable length, symbols, uppercase, numbers. All generation happens client-side.
 - [Image Converter](https://toolsnowpro.com/image-converter/): Convert images between JPG, PNG, and WebP formats. Resize and compress. Runs entirely in the browser — images never leave the user's device.
 - [Username Generator](https://toolsnowpro.com/gaming/): Generate usernames for gaming, TikTok, Instagram, aesthetic, and business purposes. Client-side JavaScript generation.
-- [JPG to PDF Converter](https://toolsnowpro.com/tools/jpg-to-pdf.html): Convert JPG, PNG, and WebP images into PDFs in the browser for scans, receipts, menus, and screenshots.
-- [Random Number Generator](https://toolsnowpro.com/tools/random-number-generator.html): Roll dice, flip coins, pick a random number, and choose random names or colors.
-- [Stopwatch / Timer](https://toolsnowpro.com/tools/stopwatch-timer.html): Use preset countdown timers, stopwatch mode, Pomodoro sessions, and study or cooking timers.
-- [Lorem Ipsum Generator](https://toolsnowpro.com/tools/lorem-ipsum-generator.html): Generate placeholder text for mockups, wireframes, and layout previews.
-- [Color Picker](https://toolsnowpro.com/tools/color-picker.html): Pick colors and convert between HEX and RGB values.
-- [JSON Formatter](https://toolsnowpro.com/tools/json-formatter.html): Beautify and validate JSON payloads before debugging or sharing them.
-- [Favicon Generator](https://toolsnowpro.com/tools/favicon-generator.html): Turn a logo or icon into a browser-ready favicon.
-- [Emoji Library](https://toolsnowpro.com/tools/emoji-library.html): Browse and copy emojis from a dedicated browser-based library.
-- [Cheat Sheet Library](https://toolsnowpro.com/tools/cheat-sheet-library.html): Find concise quick-reference cheat sheets for programming and productivity.
+- [JPG to PDF Converter](https://toolsnowpro.com/tools/jpg-to-pdf): Convert JPG, PNG, and WebP images into PDFs in the browser for scans, receipts, menus, and screenshots.
+- [Random Number Generator](https://toolsnowpro.com/tools/random-number-generator): Roll dice, flip coins, pick a random number, and choose random names or colors.
+- [Stopwatch / Timer](https://toolsnowpro.com/tools/stopwatch-timer): Use preset countdown timers, stopwatch mode, Pomodoro sessions, and study or cooking timers.
+- [Lorem Ipsum Generator](https://toolsnowpro.com/tools/lorem-ipsum-generator): Generate placeholder text for mockups, wireframes, and layout previews.
+- [Color Picker](https://toolsnowpro.com/tools/color-picker): Pick colors and convert between HEX and RGB values.
+- [JSON Formatter](https://toolsnowpro.com/tools/json-formatter): Beautify and validate JSON payloads before debugging or sharing them.
+- [Favicon Generator](https://toolsnowpro.com/tools/favicon-generator): Turn a logo or icon into a browser-ready favicon.
+- [Emoji Library](https://toolsnowpro.com/tools/emoji-library): Browse and copy emojis from a dedicated browser-based library.
+- [Cheat Sheet Library](https://toolsnowpro.com/tools/cheat-sheet-library): Find concise quick-reference cheat sheets for programming and productivity.
 
 
 ## QR Code guides
 
-- [How to Create a QR Code for Your Restaurant Menu](https://toolsnowpro.com/blog/qr-code-restaurant-menu.html)
-- [WiFi QR Code Generator – Let Guests Connect Without Sharing the Password](https://toolsnowpro.com/blog/wifi-qr-code-generator.html)
-- [QR Code for Business Cards – The Complete Guide](https://toolsnowpro.com/blog/qr-code-business-card.html)
-- [QR Code Size Guide – How Big Should Your QR Code Be?](https://toolsnowpro.com/blog/qr-code-size-guide.html)
-- [Free QR Code Generator with No Signup – Static Codes That Never Expire](https://toolsnowpro.com/blog/free-qr-code-generator-no-signup.html)
+- [How to Create a QR Code for Your Restaurant Menu](https://toolsnowpro.com/blog/qr-code-restaurant-menu)
+- [WiFi QR Code Generator – Let Guests Connect Without Sharing the Password](https://toolsnowpro.com/blog/wifi-qr-code-generator)
+- [QR Code for Business Cards – The Complete Guide](https://toolsnowpro.com/blog/qr-code-business-card)
+- [QR Code Size Guide – How Big Should Your QR Code Be?](https://toolsnowpro.com/blog/qr-code-size-guide)
+- [Free QR Code Generator with No Signup – Static Codes That Never Expire](https://toolsnowpro.com/blog/free-qr-code-generator-no-signup)
 
 ## Username & social media guides
 
-- [How to Pick a Gaming Username Nobody Forgets](https://toolsnowpro.com/blog/gaming-username-guide.html)
-- [300+ Cool Roblox Username Ideas (2026)](https://toolsnowpro.com/blog/roblox-usernames.html)
-- [200+ Cool Discord Username Ideas](https://toolsnowpro.com/blog/discord-usernames.html)
-- [200+ TikTok Username Ideas](https://toolsnowpro.com/blog/tiktok-usernames-2026.html)
-- [Aesthetic Username Guide](https://toolsnowpro.com/blog/aesthetic-usernames.html)
-- [Cute Username Ideas](https://toolsnowpro.com/blog/cute-usernames.html)
-- [Funny Usernames Guide](https://toolsnowpro.com/blog/funny-usernames.html)
-- [Business Username Branding Guide](https://toolsnowpro.com/blog/business-usernames.html)
-- [Minecraft Username Ideas](https://toolsnowpro.com/blog/minecraft-usernames.html)
-- [How to Check Username Availability](https://toolsnowpro.com/blog/username-availability.html)
-- [How to Rebrand Your Social Media Username](https://toolsnowpro.com/blog/rebrand-username.html)
-- [Short Username Ideas Under 8 Characters](https://toolsnowpro.com/blog/short-usernames.html)
-- [Dark Academia Username Ideas](https://toolsnowpro.com/blog/dark-academia-usernames.html)
-- [Cottagecore Username Ideas](https://toolsnowpro.com/blog/cottagecore-usernames.html)
-- [How to Build a Username Around Your Real Name](https://toolsnowpro.com/blog/username-with-name.html)
-- [YouTube Channel Name Guide](https://toolsnowpro.com/blog/youtube-channel-names.html)
-- [Twitch Username Guide](https://toolsnowpro.com/blog/twitch-usernames.html)
-- [Matching Usernames for Best Friends & Twins](https://toolsnowpro.com/blog/twin-usernames.html)
-- [Unique Username Ideas](https://toolsnowpro.com/blog/unique-usernames.html)
+- [How to Pick a Gaming Username Nobody Forgets](https://toolsnowpro.com/blog/gaming-username-guide)
+- [300+ Cool Roblox Username Ideas (2026)](https://toolsnowpro.com/blog/roblox-usernames)
+- [115 Discord Username Ideas](https://toolsnowpro.com/blog/discord-usernames)
+- [100 TikTok Username Ideas](https://toolsnowpro.com/blog/tiktok-usernames-2026)
+- [Aesthetic Username Guide](https://toolsnowpro.com/blog/aesthetic-usernames)
+- [Cute Username Ideas](https://toolsnowpro.com/blog/cute-usernames)
+- [Funny Usernames Guide](https://toolsnowpro.com/blog/funny-usernames)
+- [Business Username Branding Guide](https://toolsnowpro.com/blog/business-usernames)
+- [Minecraft Username Ideas](https://toolsnowpro.com/blog/minecraft-usernames)
+- [How to Check Username Availability](https://toolsnowpro.com/blog/username-availability)
+- [How to Rebrand Your Social Media Username](https://toolsnowpro.com/blog/rebrand-username)
+- [Short Username Ideas Under 8 Characters](https://toolsnowpro.com/blog/short-usernames)
+- [Dark Academia Username Ideas](https://toolsnowpro.com/blog/dark-academia-usernames)
+- [Cottagecore Username Ideas](https://toolsnowpro.com/blog/cottagecore-usernames)
+- [How to Build a Username Around Your Real Name](https://toolsnowpro.com/blog/username-with-name)
+- [YouTube Channel Name Guide](https://toolsnowpro.com/blog/youtube-channel-names)
+- [Twitch Username Guide](https://toolsnowpro.com/blog/twitch-usernames)
+- [Matching Usernames for Best Friends & Twins](https://toolsnowpro.com/blog/twin-usernames)
+- [Unique Username Ideas](https://toolsnowpro.com/blog/unique-usernames)
 
 ## Utility guides
 
-- [How to Convert JPG to PDF Online Without Losing Quality](https://toolsnowpro.com/blog/how-to-convert-jpg-to-pdf-online.html)
-- [Best Random Number Generator Online for Dice, Coins, and Name Picks](https://toolsnowpro.com/blog/best-random-number-generator-online.html)
-- [Online Stopwatch Timer for Pomodoro, Countdown, and 5 Minute Timers](https://toolsnowpro.com/blog/online-stopwatch-timer-guide.html)
-- [How to Generate Strong Passwords Online Without Reusing Anything](https://toolsnowpro.com/blog/how-to-generate-strong-passwords-online.html)
-- [Best Color Picker Online for HEX and RGB Websites](https://toolsnowpro.com/blog/best-color-picker-online-for-hex-and-rgb.html)
-- [What Is a HEX Color Code? Complete Guide](https://toolsnowpro.com/blog/what-is-a-hex-color-code.html)
-- [JSON Formatter Online: Beautify and Validate JSON Instantly](https://toolsnowpro.com/blog/json-formatter-online-guide.html)
-- [Favicon Generator Online: Create a Website Icon in Minutes](https://toolsnowpro.com/blog/favicon-generator-online-guide.html)
-- [Python Cheat Sheet Online: Essential Syntax, Lists, Loops, and Functions](https://toolsnowpro.com/blog/python-cheat-sheet-online-complete-guide.html)
-- [Keyboard Shortcuts Cheat Sheet for Mac: Copy, Save, and Switch Faster](https://toolsnowpro.com/blog/mac-keyboard-shortcuts-cheat-sheet.html)
-- [How to Generate Lorem Ipsum Text Online](https://toolsnowpro.com/blog/how-to-generate-lorem-ipsum-text-online.html)
-- [What Is Lorem Ipsum Placeholder Text? Complete Guide](https://toolsnowpro.com/blog/what-is-lorem-ipsum-placeholder-text.html)
+- [How to Convert JPG to PDF: Quality Settings and Limitations](https://toolsnowpro.com/blog/how-to-convert-jpg-to-pdf-online)
+- [Best Random Number Generator Online for Dice, Coins, and Name Picks](https://toolsnowpro.com/blog/best-random-number-generator-online)
+- [Online Stopwatch Timer for Pomodoro, Countdown, and 5 Minute Timers](https://toolsnowpro.com/blog/online-stopwatch-timer-guide)
+- [How to Generate Strong Passwords Online Without Reusing Anything](https://toolsnowpro.com/blog/how-to-generate-strong-passwords-online)
+- [How to Pick and Convert HEX and RGB Colors](https://toolsnowpro.com/blog/best-color-picker-online-for-hex-and-rgb)
+- [What Is a HEX Color Code? Complete Guide](https://toolsnowpro.com/blog/what-is-a-hex-color-code)
+- [JSON Formatter Online: Beautify and Validate JSON Instantly](https://toolsnowpro.com/blog/json-formatter-online-guide)
+- [Favicon Generator Online: Create a Website Icon in Minutes](https://toolsnowpro.com/blog/favicon-generator-online-guide)
+- [Python Cheat Sheet Online: Essential Syntax, Lists, Loops, and Functions](https://toolsnowpro.com/blog/python-cheat-sheet-online-complete-guide)
+- [Keyboard Shortcuts Cheat Sheet for Mac: Copy, Save, and Switch Faster](https://toolsnowpro.com/blog/mac-keyboard-shortcuts-cheat-sheet)
+- [How to Generate Lorem Ipsum Text Online](https://toolsnowpro.com/blog/how-to-generate-lorem-ipsum-text-online)
+- [What Is Lorem Ipsum Placeholder Text? Complete Guide](https://toolsnowpro.com/blog/what-is-lorem-ipsum-placeholder-text)
 
 ## About
 
@@ -79,3 +79,5 @@
 - [QR Generator (full page)](https://toolsnowpro.com/qr-generator/)
 - [Text Tools (full page)](https://toolsnowpro.com/text-tools/)
 - [Blog index](https://toolsnowpro.com/blog/)
+
+- [General Username Generator](https://toolsnowpro.com/tools/username-generator): keyword and style controls, length limits, copy and download.

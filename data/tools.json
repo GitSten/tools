@@ -1,0 +1,198 @@
+[
+  {
+    "id": "qr",
+    "name": "QR Code Generator",
+    "url": "/qr-generator/",
+    "category": "Everyday",
+    "icon": "▦",
+    "description": "Create URL, WiFi and contact QR codes. Download PNG or SVG.",
+    "keywords": "qrcode wifi vcard barcode link menu",
+    "featured": true
+  },
+  {
+    "id": "json",
+    "name": "JSON Formatter",
+    "url": "/tools/json-formatter",
+    "category": "Developer",
+    "icon": "{}",
+    "description": "Format, validate, inspect and download JSON with helpful error feedback.",
+    "keywords": "beautifier minify pretty print api parser",
+    "featured": true
+  },
+  {
+    "id": "pdf",
+    "name": "Images to PDF",
+    "url": "/tools/jpg-to-pdf",
+    "category": "Images",
+    "icon": "▤",
+    "description": "Combine JPG, PNG or WebP images into a PDF, right in your browser.",
+    "keywords": "jpg jpeg png webp pdf scan receipt document",
+    "featured": true
+  },
+  {
+    "id": "color",
+    "name": "Color Picker & Contrast",
+    "url": "/tools/color-picker",
+    "category": "Developer",
+    "icon": "◐",
+    "description": "Convert HEX and RGB, then check text contrast against a background.",
+    "keywords": "hex rgb color colour wcag accessibility contrast css",
+    "featured": true
+  },
+  {
+    "id": "password",
+    "name": "Password Generator",
+    "url": "/tools/password-generator",
+    "category": "Everyday",
+    "icon": "⌘",
+    "description": "Generate a random password locally with your choice of characters.",
+    "keywords": "secure strong random password security",
+    "featured": true
+  },
+  {
+    "id": "counter",
+    "name": "Word Counter",
+    "url": "/text-tools/word-counter",
+    "category": "Text",
+    "icon": "¶",
+    "description": "Count words and characters, estimate reading time and track a target.",
+    "keywords": "essay character count sentences reading writing",
+    "featured": true
+  },
+  {
+    "id": "case",
+    "name": "Text Case Converter",
+    "url": "/text-tools/",
+    "category": "Text",
+    "icon": "Aa",
+    "description": "Switch between sentence case, title case, uppercase and code-friendly formats.",
+    "keywords": "lowercase uppercase camelcase snake case kebab capitalize"
+  },
+  {
+    "id": "image",
+    "name": "Image Converter",
+    "url": "/image-converter/",
+    "category": "Images",
+    "icon": "▧",
+    "description": "Convert, resize and compress JPG, PNG and WebP images locally.",
+    "keywords": "resize compress jpeg png webp photo picture"
+  },
+  {
+    "id": "favicon",
+    "name": "Favicon Generator",
+    "url": "/tools/favicon-generator",
+    "category": "Images",
+    "icon": "◉",
+    "description": "Make an icon from initials or emoji and download PNG or SVG.",
+    "keywords": "icon logo emoji initials browser favicon"
+  },
+  {
+    "id": "random",
+    "name": "Random Number Generator",
+    "url": "/tools/random-number-generator",
+    "category": "Everyday",
+    "icon": "⚄",
+    "description": "Pick a random number or name, roll dice and flip a coin.",
+    "keywords": "rng dice coin picker lottery raffle d20 d6"
+  },
+  {
+    "id": "timer",
+    "name": "Stopwatch & Timer",
+    "url": "/tools/stopwatch-timer",
+    "category": "Everyday",
+    "icon": "◴",
+    "description": "Run a stopwatch, countdown, Pomodoro session or chess clock.",
+    "keywords": "pomodoro clock countdown study focus alarm"
+  },
+  {
+    "id": "lorem",
+    "name": "Lorem Ipsum Generator",
+    "url": "/tools/lorem-ipsum-generator",
+    "category": "Text",
+    "icon": "≋",
+    "description": "Generate placeholder paragraphs and sentences for your next layout.",
+    "keywords": "dummy placeholder text paragraphs mockup wireframe"
+  },
+  {
+    "id": "emoji",
+    "name": "Emoji Library",
+    "url": "/tools/emoji-library",
+    "category": "Text",
+    "icon": "☺",
+    "description": "Find an emoji by name or category and copy it into your message.",
+    "keywords": "emojis symbols smileys unicode copy"
+  },
+  {
+    "id": "cheats",
+    "name": "Developer Cheat Sheets",
+    "url": "/tools/cheat-sheet-library",
+    "category": "Developer",
+    "icon": "⌗",
+    "description": "Browse practical references for Git, Python, CSS, SQL and more.",
+    "keywords": "python git html css sql regex bash excel markdown reference"
+  },
+  {
+    "id": "usernames",
+    "name": "Username Generator",
+    "url": "/tools/username-generator",
+    "category": "Usernames",
+    "icon": "@",
+    "description": "Generate handle ideas with a keyword, style and adjustable length.",
+    "keywords": "username name handle business cute funny short",
+    "featured": true
+  },
+  {
+    "id": "gaming",
+    "name": "Gaming Username Generator",
+    "url": "/gaming/",
+    "category": "Usernames",
+    "icon": "✧",
+    "description": "Generate gamer tags for Roblox, Minecraft, Discord and other games.",
+    "keywords": "roblox fortnite minecraft discord valorant gamertag"
+  },
+  {
+    "id": "tiktok",
+    "name": "TikTok Username Generator",
+    "url": "/tiktok/",
+    "category": "Usernames",
+    "icon": "♪",
+    "description": "Make TikTok-style handle ideas from your name or content niche.",
+    "keywords": "tiktok username aesthetic cute funny dark"
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram Username Generator",
+    "url": "/instagram/",
+    "category": "Usernames",
+    "icon": "◎",
+    "description": "Find readable handle ideas for a creator, personal page or studio.",
+    "keywords": "instagram ig handle influencer name"
+  },
+  {
+    "id": "aesthetic",
+    "name": "Aesthetic Username Generator",
+    "url": "/aesthetic/",
+    "category": "Usernames",
+    "icon": "✦",
+    "description": "Explore soft, dark, cottagecore and celestial name combinations.",
+    "keywords": "aesthetic cottagecore dark celestial soft dreamy"
+  },
+  {
+    "id": "bio",
+    "name": "Bio Generator",
+    "url": "/tools/bio-generator",
+    "category": "Usernames",
+    "icon": "✎",
+    "description": "Draft a short social profile bio, then make it your own.",
+    "keywords": "bio biography profile instagram tiktok creator"
+  },
+  {
+    "id": "hashtag",
+    "name": "Hashtag Generator",
+    "url": "/tools/hashtag-generator",
+    "category": "Usernames",
+    "icon": "#",
+    "description": "Build a starting set of niche hashtags for your social post.",
+    "keywords": "hashtags tags social instagram tiktok"
+  }
+]

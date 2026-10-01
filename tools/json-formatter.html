@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JSON Formatter / Beautifier | ToolsNowPro</title>
-<meta name="description" content="Format, beautify and minify JSON instantly. Free JSON formatter with copy button and live error handling.">
-<link rel="canonical" href="https://toolsnowpro.com/tools/json-formatter.html">
+<meta name="description" content="Format, validate, minify and download JSON locally. Open JSON files, inspect paths and get clear syntax errors with unsafe-integer protection.">
+<link rel="canonical" href="https://toolsnowpro.com/tools/json-formatter">
 <link rel="stylesheet" href="../shared.css">
 <style>
 .hero{padding:52px 0 28px;text-align:center}
@@ -34,74 +34,40 @@ textarea:focus, select:focus{outline:none;border-color:var(--violet)}
 .mini-link{display:inline-flex;align-items:center;gap:6px;color:var(--violet-l);font-weight:700;text-decoration:none}
 .mini-link:hover{text-decoration:underline}
 @media(max-width:840px){.layout,.guide-grid{grid-template-columns:1fr}}
+.json-path-row{display:grid;grid-template-columns:1.4fr .4fr 1fr;gap:12px;border-bottom:1px solid var(--border);padding:10px 0;font-size:.72rem;overflow-wrap:anywhere}.json-path-row code{color:var(--violet-xl)}.json-path-row span{color:var(--muted)}.json-input,.json-output{min-height:340px!important}@media(max-width:640px){.json-path-row{grid-template-columns:1fr .4fr}.json-path-row span:last-child{grid-column:1/-1}.json-input,.json-output{min-height:240px!important}}
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSDSPEHT0J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-LSDSPEHT0J");</script>
+
+
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="apple-touch-icon" href="../favicon-180.svg">
 <meta name="theme-color" content="#7C3AED">
+<script src="/js/analytics.js" defer></script>
+<script src="/js/site.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "JSON Formatter", "url": "https://toolsnowpro.com/tools/json-formatter", "description": "Format, validate, inspect and download JSON with helpful error feedback.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript and a modern web browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 </head>
-<body>
+<body data-tool-id="json">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header"><div class="wrapper"><div class="header-inner">
-  <a href="../index.html" class="logo"><span class="logo-icon">⚡</span>ToolsNowPro</a>
-  <button class="nav-toggle" onclick="document.getElementById('snav').classList.toggle('open')">☰</button>
-  <nav class="site-nav" id="snav">
-    <a href="../qr-generator/index.html">▦ QR Generator</a>
-    <a href="../text-tools/index.html">🔤 Case Converter</a>
-    <a href="../text-tools/word-counter.html">📊 Word Counter</a>
-    <a href="../tools/password-generator.html">🔑 Password Generator</a>
-    <a href="../tools/jpg-to-pdf.html">📄 JPG to PDF</a>
-    <a href="../tools/random-number-generator.html">🎲 Random Number</a>
-    <a href="../tools/stopwatch-timer.html">⏱ Stopwatch / Timer</a>
-    <a href="../tools/lorem-ipsum-generator.html">✎ Lorem Ipsum</a>
-    <a href="../tools/color-picker.html">🎨 Color Picker</a>
-    <a href="../tools/json-formatter.html" class="active">{} JSON Formatter</a>
-    <a href="../tools/favicon-generator.html">◉ Favicon</a>
-    <a href="../tools/emoji-library.html">😄 Emoji Library</a>
-    <a href="cheat-sheet-library.html">📚 Cheat Sheets</a>
-    <a href="../image-converter/index.html">🖼 Image Converter</a>
-    <a href="../index.html">⚡ Username</a>
-    <a href="../blog/index.html">📝 Blog</a>
-  </nav>
+<a href="/" class="logo" aria-label="ToolsNowPro home"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a>
+<nav class="site-nav" id="snav" aria-label="Main navigation"><a href="/#tools">All tools</a><a href="/qr-generator/">QR codes</a><a href="/tools/username-generator">Usernames</a><a href="/blog/">Guides</a></nav>
+<div class="header-actions"><button type="button" class="site-search-button" data-open-search aria-label="Search tools"><span aria-hidden="true">⌕</span><span class="search-button-label">Find a tool</span><kbd aria-hidden="true">⌘ K</kbd></button><button type="button" class="nav-toggle" aria-controls="snav" aria-expanded="false" aria-label="Toggle navigation">☰</button></div>
 </div></div></header>
+<main id="main-content">
+<div class="wrapper tool-breadcrumbs"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/?category=Developer#tools">Developer</a><span aria-hidden="true">/</span><span>JSON Formatter</span></nav><button type="button" class="save-tool-button" data-save-current aria-pressed="false" hidden>☆ Save tool</button></div>
 
-<div class="wrapper">
-  <details class="bookmark-strip">
-    <summary>Bookmark this page</summary>
-    <div class="bookmark-hint">Press Ctrl+D (Windows) or Cmd+D (Mac) to bookmark this page.</div>
-  </details>
-</div>
-<div class="wrapper"><div class="ad-slot ad-banner" style="padding:0;overflow:hidden;display:flex;justify-content:center"><iframe src="/namecheap-1374966.html" width="728" height="90" title="Namecheap sponsored banner" style="border:0;display:block;background:transparent" loading="lazy"></iframe></div></div>
-<div class="hero wrapper">
-  <div class="badge badge-violet" style="margin-bottom:18px">{ } Structured Data</div>
-  <h1>JSON Formatter <span>/ Beautifier</span></h1>
-  <p>Paste JSON, format it with indentation, or minify it for transport. The tool shows parse errors immediately.</p>
-</div>
-<div class="wrapper">
-  <div class="tool-wrap">
-    <div class="card-tool">
-      <div class="layout">
-        <div class="field"><label>JSON input</label><textarea id="json-input" class="json-input" spellcheck="false" placeholder='{"name":"ToolsNowPro"}'></textarea></div>
-        <div class="field"><label>Formatted output</label><textarea id="json-output" class="json-output" readonly spellcheck="false"></textarea></div>
-      </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center">
-        <div class="field" style="min-width:120px;margin-bottom:0"><label>Indent</label><select id="json-indent" onchange="formatJson()"><option value="2">2 spaces</option><option value="4">4 spaces</option></select></div>
-        <button class="btn-primary" onclick="formatJson()">Format</button>
-        <button class="btn-mini" onclick="minifyJson()">Minify</button>
-        <button class="btn-mini" onclick="copyJson()">Copy output</button>
-      </div>
-      <div class="status" id="json-status"></div>
-    </div>
-    <div class="card-tool">
-      <h2 style="font-size:1.05rem;font-weight:800;margin-bottom:10px">Tips</h2>
-      <ul style="color:var(--muted);font-size:.9rem;padding-left:18px;display:flex;flex-direction:column;gap:8px">
-        <li>Formatted JSON is easier to read and compare.</li>
-        <li>Minified JSON is smaller for APIs and transport.</li>
-        <li>Invalid JSON is highlighted with a clear error message.</li>
-      </ul>
-    </div>
-  </div>
-</div>
+
+
+
+
+
+
+<div class="tool-hero wrapper"><div class="section-eyebrow">DEVELOPER TOOLS</div><h1>JSON Formatter &amp; Validator</h1><p>Make an API response readable, repair a syntax error, or inspect a value’s path. Your input stays in this browser.</p></div>
+<div class="wrapper"><section class="tool-workspace" aria-label="JSON formatter">
+<div class="tool-row" style="margin-bottom:16px"><label for="json-file" class="tool-button">Open .json file</label><input id="json-file" type="file" accept=".json,application/json,text/plain" class="sr-only"><button type="button" class="tool-button" onclick="loadSampleJson()">Load sample</button><button type="button" class="tool-button" id="json-clear">Clear</button><label style="margin-left:auto;font-size:.75rem;color:var(--muted)"><input type="checkbox" id="json-live" checked> Format as I type</label></div>
+<div class="layout"><div class="field"><label for="json-input">JSON input <span style="font-weight:400">· drag a file here</span></label><textarea id="json-input" class="json-input" spellcheck="false" placeholder='{"orderId":"A104","paid":true}'></textarea></div><div class="field"><label for="json-output">Formatted output</label><textarea id="json-output" class="json-output" readonly spellcheck="false" placeholder="Your formatted JSON appears here"></textarea></div></div>
+<div class="tool-row" style="margin-top:14px"><div class="tool-field"><label for="json-indent">Indentation</label><select id="json-indent" onchange="formatJson()"><option value="2">2 spaces</option><option value="4">4 spaces</option></select></div><button type="button" class="btn-primary" onclick="formatJson()">Format JSON</button><button type="button" class="tool-button" onclick="minifyJson()">Minify</button><button type="button" class="tool-button" onclick="copyJson()">Copy output</button><button type="button" class="tool-button" onclick="downloadJson()">Download .json</button></div>
+<div id="json-metrics" class="result-metrics"></div><p class="status" id="json-status" role="status" aria-live="polite"></p><p class="tool-note">Up to 2 MB. Ctrl/Cmd + Enter to format. Syntax validation does not check an API schema. Unsafe integers are flagged before formatting; duplicate keys and decimal representation can still change on parsing.</p>
+</section><details class="tool-workspace" style="margin-top:16px"><summary style="cursor:pointer;font-weight:600;font-size:.9rem">Inspect JSON paths &amp; values</summary><div class="tool-field" style="margin-top:16px"><label for="json-path-search">Filter paths or values</label><input type="search" id="json-path-search" placeholder="e.g. items, quantity, true" autocomplete="off"></div><p class="tool-note" id="json-path-note"></p><div id="json-path-results"></div></details></div>
 <div class="wrapper">
   <div class="guide-grid">
     <section class="guide-card">
@@ -143,25 +109,23 @@ textarea:focus, select:focus{outline:none;border-color:var(--violet)}
       <p>Use formatted JSON when you are reading data, comparing responses, or explaining an issue to someone else. Indentation makes nesting obvious, so arrays and objects are much easier to scan.</p>
       <p>Use minified JSON when size matters more than readability. That is useful for sending payloads, storing compact sample data, or preparing responses for transport. The structure is the same either way, but the visual presentation serves a different goal.</p>
       <p>For the cleanest workflow, format first, validate the shape, and only then minify if you need the smaller version.</p>
-      <a class="mini-link" href="../blog/json-formatter-online-guide.html">Read the JSON API formatting guide →</a>
+      <a class="mini-link" href="../blog/json-formatter-online-guide">Read the JSON API formatting guide →</a>
     </section>
     <section class="guide-card">
       <h2>FAQ</h2>
       <p><strong>Does this tool keep my JSON?</strong><br>No, the formatter runs in your browser so you can work locally.</p>
       <p><strong>What if my JSON is invalid?</strong><br>The formatter helps you surface the syntax issue faster, which is usually the real problem.</p>
       <p><strong>Can I change indentation?</strong><br>Yes, choose 2 spaces or 4 spaces depending on your preferred style.</p>
-      <p style="margin-bottom:0"><strong>Need more help?</strong><br><a class="mini-link" href="../blog/json-formatter-online-guide.html">Open the JSON formatter guide →</a></p>
+      <p style="margin-bottom:0"><strong>Need more help?</strong><br><a class="mini-link" href="../blog/json-formatter-online-guide">Open the JSON formatter guide →</a></p>
     </section>
   </div>
 </div>
-<footer class="site-footer"><div class="wrapper">
-  <div class="footer-grid">
-    <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:10px;display:inline-flex"><span class="logo-icon">⚡</span>ToolsNowPro</a><p>Free utility tools for creators.</p></div>
-    <div><div class="footer-heading">Tools</div><ul class="footer-links"><li><a href="../index.html">Username Generator</a></li><li><a href="password-generator.html">Password Generator</a></li><li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li><li><a href="color-picker.html">Color Picker</a></li><li><a href="json-formatter.html">JSON Formatter</a></li><li><a href="favicon-generator.html">Favicon Generator</a></li><li><a href="emoji-library.html">Emoji Library</a></li><li><a href="cheat-sheet-library.html">Cheat Sheets</a></li><li><a href="bio-generator.html">Bio Generator</a></li></ul></div>
-    <div><div class="footer-heading">Learn</div><ul class="footer-links"><li><a href="../blog/index.html">📝 Blog</a></li><li><a href="../faq/index.html">FAQ</a></li><li><a href="../blog/json-formatter-online-guide.html">JSON Guide</a></li></ul></div>
-    <div><div class="footer-heading">Legal</div><ul class="footer-links"><li><a href="../about/index.html#privacy">Privacy</a></li><li><a href="../about/index.html#terms">Terms</a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 ToolsNowPro.</span></div>
-</div></footer>
+</main>
+<footer class="site-footer"><div class="wrapper"><div class="footer-grid"><div class="footer-brand"><a href="/" class="logo"><span class="logo-icon" aria-hidden="true">↗</span>ToolsNow<span class="logo-pro">Pro</span></a><p>Small tools for everyday work.<br>Free to use. Built for your browser.</p></div><div><div class="footer-heading">Your toolkit</div><ul class="footer-links"><li><a href="/tools/json-formatter">JSON Formatter</a></li><li><a href="/tools/jpg-to-pdf">Images to PDF</a></li><li><a href="/tools/color-picker">Color & Contrast</a></li><li><a href="/qr-generator/">QR Code Generator</a></li><li><a href="/#tools">All 21 tools</a></li></ul></div><div><div class="footer-heading">Ideas & reference</div><ul class="footer-links"><li><a href="/tools/username-generator">Username Generator</a></li><li><a href="/gaming/">Gaming Usernames</a></li><li><a href="/tools/cheat-sheet-library">Cheat Sheets</a></li><li><a href="/blog/">Practical Guides</a></li></ul></div><div><div class="footer-heading">ToolsNowPro</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/editorial/">Editorial Standards</a></li><li><a href="/about/#contact">Contact & Feedback</a></li><li><a href="/about/#privacy">Privacy</a></li><li><a href="/about/#terms">Terms</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 ToolsNowPro · <button type="button" class="analytics-toggle" data-analytics-toggle aria-pressed="false">Analytics settings</button></span><span>Need a domain? <a href="https://namecheap.pxf.io/c/7408925/1632743/5618" rel="sponsored nofollow noopener" target="_blank">Search Namecheap ↗</a> <span class="affiliate-label">Affiliate link</span></span></div></div></footer>
+<dialog class="tool-search-dialog" id="tool-search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-header"><h2 id="search-dialog-title">Find your next tool</h2><button type="button" data-close-search class="dialog-close" aria-label="Close tool search">×</button></div><label class="sr-only" for="site-search-input">Search tool names and tasks</label><input type="search" id="site-search-input" placeholder="Try JSON, PDF, QR or username…" autocomplete="off"><p id="site-search-count" class="sr-only" role="status" aria-live="polite"></p><div id="site-search-results" class="site-search-results"></div><div class="search-dialog-footer"><a href="/#tools">Browse all tools →</a><span>Esc to close</span></div></dialog>
+
+
+
+
 <script src="../js/json-formatter.js"></script>
 </body></html>

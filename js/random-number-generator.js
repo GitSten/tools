@@ -17,13 +17,10 @@ const rngEls = {
   toast: document.getElementById('toast')
 };
 
-function randInt(min, max) {
-  const lo = Math.ceil(Math.min(min, max));
-  const hi = Math.floor(Math.max(min, max));
-  const range = hi - lo + 1;
-  const arr = new Uint32Array(1);
-  crypto.getRandomValues(arr);
-  return lo + (arr[0] % range);
+function randInt(min,max){
+  if(!Number.isFinite(min)||!Number.isFinite(max))return 'Enter a valid range';
+  const lo=Math.ceil(Math.min(min,max)),hi=Math.floor(Math.max(min,max));
+  try{return window.ToolsNow.randomInt(lo,hi);}catch{return 'Use safe integers with a range of at most 4,294,967,296 values';}
 }
 
 function randChoice(list) {
@@ -36,11 +33,11 @@ function showToast(message) {
   setTimeout(() => rngEls.toast.classList.remove('show'), 1600);
 }
 
-function copyResult(id) {
+async function copyResult(id) {
   const el = document.getElementById(id);
   const text = el.textContent.trim();
   if (!text || text.includes('Paste a list')) return;
-  navigator.clipboard.writeText(text).catch(() => {});
+  if(!await window.ToolsNow.copy(text))return;
   showToast('Copied');
 }
 
@@ -116,10 +113,8 @@ function generatePassword() {
   const nums = '0123456789';
   const syms = '!@#$%^&*()-_=+[]{}|;:,.<>?';
   const pool = lower + upper + nums + syms;
-  const arr = new Uint32Array(len);
-  crypto.getRandomValues(arr);
   let out = '';
-  for (let i = 0; i < len; i++) out += pool[arr[i] % pool.length];
+  for (let i = 0; i < len; i++) out += pool[window.ToolsNow.randomInt(0,pool.length-1)];
   rngEls.pwOut.textContent = out;
 }
 
