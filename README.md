@@ -103,7 +103,7 @@ find . -name "*.html" -exec sed -i '' 's/ca-pub-XXXX/ca-pub-SINUNUMBER/g' {} +
 
 ## Kontaktivorm
 
-Kontaktivorm ei vaja eraldi saatmisteenust. See avab kasutaja enda e-posti rakenduse `mailto:` lingiga, täites aadressi, teema ja sõnumi automaatselt. Muuda `about/index.html` vormi `data-contact-email` väärtus oma päris kontaktiaadressiks. Veebileht ei saa sel viisil kohaletoimetamist kinnitada: kasutaja peab avanenud e-posti rakenduses ise vajutama Send.
+Kontaktivorm ei vaja eraldi saatmisteenust. See avab kasutaja enda e-posti rakenduse `mailto:` lingiga, täites aadressi, teema ja sõnumi automaatselt. Kontaktiaadress on `info@webpagesolutions.ee`. Veebileht ei saa sel viisil kohaletoimetamist kinnitada: kasutaja peab avanenud e-posti rakenduses ise vajutama Send.
 
 About-lehe avaliku haldaja nimi tuleb lisada omaniku kinnitatud andmete põhjal. Projekti failides sellist identiteeti ei olnud.
 
