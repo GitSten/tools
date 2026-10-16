@@ -7,7 +7,7 @@
 ## Tools
 
 - [QR Code Generator](https://toolsnowpro.com/qr-generator/): Generate static QR codes for URLs, WiFi credentials, vCards, email, SMS, and plain text. Outputs PNG and SVG. No signup, no watermark, codes never expire.
-- [Text Case Converter](https://toolsnowpro.com/text-tools/): Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and AlTeRnAtInG case. Live statistics included.
+- [Convert Case](https://toolsnowpro.com/text-tools/): Convert text between UPPERCASE, lowercase, Title Case, Sentence case, Capitalized Case, camelCase, PascalCase, snake_case, kebab-case, alternating case, and inverse case. Each format also has its own page under /text-tools/. Text stays in the browser.
 - [Word Counter](https://toolsnowpro.com/text-tools/word-counter): Count words, characters (with and without spaces), sentences, paragraphs and reading time. Supports word limit targets for SEO and social media.
 - [Password Generator](https://toolsnowpro.com/tools/password-generator): Generate cryptographically random passwords. Configurable length, symbols, uppercase, numbers. All generation happens client-side.
 - [Image Converter](https://toolsnowpro.com/image-converter/): Convert images between JPG, PNG, and WebP formats. Resize and compress. Runs entirely in the browser — images never leave the user's device.

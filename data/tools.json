@@ -61,12 +61,12 @@
   },
   {
     "id": "case",
-    "name": "Text Case Converter",
+    "name": "Convert Case",
     "url": "/text-tools/",
     "category": "Text",
     "icon": "Aa",
-    "description": "Switch between sentence case, title case, uppercase and code-friendly formats.",
-    "keywords": "lowercase uppercase camelcase snake case kebab capitalize"
+    "description": "Turn uppercase into lowercase, sentence case, title case, or a code format.",
+    "keywords": "convert case lowercase uppercase sentence case title case capitalized camelcase pascal snake case kebab alternating inverse"
   },
   {
     "id": "image",
