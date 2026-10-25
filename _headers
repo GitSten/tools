@@ -1,3 +1,9 @@
+/404
+  X-Robots-Tag: noindex
+/404.html
+  X-Robots-Tag: noindex
+/namecheap-*
+  X-Robots-Tag: noindex
 /scripts/*
   X-Robots-Tag: noindex
 /data/*

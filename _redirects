@@ -2,6 +2,14 @@
 # Note: 404.html in root is served automatically by Cloudflare Pages for missing pages
 # No redirect rules needed for 404 — it's handled natively
 
+# The Search Console HTML file must answer at this exact URL. html_handling
+# otherwise 307s every .html path to an extensionless URL.
+/google8f7c572c2c34b422.html /google8f7c572c2c34b422.html 200
+
+# Retired QR URL. The trailing-slash form must skip the extra hop through
+# /tools/qr-generator, which html_handling would 307 before the rule below.
+/tools/qr-generator/ /qr-generator/ 301
+
 # Consolidated thin/duplicate blog posts merged into single comprehensive guides (2026-07-23)
 /blog/free-lorem-ipsum-generator-online.html /blog/how-to-generate-lorem-ipsum-text-online 301
 /blog/free-lorem-ipsum-generator-online /blog/how-to-generate-lorem-ipsum-text-online 301

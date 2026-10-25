@@ -9,13 +9,15 @@
   const EXAMPLE = 'the QUICK brown fox jumps over the lazy dog. please convert THIS sentence.';
 
   function cap(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    const chars = [...word];
+    if (!chars.length) return '';
+    return chars[0].toUpperCase() + chars.slice(1).join('').toLowerCase();
   }
 
   function wordsOf(str) {
     return str
-      .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
-      .split(/[^A-Za-z0-9]+/)
+      .replace(/(\p{Ll}|\p{N})(\p{Lu})/gu, '$1 $2')
+      .split(/[^\p{L}\p{N}]+/u)
       .filter(Boolean);
   }
 
@@ -30,7 +32,7 @@
 
   function sentenceCase(str) {
     const lower = str.toLowerCase();
-    return lower.replace(/(^|[\n.!?]\s*)([a-z])/g, (_, lead, letter) => lead + letter.toUpperCase());
+    return lower.replace(/(^|[\n.!?]\s*)(\p{Ll})/gu, (_, lead, letter) => lead + letter.toUpperCase());
   }
 
   function applyCase(text, type) {
@@ -54,7 +56,13 @@
           return next;
         }).join('');
       }
-      case 'inverse': return [...text].map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
+      case 'inverse': return [...text].map(char => {
+        if (!/\p{L}/u.test(char)) return char;
+        const upper = char.toUpperCase();
+        const lower = char.toLowerCase();
+        if (upper === lower || [...upper].length !== 1 || [...lower].length !== 1) return char;
+        return char === upper ? lower : upper;
+      }).join('');
       default: return text;
     }
   }
@@ -111,6 +119,8 @@
   root.querySelector('[data-case-clear]')?.addEventListener('click', () => {
     input.value = '';
     stats('');
+    const preset = root.dataset.defaultCase || '';
+    setActive(preset);
     input.focus();
   });
 

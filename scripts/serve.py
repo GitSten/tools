@@ -12,9 +12,15 @@ class Handler(SimpleHTTPRequestHandler):
    parts=line.split()
    if len(parts)==3 and not line.lstrip().startswith('#'):redirects[parts[0]]=(parts[1],int(parts[2]))
   if route in redirects:
-   dest,status=redirects[route];self.send_response(status);self.send_header('Location',dest);self.end_headers();return None
+   dest,status=redirects[route]
+   if status==200:
+    self.path=dest+(('?'+parsed.query) if parsed.query else '')
+    return super().send_head()
+   self.send_response(status);self.send_header('Location',dest);self.end_headers();return None
   if route.endswith('.html') and not route.startswith('/namecheap-'):
-   dest=route[:-10]+'/' if route.endswith('/index.html') else route[:-5]
+   if route=='/index.html':dest='/'
+   elif route.endswith('/index.html'):dest=route[:-len('index.html')]
+   else:dest=route[:-5]
    self.send_response(307);self.send_header('Location',dest+('?' + parsed.query if parsed.query else ''));self.end_headers();return None
   file=Path(self.translate_path(route))
   if not file.exists() and not file.suffix and file.with_suffix('.html').is_file():self.path=route+'.html'+('?' + parsed.query if parsed.query else '')

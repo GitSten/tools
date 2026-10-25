@@ -22,11 +22,14 @@ def local_file(url,source):
  if path.is_dir():path=path/'index.html'
  if not path.exists() and not path.suffix and path.with_suffix('.html').exists():path=path.with_suffix('.html')
  return path
+def verification_file(path, text):
+ return path.name.startswith('google') and text.lstrip().startswith('google-site-verification:')
 errors=[];count=0;canonicals={}
 for p in ROOT.rglob('*.html'):
  if '.git' in p.parts:continue
  s=p.read_text();doc=Parser();doc.feed(s)
  if len(doc.ids)!=len(set(doc.ids)):errors.append(f'{p.relative_to(ROOT)}: duplicate IDs')
+ if verification_file(p, s):continue
  if not p.name.startswith('namecheap-') and 'http-equiv="refresh"' not in s:
   count+=1
   if doc.h1!=1:errors.append(f'{p.relative_to(ROOT)}: expected 1 h1, found {doc.h1}')
